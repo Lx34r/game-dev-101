@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T20:07:19.587Z",
+  "generatedAt": "2026-10-29T20:19:57.684Z",
   "notes": [
     {
       "title": "3D 数学基础：坐标空间、变换与游戏渲染管线",
@@ -525,6 +525,37 @@
         {
           "id": "testing",
           "label": "测试"
+        }
+      ]
+    },
+    {
+      "title": "游戏机制：内部经济与反馈设计",
+      "link": "/notes/game-mechanics",
+      "description": "按《游戏机制：高级游戏设计技术》的十二章结构，梳理机制分类、内部经济、Machinations、反馈循环、设计模式、模拟平衡与渐进机制。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "economy",
+          "label": "经济"
+        },
+        {
+          "id": "patterns",
+          "label": "设计模式"
+        },
+        {
+          "id": "level",
+          "label": "关卡"
+        },
+        {
+          "id": "analytics",
+          "label": "数据"
+        },
+        {
+          "id": "psychology",
+          "label": "心理"
         }
       ]
     },

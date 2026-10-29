@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-29T20:07:19.587Z",
-  "docs": 211,
+  "generatedAt": "2026-10-29T20:19:57.684Z",
+  "docs": 212,
   "tags": 65,
   "sources": [
     {
@@ -67,7 +67,7 @@
       "id": "notes",
       "name": "GameDev Atlas 笔记",
       "url": "",
-      "pages": 23,
+      "pages": 24,
       "lastSync": "2026-10-29",
       "path": "/notes/",
       "topTags": [
@@ -92,18 +92,23 @@
           "count": 6
         },
         {
+          "id": "patterns",
+          "label": "设计模式",
+          "count": 5
+        },
+        {
           "id": "algorithm",
           "label": "算法",
           "count": 5
         },
         {
-          "id": "patterns",
-          "label": "设计模式",
+          "id": "csharp",
+          "label": "C#",
           "count": 4
         },
         {
-          "id": "csharp",
-          "label": "C#",
+          "id": "psychology",
+          "label": "心理",
           "count": 4
         },
         {
@@ -114,11 +119,6 @@
         {
           "id": "publishing",
           "label": "发行",
-          "count": 3
-        },
-        {
-          "id": "input",
-          "label": "输入",
           "count": 3
         }
       ]

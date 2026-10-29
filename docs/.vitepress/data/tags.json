@@ -46,7 +46,7 @@
   },
   "analytics": {
     "label": "数据",
-    "count": 35,
+    "count": 36,
     "kind": "keyword"
   },
   "skill": {
@@ -79,6 +79,11 @@
     "count": 25,
     "kind": "keyword"
   },
+  "module-notes": {
+    "label": "笔记",
+    "count": 24,
+    "kind": "module"
+  },
   "art": {
     "label": "美术",
     "count": 24,
@@ -88,11 +93,6 @@
     "label": "数学",
     "count": 24,
     "kind": "keyword"
-  },
-  "module-notes": {
-    "label": "笔记",
-    "count": 23,
-    "kind": "module"
   },
   "defense": {
     "label": "防御",
@@ -109,18 +109,23 @@
     "count": 21,
     "kind": "keyword"
   },
+  "level": {
+    "label": "关卡",
+    "count": 19,
+    "kind": "keyword"
+  },
   "roguelike": {
     "label": "肉鸽",
     "count": 19,
     "kind": "keyword"
   },
-  "level": {
-    "label": "关卡",
+  "vfx": {
+    "label": "特效",
     "count": 18,
     "kind": "keyword"
   },
-  "vfx": {
-    "label": "特效",
+  "psychology": {
+    "label": "心理",
     "count": 18,
     "kind": "keyword"
   },
@@ -131,11 +136,6 @@
   },
   "tooling": {
     "label": "工具",
-    "count": 17,
-    "kind": "keyword"
-  },
-  "psychology": {
-    "label": "心理",
     "count": 17,
     "kind": "keyword"
   },
@@ -159,6 +159,11 @@
     "count": 14,
     "kind": "keyword"
   },
+  "economy": {
+    "label": "经济",
+    "count": 13,
+    "kind": "keyword"
+  },
   "memory": {
     "label": "内存",
     "count": 13,
@@ -177,11 +182,6 @@
   "ai": {
     "label": "AI",
     "count": 13,
-    "kind": "keyword"
-  },
-  "economy": {
-    "label": "经济",
-    "count": 12,
     "kind": "keyword"
   },
   "shader": {
@@ -274,6 +274,11 @@
     "count": 7,
     "kind": "keyword"
   },
+  "patterns": {
+    "label": "设计模式",
+    "count": 6,
+    "kind": "keyword"
+  },
   "module-audio": {
     "label": "音频",
     "count": 6,
@@ -288,11 +293,6 @@
     "label": "规范标准",
     "count": 5,
     "kind": "module"
-  },
-  "patterns": {
-    "label": "设计模式",
-    "count": 5,
-    "kind": "keyword"
   },
   "ftue": {
     "label": "新手引导",

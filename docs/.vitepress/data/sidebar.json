@@ -1204,6 +1204,10 @@
           "link": "/notes/game-feel"
         },
         {
+          "text": "游戏机制：内部经济与反馈设计",
+          "link": "/notes/game-mechanics"
+        },
+        {
           "text": "战斗公式：从固定 K 到动态 K",
           "link": "/notes/combat-formulas"
         },
