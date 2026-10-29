@@ -580,7 +580,7 @@ function buildModuleSidebar(module) {
 }
 
 function buildSidebar() {
-  const rootOrder = ['overview.md', 'START_HERE.md', 'NAVIGATION.md', 'Full_Index.md']
+  const rootOrder = ['START_HERE.md', 'NAVIGATION.md', 'Full_Index.md']
   const rootItems = rootOrder
     .filter((rel) => fs.existsSync(path.join(DOCS, rel)))
     .map((rel) => ({ text: readPageTitle(rel), link: sidebarLink(rel) }))

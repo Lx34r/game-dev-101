@@ -43,16 +43,16 @@ const nav = [
 export default withMermaid(
   defineConfig({
     lang: 'zh-CN',
-    title: '游戏开发 101',
+    title: 'GameDev Atlas',
     titleTemplate: false,
-    description: '塔防 + Roguelike + 刷宝 的游戏开发知识库：设计、技术、美术、音频、案例与发行。',
+    description: '面向独立游戏团队的设计与工程知识库：数值、机制、技术、美术、音频与发行。',
     base,
     appearance: 'dark',
     cleanUrls: false,
     head: [
       ['meta', { name: 'theme-color', content: '#0b0c0e' }],
       ['meta', { property: 'og:type', content: 'website' }],
-      ['meta', { property: 'og:site_name', content: '游戏开发 101' }],
+      ['meta', { property: 'og:site_name', content: 'GameDev Atlas' }],
       ['link', { rel: 'icon', href: `${base}logo.svg` }]
     ],
     sitemap: {
@@ -66,7 +66,7 @@ export default withMermaid(
     },
     themeConfig: {
       logo: '/logo.svg',
-      siteTitle: '游戏开发 101',
+      siteTitle: 'GameDev Atlas',
       nav,
       sidebar,
       outline: {
@@ -120,8 +120,8 @@ export default withMermaid(
       socialLinks: [{ icon: 'github', link: REPO_URL }],
       footer: {
         message:
-          '内容镜像自 <a href="https://docs.wanyouxi.online/docs" target="_blank" rel="noreferrer">游戏开发 101</a>，按原站结构整理，供离线阅读与检索。',
-        copyright: '本站为可部署镜像站点'
+          '文档内容来自 <a href="https://docs.wanyouxi.online/docs" target="_blank" rel="noreferrer">游戏开发 101</a>，本站以独立设计与导航重新呈现。',
+        copyright: 'GameDev Atlas · 可部署的知识库镜像'
       }
     }
   })

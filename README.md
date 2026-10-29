@@ -1,6 +1,6 @@
-# 游戏开发 101 · 知识库镜像
+# GameDev Atlas · 游戏开发知识库
 
-塔防 + Roguelike + 刷宝方向的游戏开发文档站点。内容镜像自 [docs.wanyouxi.online](https://docs.wanyouxi.online/docs)，使用 VitePress 构建，通过 GitHub Pages 发布。
+面向独立游戏团队的设计与工程知识库。内容镜像自 [docs.wanyouxi.online](https://docs.wanyouxi.online/docs)，使用 VitePress 构建，通过 GitHub Pages 发布。
 
 ## 本地开发
 

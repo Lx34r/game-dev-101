@@ -4,10 +4,6 @@
       "text": "开始",
       "items": [
         {
-          "text": "游戏开发 101",
-          "link": "/overview"
-        },
-        {
           "text": "新人上路指南",
           "link": "/START_HERE"
         },
