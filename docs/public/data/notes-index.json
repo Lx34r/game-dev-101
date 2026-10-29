@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T12:52:29.305Z",
+  "generatedAt": "2026-10-29T13:07:39.056Z",
   "notes": [
     {
       "title": "双摇杆射击的辅助瞄准：从死区到自动瞄准",
@@ -25,6 +25,37 @@
         {
           "id": "camera",
           "label": "摄像机"
+        },
+        {
+          "id": "unity",
+          "label": "Unity"
+        }
+      ]
+    },
+    {
+      "title": "以撒的房间生成：BFS 布局、特殊房与形状扩展",
+      "link": "/notes/isaac-room-generation",
+      "description": "拆解以撒原版的房间布局算法、特殊房约束与房间池，并给出可扩展的大房间实现思路。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "roguelike",
+          "label": "肉鸽"
+        },
+        {
+          "id": "procedural",
+          "label": "程序化"
+        },
+        {
+          "id": "level",
+          "label": "关卡"
+        },
+        {
+          "id": "algorithm",
+          "label": "算法"
         },
         {
           "id": "unity",

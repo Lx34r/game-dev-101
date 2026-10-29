@@ -1140,6 +1140,10 @@
           "link": "/notes/dual-stick-aim-assist"
         },
         {
+          "text": "以撒的房间生成：BFS 布局、特殊房与形状扩展",
+          "link": "/notes/isaac-room-generation"
+        },
+        {
           "text": "战斗公式：从固定 K 到动态 K",
           "link": "/notes/combat-formulas"
         }

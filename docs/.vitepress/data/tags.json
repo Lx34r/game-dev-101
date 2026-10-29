@@ -21,7 +21,7 @@
   },
   "unity": {
     "label": "Unity",
-    "count": 50,
+    "count": 51,
     "kind": "keyword"
   },
   "module-design": {
@@ -91,7 +91,7 @@
   },
   "algorithm": {
     "label": "算法",
-    "count": 20,
+    "count": 21,
     "kind": "keyword"
   },
   "vfx": {
@@ -99,24 +99,24 @@
     "count": 20,
     "kind": "keyword"
   },
+  "level": {
+    "label": "关卡",
+    "count": 19,
+    "kind": "keyword"
+  },
+  "procedural": {
+    "label": "程序化",
+    "count": 18,
+    "kind": "keyword"
+  },
   "tooling": {
     "label": "工具",
     "count": 18,
     "kind": "keyword"
   },
-  "level": {
-    "label": "关卡",
-    "count": 18,
-    "kind": "keyword"
-  },
-  "procedural": {
-    "label": "程序化",
-    "count": 17,
-    "kind": "keyword"
-  },
   "roguelike": {
     "label": "肉鸽",
-    "count": 17,
+    "count": 18,
     "kind": "keyword"
   },
   "module-art": {
@@ -294,14 +294,14 @@
     "count": 4,
     "kind": "keyword"
   },
-  "module-research": {
-    "label": "研究",
+  "module-notes": {
+    "label": "笔记",
     "count": 3,
     "kind": "module"
   },
-  "module-notes": {
-    "label": "笔记",
-    "count": 2,
+  "module-research": {
+    "label": "研究",
+    "count": 3,
     "kind": "module"
   },
   "module-guides": {

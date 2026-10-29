@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-29T12:52:29.305Z",
-  "docs": 190,
+  "generatedAt": "2026-10-29T13:07:39.056Z",
+  "docs": 191,
   "tags": 53,
   "sources": [
     {
@@ -67,18 +67,23 @@
       "id": "notes",
       "name": "GameDev Atlas 笔记",
       "url": "",
-      "pages": 2,
+      "pages": 3,
       "lastSync": "2026-10-29",
       "path": "/notes/",
       "topTags": [
+        {
+          "id": "unity",
+          "label": "Unity",
+          "count": 3
+        },
         {
           "id": "combat",
           "label": "战斗",
           "count": 2
         },
         {
-          "id": "unity",
-          "label": "Unity",
+          "id": "roguelike",
+          "label": "肉鸽",
           "count": 2
         },
         {
@@ -97,18 +102,23 @@
           "count": 1
         },
         {
+          "id": "procedural",
+          "label": "程序化",
+          "count": 1
+        },
+        {
+          "id": "level",
+          "label": "关卡",
+          "count": 1
+        },
+        {
+          "id": "algorithm",
+          "label": "算法",
+          "count": 1
+        },
+        {
           "id": "numerical",
           "label": "数值",
-          "count": 1
-        },
-        {
-          "id": "defense",
-          "label": "防御",
-          "count": 1
-        },
-        {
-          "id": "roguelike",
-          "label": "肉鸽",
           "count": 1
         }
       ]
