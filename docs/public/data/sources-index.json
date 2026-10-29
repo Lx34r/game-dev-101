@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-29T13:28:53.154Z",
-  "docs": 192,
-  "tags": 53,
+  "generatedAt": "2026-10-29T16:48:03.520Z",
+  "docs": 197,
+  "tags": 57,
   "sources": [
     {
       "id": "wanyouxi",
@@ -14,17 +14,12 @@
         {
           "id": "enemy",
           "label": "敌人",
-          "count": 69
+          "count": 66
         },
         {
           "id": "performance",
           "label": "性能",
-          "count": 64
-        },
-        {
-          "id": "numerical",
-          "label": "数值",
-          "count": 53
+          "count": 62
         },
         {
           "id": "combat",
@@ -32,24 +27,19 @@
           "count": 49
         },
         {
+          "id": "numerical",
+          "label": "数值",
+          "count": 49
+        },
+        {
           "id": "unity",
           "label": "Unity",
-          "count": 48
+          "count": 47
         },
         {
           "id": "skill",
           "label": "技能",
-          "count": 37
-        },
-        {
-          "id": "architecture",
-          "label": "架构",
           "count": 36
-        },
-        {
-          "id": "analytics",
-          "label": "数据",
-          "count": 35
         },
         {
           "id": "loot",
@@ -57,9 +47,19 @@
           "count": 34
         },
         {
-          "id": "build",
-          "label": "构筑",
-          "count": 25
+          "id": "analytics",
+          "label": "数据",
+          "count": 34
+        },
+        {
+          "id": "architecture",
+          "label": "架构",
+          "count": 33
+        },
+        {
+          "id": "ui",
+          "label": "UI",
+          "count": 23
         }
       ]
     },
@@ -67,14 +67,39 @@
       "id": "notes",
       "name": "GameDev Atlas 笔记",
       "url": "",
-      "pages": 4,
+      "pages": 9,
       "lastSync": "2026-10-29",
       "path": "/notes/",
       "topTags": [
         {
           "id": "unity",
           "label": "Unity",
+          "count": 5
+        },
+        {
+          "id": "team",
+          "label": "团队",
+          "count": 4
+        },
+        {
+          "id": "roguelike",
+          "label": "肉鸽",
           "count": 3
+        },
+        {
+          "id": "publishing",
+          "label": "发行",
+          "count": 2
+        },
+        {
+          "id": "monetization",
+          "label": "商业化",
+          "count": 2
+        },
+        {
+          "id": "architecture",
+          "label": "架构",
+          "count": 2
         },
         {
           "id": "input",
@@ -87,38 +112,13 @@
           "count": 2
         },
         {
-          "id": "roguelike",
-          "label": "肉鸽",
-          "count": 2
-        },
-        {
-          "id": "architecture",
-          "label": "架构",
+          "id": "steam",
+          "label": "Steam",
           "count": 1
         },
         {
-          "id": "network",
-          "label": "网络",
-          "count": 1
-        },
-        {
-          "id": "ecs",
-          "label": "ECS",
-          "count": 1
-        },
-        {
-          "id": "multiplayer",
-          "label": "多人",
-          "count": 1
-        },
-        {
-          "id": "aim",
-          "label": "瞄准",
-          "count": 1
-        },
-        {
-          "id": "camera",
-          "label": "摄像机",
+          "id": "analytics",
+          "label": "数据",
           "count": 1
         }
       ]

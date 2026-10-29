@@ -1,7 +1,7 @@
 ---
 title: "Unity 游戏开发工业化标准流程指南"
 description: "本文聚焦 Unity 工业化开发流程，覆盖资产导入、Prefab 结构、场景组织、物理层矩阵、碰撞体、材质规范、版本协作与提交流程。"
-tags: ["module-standards","unity","team","multiplayer","tooling","architecture"]
+tags: ["module-standards","unity","math","team","multiplayer","tooling"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Unity_Standards/Unity_Industrial_Development_Workflow_Guide.md"

@@ -1,7 +1,7 @@
 ---
 title: "移动与冲刺系统 (Movement & Dash System)"
 description: "本文聚焦「移动与冲刺系统 (Movement & Dash System)」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-tech","enemy","towerdefense","numerical","combat","unity"]
+tags: ["module-tech","enemy","towerdefense","math","numerical","combat"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Mechanics/Movement_And_Dash_System.md"

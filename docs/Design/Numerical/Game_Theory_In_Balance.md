@@ -1,7 +1,7 @@
 ---
 title: "博弈论与PVP平衡"
 description: "PVP 平衡不是追求“所有角色胜率 50%”，而是追求“策略空间的动态最大化”。本文将引入收益矩阵、纳什均衡漂移及非对称博弈模型，揭示 Meta（元游戏）演化的数学本质。"
-tags: ["module-design","build","enemy","algorithm","team","ai"]
+tags: ["module-design","math","build","enemy","algorithm","team"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Design/Numerical/Game_Theory_In_Balance.md"

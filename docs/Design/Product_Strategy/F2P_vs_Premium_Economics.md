@@ -1,7 +1,7 @@
 ---
 title: "F2P vs Premium 数值"
 description: "本文聚焦「F2P vs Premium 数值」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-design","monetization","numerical","economy","loot","skill"]
+tags: ["module-design","monetization","numerical","economy","math","loot"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Design/Product_Strategy/F2P_vs_Premium_Economics.md"

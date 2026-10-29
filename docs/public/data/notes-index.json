@@ -1,6 +1,37 @@
 {
-  "generatedAt": "2026-10-29T13:28:53.154Z",
+  "generatedAt": "2026-10-29T16:48:03.520Z",
   "notes": [
+    {
+      "title": "独立游戏上架 Steam：从 100 美元到商店页的实务清单",
+      "link": "/notes/steam-publishing-checklist",
+      "description": "把开发者注册、税务、商店页素材、审核与上线节奏拆成可执行清单，避开过审却不发布的常见坑。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "publishing",
+          "label": "发行"
+        },
+        {
+          "id": "steam",
+          "label": "Steam"
+        },
+        {
+          "id": "monetization",
+          "label": "商业化"
+        },
+        {
+          "id": "team",
+          "label": "团队"
+        },
+        {
+          "id": "analytics",
+          "label": "数据"
+        }
+      ]
+    },
     {
       "title": "守望先锋的 ECS 架构与网络代码：从命令帧到命中回溯",
       "link": "/notes/overwatch-ecs-netcode",
@@ -64,6 +95,37 @@
       ]
     },
     {
+      "title": "四元数与三维旋转：从复数到万向锁",
+      "link": "/notes/quaternion-3d-rotation",
+      "description": "从复数旋转推出四元数旋转公式，解释双倍覆盖、Slerp 插值与万向锁的真正成因。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "math",
+          "label": "数学"
+        },
+        {
+          "id": "quaternion",
+          "label": "四元数"
+        },
+        {
+          "id": "rotation",
+          "label": "旋转"
+        },
+        {
+          "id": "unity",
+          "label": "Unity"
+        },
+        {
+          "id": "animation",
+          "label": "动画"
+        }
+      ]
+    },
+    {
       "title": "以撒的房间生成：BFS 布局、特殊房与形状扩展",
       "link": "/notes/isaac-room-generation",
       "description": "拆解以撒原版的房间布局算法、特殊房约束与房间池，并给出可扩展的大房间实现思路。",
@@ -122,6 +184,99 @@
         {
           "id": "unity",
           "label": "Unity"
+        }
+      ]
+    },
+    {
+      "title": "Hades 的叙事工程：把死亡循环做成连续剧",
+      "link": "/notes/hades-narrative-gdc",
+      "description": "从 GDC 的 Hades 语音与叙事分享出发，拆解肉鸽死亡循环、抢先体验、选角与 2.1 万条语音的生产管线。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "narrative",
+          "label": "叙事"
+        },
+        {
+          "id": "audio",
+          "label": "音频"
+        },
+        {
+          "id": "roguelike",
+          "label": "肉鸽"
+        },
+        {
+          "id": "team",
+          "label": "团队"
+        },
+        {
+          "id": "liveops",
+          "label": "LiveOps"
+        }
+      ]
+    },
+    {
+      "title": "Jonas Tyroller 的独立生存指南：代码之外的四个杠杆",
+      "link": "/notes/jonas-tyroller-indie-survival",
+      "description": "从 Jonas Tyroller 的公开访谈与作品资料出发，整理定价、商店页、营销渠道与设计迭代的独立开发生存策略。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "marketing",
+          "label": "营销"
+        },
+        {
+          "id": "publishing",
+          "label": "发行"
+        },
+        {
+          "id": "monetization",
+          "label": "商业化"
+        },
+        {
+          "id": "team",
+          "label": "团队"
+        },
+        {
+          "id": "community",
+          "label": "社区"
+        }
+      ]
+    },
+    {
+      "title": "Unity 工程化清单：从 50 条技巧里留下真正耐用的部分",
+      "link": "/notes/unity-50-tips",
+      "description": "从 2016 版 Unity 50 条最佳实践中提炼项目结构、Prefab、ScriptableObject、调试与性能的耐用规则。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "unity",
+          "label": "Unity"
+        },
+        {
+          "id": "architecture",
+          "label": "架构"
+        },
+        {
+          "id": "testing",
+          "label": "测试"
+        },
+        {
+          "id": "performance",
+          "label": "性能"
+        },
+        {
+          "id": "team",
+          "label": "团队"
         }
       ]
     }

@@ -1,7 +1,7 @@
 ---
 title: "Steam 发行策略研究"
 description: "本文档旨在为《Vampirefall》制定一套科学、数据驱动的 Steam 发行策略。Steam 不是一个“上传游戏然后躺平”的平台，它是一个**算法驱动的流量放大器**。"
-tags: ["module-guides","steam","unity","publishing","analytics","performance"]
+tags: ["module-guides","steam","unity","marketing","publishing","analytics"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Guides/Publishing/Steam_Complete_Guide.md"

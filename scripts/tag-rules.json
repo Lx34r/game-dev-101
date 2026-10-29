@@ -324,6 +324,41 @@
       ]
     },
     {
+      "id": "math",
+      "label": "数学",
+      "patterns": [
+        "数学",
+        "Math",
+        "矩阵",
+        "线性代数",
+        "向量",
+        "Matrix"
+      ]
+    },
+    {
+      "id": "quaternion",
+      "label": "四元数",
+      "patterns": [
+        "四元数",
+        "Quaternion",
+        "Slerp",
+        "Gimbal",
+        "万向锁"
+      ]
+    },
+    {
+      "id": "rotation",
+      "label": "旋转",
+      "patterns": [
+        "旋转",
+        "Rotation",
+        "欧拉角",
+        "Euler",
+        "万向锁",
+        "Gimbal"
+      ]
+    },
+    {
       "id": "input",
       "label": "输入",
       "patterns": [
@@ -512,6 +547,19 @@
         "Publishing",
         "上线",
         "商店页"
+      ]
+    },
+    {
+      "id": "marketing",
+      "label": "营销",
+      "patterns": [
+        "营销",
+        "Marketing",
+        "宣传",
+        "推广",
+        "愿望单",
+        "Wishlist",
+        "Steam 页面"
       ]
     },
     {

@@ -1,7 +1,7 @@
 ---
 title: "Roguelike强化系统深度分析报告"
 description: "本文聚焦「Roguelike强化系统深度分析报告」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-research","skill","roguelike","psychology","architecture","retention"]
+tags: ["module-research","skill","roguelike","psychology","architecture","math"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Research/Roguelike%E5%BC%BA%E5%8C%96%E7%B3%BB%E7%BB%9F%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A.md"

@@ -1,7 +1,7 @@
 ---
 title: "Utility AI 决策系统"
 description: "本文聚焦「Utility AI 决策系统」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-tech","ai","architecture","numerical","performance","build"]
+tags: ["module-tech","ai","architecture","numerical","performance","math"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Tech/AI_Utility_System.md"
