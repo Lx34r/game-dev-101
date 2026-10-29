@@ -16,6 +16,10 @@
           "link": "/Full_Index"
         },
         {
+          "text": "笔记",
+          "link": "/notes/"
+        },
+        {
           "text": "标签图谱",
           "link": "/tags/"
         },
@@ -1118,6 +1122,22 @@
         {
           "text": "Odin Inspector 高级使用技巧",
           "link": "/Tools/Odin_Inspector_Complete"
+        }
+      ]
+    }
+  ],
+  "/notes/": [
+    {
+      "text": "笔记概览",
+      "link": "/notes/"
+    },
+    {
+      "text": "文章",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "战斗公式：从固定 K 到动态 K",
+          "link": "/notes/combat-formulas"
         }
       ]
     }

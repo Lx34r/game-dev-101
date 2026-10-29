@@ -1,0 +1,36 @@
+{
+  "generatedAt": "2026-10-29T11:50:43.347Z",
+  "notes": [
+    {
+      "title": "战斗公式：从固定 K 到动态 K",
+      "link": "/notes/combat-formulas",
+      "description": "用动态 K 值、防御上限与伤害下限，解决 Roguelite 战斗中的不破防、数值崩坏与成长失真。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "numerical",
+          "label": "数值"
+        },
+        {
+          "id": "combat",
+          "label": "战斗"
+        },
+        {
+          "id": "defense",
+          "label": "防御"
+        },
+        {
+          "id": "roguelike",
+          "label": "肉鸽"
+        },
+        {
+          "id": "unity",
+          "label": "Unity"
+        }
+      ]
+    }
+  ]
+}

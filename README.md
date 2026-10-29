@@ -42,6 +42,10 @@ npm run build         # 生产构建
 - 附加来源使用 `sources/<id>` 作为前缀，避免路径冲突。
 - 标签规则在 [scripts/tag-rules.json](scripts/tag-rules.json) 维护，新增规则后重新同步。
 
+## 本地笔记
+
+在 `docs/notes/` 新建 Markdown，frontmatter 写 `title`、`description`、`tags` 与 `source: "notes"`，正文 H1 下放 `<ArticleTags />`。`npm run sync` 会保留笔记，并把它们加入笔记索引、标签与词云。
+
 ## 目录
 
 - `docs/`：同步文章、首页与生成页面

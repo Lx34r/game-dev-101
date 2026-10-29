@@ -1,7 +1,7 @@
 ---
 title: "塔防建筑机制设计"
 description: "本文档详细定义了 Project Vampirefall 中“塔防”部分的玩法规则。由于本作混合了 ARPG 元素，塔的设计必须考虑到与主角的协同作战。"
-tags: ["module-design","towerdefense","enemy","combat","ui","analytics"]
+tags: ["module-design","towerdefense","enemy","combat","defense","ui"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Design/Mechanics/Tower_Defense_System.md"

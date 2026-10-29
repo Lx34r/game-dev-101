@@ -1,7 +1,7 @@
 ---
 title: "怪物图鉴与AI行为"
 description: "本文档定义了怪物的分类、AI 行为模式及特殊词缀设计。"
-tags: ["module-design","enemy","ai","architecture","combat","level"]
+tags: ["module-design","enemy","ai","architecture","combat","defense"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Design/Content/Enemy_Bestiary.md"

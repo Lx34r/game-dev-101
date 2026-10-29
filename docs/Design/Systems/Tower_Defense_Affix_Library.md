@@ -1,7 +1,7 @@
 ---
 title: "塔防词条库"
 description: "本文聚焦「塔防词条库」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-design","enemy","combat","towerdefense","build","skill"]
+tags: ["module-design","enemy","defense","combat","towerdefense","build"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Design/Systems/Tower_Defense_Affix_Library.md"

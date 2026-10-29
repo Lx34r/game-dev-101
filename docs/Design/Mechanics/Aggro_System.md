@@ -1,7 +1,7 @@
 ---
 title: "仇恨系统与 AI 目标选择"
 description: "本文聚焦「仇恨系统与 AI 目标选择」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-design","enemy","ai","combat","skill","numerical"]
+tags: ["module-design","enemy","ai","combat","skill","defense"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Design/Mechanics/Aggro_System.md"

@@ -1,7 +1,7 @@
 ---
 title: "游戏数值框架构建指南"
 description: "本文聚焦「游戏数值框架构建指南」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-design","numerical","combat","architecture","analytics","psychology"]
+tags: ["module-design","numerical","combat","architecture","defense","analytics"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Design/Numerical/Numerical_Framework_Methodology.md"

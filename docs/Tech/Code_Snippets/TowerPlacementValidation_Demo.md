@@ -1,7 +1,7 @@
 ---
 title: "防御塔放置校验逻辑"
 description: "本文档详细描述了在塔防游戏中，如何利用 Unity 的 `NavMesh` 系统来校验玩家的防御塔放置，防止玩家通过放置塔来**完全堵死敌人路径** (Maze Blocking)。这是一个在设计塔防地图和平衡性时至关重要的机制。"
-tags: ["module-tech","towerdefense","procedural","enemy","unity","level"]
+tags: ["module-tech","defense","towerdefense","procedural","enemy","unity"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Code_Snippets/TowerPlacementValidation_Demo.md"

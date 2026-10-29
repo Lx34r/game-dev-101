@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-29T11:19:45.413Z",
-  "docs": 188,
-  "tags": 61,
+  "generatedAt": "2026-10-29T11:50:43.347Z",
+  "docs": 189,
+  "tags": 51,
   "sources": [
     {
       "id": "wanyouxi",
@@ -14,7 +14,7 @@
         {
           "id": "enemy",
           "label": "敌人",
-          "count": 72
+          "count": 71
         },
         {
           "id": "performance",
@@ -24,7 +24,7 @@
         {
           "id": "numerical",
           "label": "数值",
-          "count": 56
+          "count": 54
         },
         {
           "id": "combat",
@@ -37,14 +37,14 @@
           "count": 49
         },
         {
-          "id": "skill",
-          "label": "技能",
-          "count": 41
-        },
-        {
           "id": "analytics",
           "label": "数据",
-          "count": 38
+          "count": 37
+        },
+        {
+          "id": "skill",
+          "label": "技能",
+          "count": 37
         },
         {
           "id": "architecture",
@@ -59,7 +59,42 @@
         {
           "id": "build",
           "label": "构筑",
-          "count": 29
+          "count": 26
+        }
+      ]
+    },
+    {
+      "id": "notes",
+      "name": "GameDev Atlas 笔记",
+      "url": "",
+      "pages": 1,
+      "lastSync": "2026-10-29",
+      "path": "/notes/",
+      "topTags": [
+        {
+          "id": "numerical",
+          "label": "数值",
+          "count": 1
+        },
+        {
+          "id": "combat",
+          "label": "战斗",
+          "count": 1
+        },
+        {
+          "id": "defense",
+          "label": "防御",
+          "count": 1
+        },
+        {
+          "id": "roguelike",
+          "label": "肉鸽",
+          "count": 1
+        },
+        {
+          "id": "unity",
+          "label": "Unity",
+          "count": 1
         }
       ]
     }

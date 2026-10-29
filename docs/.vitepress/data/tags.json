@@ -1,7 +1,7 @@
 {
   "enemy": {
     "label": "敌人",
-    "count": 72,
+    "count": 71,
     "kind": "keyword"
   },
   "performance": {
@@ -11,28 +11,23 @@
   },
   "numerical": {
     "label": "数值",
-    "count": 56,
+    "count": 55,
     "kind": "keyword"
   },
   "combat": {
     "label": "战斗",
-    "count": 51,
+    "count": 52,
+    "kind": "keyword"
+  },
+  "unity": {
+    "label": "Unity",
+    "count": 50,
     "kind": "keyword"
   },
   "module-design": {
     "label": "游戏设计",
     "count": 49,
     "kind": "module"
-  },
-  "unity": {
-    "label": "Unity",
-    "count": 49,
-    "kind": "keyword"
-  },
-  "skill": {
-    "label": "技能",
-    "count": 41,
-    "kind": "keyword"
   },
   "module-tech": {
     "label": "技术实现",
@@ -44,9 +39,14 @@
     "count": 38,
     "kind": "module"
   },
+  "skill": {
+    "label": "技能",
+    "count": 37,
+    "kind": "keyword"
+  },
   "analytics": {
     "label": "数据",
-    "count": 38,
+    "count": 37,
     "kind": "keyword"
   },
   "architecture": {
@@ -59,15 +59,15 @@
     "count": 34,
     "kind": "keyword"
   },
-  "build": {
-    "label": "构筑",
-    "count": 29,
-    "kind": "keyword"
-  },
   "module-case": {
     "label": "案例研究",
     "count": 26,
     "kind": "module"
+  },
+  "build": {
+    "label": "构筑",
+    "count": 26,
+    "kind": "keyword"
   },
   "testing": {
     "label": "测试",
@@ -79,14 +79,14 @@
     "count": 23,
     "kind": "keyword"
   },
-  "art": {
-    "label": "美术",
+  "defense": {
+    "label": "防御",
     "count": 22,
     "kind": "keyword"
   },
-  "algorithm": {
-    "label": "算法",
-    "count": 21,
+  "art": {
+    "label": "美术",
+    "count": 22,
     "kind": "keyword"
   },
   "vfx": {
@@ -94,14 +94,9 @@
     "count": 21,
     "kind": "keyword"
   },
-  "level": {
-    "label": "关卡",
+  "algorithm": {
+    "label": "算法",
     "count": 20,
-    "kind": "keyword"
-  },
-  "procedural": {
-    "label": "程序化",
-    "count": 18,
     "kind": "keyword"
   },
   "tooling": {
@@ -109,13 +104,23 @@
     "count": 18,
     "kind": "keyword"
   },
-  "psychology": {
-    "label": "心理",
+  "level": {
+    "label": "关卡",
+    "count": 18,
+    "kind": "keyword"
+  },
+  "procedural": {
+    "label": "程序化",
     "count": 17,
     "kind": "keyword"
   },
   "roguelike": {
     "label": "肉鸽",
+    "count": 17,
+    "kind": "keyword"
+  },
+  "psychology": {
+    "label": "心理",
     "count": 16,
     "kind": "keyword"
   },
@@ -134,11 +139,6 @@
     "count": 15,
     "kind": "keyword"
   },
-  "economy": {
-    "label": "经济",
-    "count": 13,
-    "kind": "keyword"
-  },
   "memory": {
     "label": "内存",
     "count": 13,
@@ -151,6 +151,11 @@
   },
   "publishing": {
     "label": "发行",
+    "count": 12,
+    "kind": "keyword"
+  },
+  "economy": {
+    "label": "经济",
     "count": 12,
     "kind": "keyword"
   },
@@ -209,11 +214,6 @@
     "count": 8,
     "kind": "keyword"
   },
-  "monetization": {
-    "label": "商业化",
-    "count": 7,
-    "kind": "keyword"
-  },
   "community": {
     "label": "社区",
     "count": 7,
@@ -226,6 +226,11 @@
   },
   "save": {
     "label": "存档",
+    "count": 6,
+    "kind": "keyword"
+  },
+  "monetization": {
+    "label": "商业化",
     "count": 6,
     "kind": "keyword"
   },
@@ -293,6 +298,11 @@
     "label": "Mod",
     "count": 2,
     "kind": "keyword"
+  },
+  "module-notes": {
+    "label": "笔记",
+    "count": 1,
+    "kind": "module"
   },
   "module-tools": {
     "label": "工具",

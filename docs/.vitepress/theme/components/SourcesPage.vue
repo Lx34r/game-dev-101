@@ -75,7 +75,8 @@ onMounted(async () => {
               </a>
             </div>
             <footer class="source-actions">
-              <a :href="source.url" target="_blank" rel="noreferrer">源站 ↗</a>
+              <a v-if="source.url" :href="source.url" target="_blank" rel="noreferrer">源站 ↗</a>
+              <span v-else>本地笔记</span>
               <a :href="withBase(source.path)">浏览文章 →</a>
             </footer>
           </article>

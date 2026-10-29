@@ -40,6 +40,7 @@ const nav = [
       { text: '内容来源', link: '/sources/' }
     ]
   },
+  { text: '笔记', link: '/notes/' },
   { text: '标签', link: '/tags/' },
   { text: '全站索引', link: '/Full_Index' }
 ]

@@ -11,6 +11,7 @@ const CACHE = path.join(ROOT, '.cache', 'raw')
 const REPORTS = path.join(ROOT, 'reports')
 const PUBLIC_IMAGES = path.join(DOCS, 'public', 'images')
 const PUBLIC_DATA = path.join(DOCS, 'public', 'data')
+const NOTES_DIR = path.join(DOCS, 'notes')
 const DATA_DIR = path.join(DOCS, '.vitepress', 'data')
 const MODULES_DATA = path.join(DATA_DIR, 'modules.json')
 const SIDEBAR_DATA = path.join(DATA_DIR, 'sidebar.json')
@@ -669,30 +670,53 @@ function generateSourcePage(source, records) {
   writePage(`${source.prefix}/index.md`, lines.join('\n'))
 }
 
-function generateSourcesPage(records, tagStats) {
+function generateSourcesPage(records, tagStats, notes = []) {
   const tagById = new Map(tagStats.tags.map((tag) => [tag.id, tag]))
-  const cards = SOURCES.map((source) => {
-    const sourceRecords = records.filter((record) => record.source === source.id)
+  const buildCard = (recordsForSource, { id, name, url, path: target }) => {
     const counts = new Map()
-    for (const record of sourceRecords) {
-      for (const id of record.tags) counts.set(id, (counts.get(id) || 0) + 1)
+    for (const record of recordsForSource) {
+      for (const tagId of record.tags) counts.set(tagId, (counts.get(tagId) || 0) + 1)
     }
     const topTags = [...counts.entries()]
-      .map(([id, count]) => ({ id, count, label: tagById.get(id)?.label || id, kind: tagById.get(id)?.kind }))
+      .map(([tagId, count]) => ({
+        id: tagId,
+        count,
+        label: tagById.get(tagId)?.label || tagId,
+        kind: tagById.get(tagId)?.kind
+      }))
       .filter((tag) => tag.kind === 'keyword')
       .sort((a, b) => b.count - a.count)
       .slice(0, 10)
-      .map(({ id, label, count }) => ({ id, label, count }))
+      .map(({ id: tagId, label, count }) => ({ id: tagId, label, count }))
     return {
+      id,
+      name,
+      url,
+      pages: recordsForSource.length,
+      lastSync: report.generatedAt.slice(0, 10),
+      path: target,
+      topTags
+    }
+  }
+
+  const cards = SOURCES.map((source) =>
+    buildCard(records.filter((record) => record.source === source.id), {
       id: source.id,
       name: source.name,
       url: source.url,
-      pages: sourceRecords.length,
-      lastSync: report.generatedAt.slice(0, 10),
-      path: source.prefix ? `/${source.prefix}/` : '/Full_Index',
-      topTags
-    }
-  })
+      path: source.prefix ? `/${source.prefix}/` : '/Full_Index'
+    })
+  )
+  if (notes.length > 0) {
+    cards.push(
+      buildCard(notes, {
+        id: 'notes',
+        name: 'GameDev Atlas 笔记',
+        url: '',
+        path: '/notes/'
+      })
+    )
+  }
 
   fs.writeFileSync(
     path.join(PUBLIC_DATA, 'sources-index.json'),
@@ -700,7 +724,7 @@ function generateSourcesPage(records, tagStats) {
       {
         generatedAt: report.generatedAt,
         docs: records.length,
-        tags: tagStats.tagCount,
+        tags: tagStats.keywordCount,
         sources: cards
       },
       null,
@@ -731,11 +755,101 @@ function generateTagsPage() {
   )
 }
 
-function buildSidebar(sources) {
+function frontmatterValue(frontmatter, key) {
+  const match = frontmatter.match(new RegExp(`^${key}:\\s*(.*)$`, 'm'))
+  if (!match) return ''
+  const raw = match[1].trim()
+  if (raw.startsWith('"') && raw.endsWith('"')) {
+    try {
+      return JSON.parse(raw)
+    } catch {
+      return raw.slice(1, -1)
+    }
+  }
+  return raw
+}
+
+function collectLocalNotes() {
+  if (!fs.existsSync(NOTES_DIR)) return []
+  const validTags = new Set([
+    ...Object.values(TAG_RULES.moduleTags).map((tag) => tag.id),
+    ...TAG_RULES.rules.map((tag) => tag.id)
+  ])
+  const notes = []
+  for (const entry of fs.readdirSync(NOTES_DIR, { withFileTypes: true })) {
+    if (!entry.isFile() || !entry.name.endsWith('.md') || entry.name === 'index.md') continue
+    const file = path.join(NOTES_DIR, entry.name)
+    const text = fs.readFileSync(file, 'utf8')
+    const match = text.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/)
+    if (!match) continue
+    const frontmatter = match[1]
+    const title =
+      frontmatterValue(frontmatter, 'title') ||
+      (text.match(/^#\s+(.+)$/m) || [])[1] ||
+      entry.name.replace(/\.md$/, '')
+    let tags = []
+    const tagsRaw = frontmatter.match(/^tags:\s*(\[[^\]]*\])$/m)
+    if (tagsRaw) {
+      try {
+        tags = JSON.parse(tagsRaw[1])
+      } catch {
+        tags = tagsRaw[1]
+          .slice(1, -1)
+          .split(',')
+          .map((item) => item.trim().replace(/^"|"$/g, ''))
+          .filter(Boolean)
+      }
+    }
+    const moduleTag = TAG_RULES.moduleTags.notes
+    tags = [...new Set([moduleTag.id, ...tags])]
+      .filter((id) => validTags.has(id))
+      .slice(0, TAG_RULES.maxPerArticle || 6)
+    const rel = path.posix.join('notes', entry.name)
+    notes.push({
+      rel,
+      title,
+      link: `/${rel.replace(/\.md$/, '')}`,
+      description: frontmatterValue(frontmatter, 'description'),
+      module: moduleTag.label,
+      source: 'notes',
+      sourceName: frontmatterValue(frontmatter, 'sourceName') || 'GameDev Atlas 笔记',
+      tags,
+      local: true
+    })
+  }
+  return notes.sort((a, b) => collator.compare(a.title, b.title))
+}
+
+function generateNotesPage(notes, tagStats) {
+  const labels = new Map(tagStats.tags.map((tag) => [tag.id, tag.label]))
+  fs.writeFileSync(
+    path.join(PUBLIC_DATA, 'notes-index.json'),
+    `${JSON.stringify(
+      {
+        generatedAt: report.generatedAt,
+        notes: notes.map((note) => ({
+          title: note.title,
+          link: note.link,
+          description: note.description,
+          tags: note.tags.map((id) => ({ id, label: labels.get(id) || id }))
+        }))
+      },
+      null,
+      2
+    )}\n`
+  )
+  writePage(
+    'notes/index.md',
+    ['---', 'layout: page', 'title: 笔记', 'sidebar: false', '---', '', '<NotesPage />', ''].join('\n')
+  )
+}
+
+function buildSidebar(sources, notes = []) {
   const rootOrder = ['START_HERE.md', 'NAVIGATION.md', 'Full_Index.md']
   const rootItems = rootOrder
     .filter((rel) => fs.existsSync(path.join(DOCS, rel)))
     .map((rel) => ({ text: readPageTitle(rel), link: sidebarLink(rel) }))
+  rootItems.push({ text: '笔记', link: '/notes/' })
   rootItems.push({ text: '标签图谱', link: '/tags/' })
   rootItems.push({ text: '内容来源', link: '/sources/' })
 
@@ -744,6 +858,12 @@ function buildSidebar(sources) {
   }
   for (const module of MODULES) {
     sidebar[`/${module.dir}/`] = buildModuleSidebar(module)
+  }
+  if (notes.length > 0) {
+    sidebar['/notes/'] = [
+      { text: '笔记概览', link: '/notes/' },
+      { text: '文章', collapsed: false, items: notes.map((note) => ({ text: note.title, link: note.link })) }
+    ]
   }
   for (const source of sources) {
     if (!source.prefix) continue
@@ -849,6 +969,18 @@ async function main() {
     })
   }
 
+  const localNotes = collectLocalNotes()
+  records.push(...localNotes)
+  if (localNotes.length > 0) {
+    report.sources.push({
+      id: 'notes',
+      name: 'GameDev Atlas 笔记',
+      pages: localNotes.length,
+      failed: 0,
+      url: '/notes/'
+    })
+  }
+
   const modules = MODULES.map(generateModulePage)
   for (const source of SOURCES) {
     if (source.prefix) generateSourcePage(source, records)
@@ -856,7 +988,8 @@ async function main() {
   generateTagsPage()
 
   const tagStats = buildTagStats({ articles: records, rules: TAG_RULES })
-  generateSourcesPage(records, tagStats)
+  generateSourcesPage(records, tagStats, localNotes)
+  generateNotesPage(localNotes, tagStats)
   fs.writeFileSync(path.join(PUBLIC_DATA, 'tag-index.json'), `${JSON.stringify(tagStats)}\n`)
   const catalog = Object.fromEntries(
     tagStats.tags.map((tag) => [tag.id, { label: tag.label, count: tag.count, kind: tag.kind }])
@@ -870,7 +1003,7 @@ async function main() {
         docs: records.length,
         modules: MODULES.length,
         tags: tagStats.keywordCount,
-        sources: SOURCES.length,
+        sources: SOURCES.length + (localNotes.length > 0 ? 1 : 0),
         diagrams: diagramCount,
         generatedAt: report.generatedAt
       },
@@ -878,7 +1011,7 @@ async function main() {
       2
     )}\n`
   )
-  fs.writeFileSync(SIDEBAR_DATA, `${JSON.stringify(buildSidebar(SOURCES), null, 2)}\n`)
+  fs.writeFileSync(SIDEBAR_DATA, `${JSON.stringify(buildSidebar(SOURCES, localNotes), null, 2)}\n`)
 
   report.pages = records.length
   report.tags = tagStats.tagCount

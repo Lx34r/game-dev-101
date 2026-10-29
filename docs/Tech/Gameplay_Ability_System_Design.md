@@ -1,7 +1,7 @@
 ---
 title: "Vampirefall 游戏技能系统 (GAS) 设计方案"
 description: "本文聚焦「Vampirefall 游戏技能系统 (GAS) 设计方案」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-tech","skill","architecture","ecs","analytics","enemy"]
+tags: ["module-tech","skill","architecture","ecs","defense","analytics"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Gameplay_Ability_System_Design.md"
