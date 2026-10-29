@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T19:58:26.189Z",
+  "generatedAt": "2026-10-29T20:07:19.587Z",
   "notes": [
     {
       "title": "3D 数学基础：坐标空间、变换与游戏渲染管线",
@@ -370,6 +370,37 @@
         {
           "id": "unity",
           "label": "Unity"
+        }
+      ]
+    },
+    {
+      "title": "游戏 AI 开发：从感知到群体协作",
+      "link": "/notes/game-ai-development",
+      "description": "按《游戏AI开发实用指南》的十章结构，梳理感知、可能性图、决策、动画、寻路、群体协作与规划的实现路径。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "ai",
+          "label": "AI"
+        },
+        {
+          "id": "algorithm",
+          "label": "算法"
+        },
+        {
+          "id": "unity",
+          "label": "Unity"
+        },
+        {
+          "id": "csharp",
+          "label": "C#"
+        },
+        {
+          "id": "performance",
+          "label": "性能"
         }
       ]
     },

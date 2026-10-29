@@ -6,12 +6,12 @@
   },
   "performance": {
     "label": "性能",
-    "count": 63,
+    "count": 64,
     "kind": "keyword"
   },
   "unity": {
     "label": "Unity",
-    "count": 57,
+    "count": 58,
     "kind": "keyword"
   },
   "combat": {
@@ -74,6 +74,11 @@
     "count": 25,
     "kind": "keyword"
   },
+  "algorithm": {
+    "label": "算法",
+    "count": 25,
+    "kind": "keyword"
+  },
   "art": {
     "label": "美术",
     "count": 24,
@@ -84,14 +89,9 @@
     "count": 24,
     "kind": "keyword"
   },
-  "algorithm": {
-    "label": "算法",
-    "count": 24,
-    "kind": "keyword"
-  },
   "module-notes": {
     "label": "笔记",
-    "count": 22,
+    "count": 23,
     "kind": "module"
   },
   "defense": {
@@ -174,13 +174,13 @@
     "count": 13,
     "kind": "keyword"
   },
-  "economy": {
-    "label": "经济",
-    "count": 12,
-    "kind": "keyword"
-  },
   "ai": {
     "label": "AI",
+    "count": 13,
+    "kind": "keyword"
+  },
+  "economy": {
+    "label": "经济",
     "count": 12,
     "kind": "keyword"
   },
@@ -264,13 +264,13 @@
     "count": 8,
     "kind": "keyword"
   },
-  "narrative": {
-    "label": "叙事",
-    "count": 7,
-    "kind": "keyword"
-  },
   "csharp": {
     "label": "C#",
+    "count": 8,
+    "kind": "keyword"
+  },
+  "narrative": {
+    "label": "叙事",
     "count": 7,
     "kind": "keyword"
   },
