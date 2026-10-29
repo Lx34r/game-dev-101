@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-29T20:19:57.684Z",
-  "docs": 212,
+  "generatedAt": "2026-10-29T20:30:01.475Z",
+  "docs": 213,
   "tags": 65,
   "sources": [
     {
@@ -67,7 +67,7 @@
       "id": "notes",
       "name": "GameDev Atlas 笔记",
       "url": "",
-      "pages": 24,
+      "pages": 25,
       "lastSync": "2026-10-29",
       "path": "/notes/",
       "topTags": [
@@ -79,12 +79,12 @@
         {
           "id": "team",
           "label": "团队",
-          "count": 9
+          "count": 10
         },
         {
           "id": "architecture",
           "label": "架构",
-          "count": 7
+          "count": 8
         },
         {
           "id": "graphics",
@@ -102,6 +102,11 @@
           "count": 5
         },
         {
+          "id": "testing",
+          "label": "测试",
+          "count": 4
+        },
+        {
           "id": "csharp",
           "label": "C#",
           "count": 4
@@ -114,11 +119,6 @@
         {
           "id": "camera",
           "label": "摄像机",
-          "count": 3
-        },
-        {
-          "id": "publishing",
-          "label": "发行",
           "count": 3
         }
       ]

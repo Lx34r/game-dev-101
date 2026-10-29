@@ -31,7 +31,7 @@
   },
   "architecture": {
     "label": "架构",
-    "count": 40,
+    "count": 41,
     "kind": "keyword"
   },
   "module-tech": {
@@ -64,25 +64,25 @@
     "count": 26,
     "kind": "module"
   },
+  "testing": {
+    "label": "测试",
+    "count": 26,
+    "kind": "keyword"
+  },
   "ui": {
     "label": "UI",
     "count": 26,
     "kind": "keyword"
   },
-  "testing": {
-    "label": "测试",
+  "module-notes": {
+    "label": "笔记",
     "count": 25,
-    "kind": "keyword"
+    "kind": "module"
   },
   "algorithm": {
     "label": "算法",
     "count": 25,
     "kind": "keyword"
-  },
-  "module-notes": {
-    "label": "笔记",
-    "count": 24,
-    "kind": "module"
   },
   "art": {
     "label": "美术",
@@ -106,7 +106,7 @@
   },
   "team": {
     "label": "团队",
-    "count": 21,
+    "count": 22,
     "kind": "keyword"
   },
   "level": {
@@ -117,6 +117,11 @@
   "roguelike": {
     "label": "肉鸽",
     "count": 19,
+    "kind": "keyword"
+  },
+  "tooling": {
+    "label": "工具",
+    "count": 18,
     "kind": "keyword"
   },
   "vfx": {
@@ -131,11 +136,6 @@
   },
   "procedural": {
     "label": "程序化",
-    "count": 17,
-    "kind": "keyword"
-  },
-  "tooling": {
-    "label": "工具",
     "count": 17,
     "kind": "keyword"
   },

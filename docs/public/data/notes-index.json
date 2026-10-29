@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T20:19:57.684Z",
+  "generatedAt": "2026-10-29T20:30:01.475Z",
   "notes": [
     {
       "title": "3D 数学基础：坐标空间、变换与游戏渲染管线",
@@ -153,6 +153,33 @@
         {
           "id": "accessibility",
           "label": "可访问性"
+        }
+      ]
+    },
+    {
+      "title": "人月神话：加人为何越加越慢",
+      "link": "/notes/mythical-man-month",
+      "description": "把《人月神话》的核心观点放回游戏项目：人月、沟通成本、概念完整性、第二系统效应、里程碑、预算与没有银弹。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "team",
+          "label": "团队"
+        },
+        {
+          "id": "architecture",
+          "label": "架构"
+        },
+        {
+          "id": "tooling",
+          "label": "工具"
+        },
+        {
+          "id": "testing",
+          "label": "测试"
         }
       ]
     },
