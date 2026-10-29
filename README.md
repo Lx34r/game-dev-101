@@ -2,6 +2,10 @@
 
 面向独立游戏团队的设计与工程知识备忘站：从多个站点同步文章，自动生成主题标签，并提供标签筛选与词云。使用 VitePress 构建，通过 GitHub Pages 发布。
 
+## AI 工作流
+
+写作、同步与发布规范见 [AI_ARTICLE_WORKFLOW.md](AI_ARTICLE_WORKFLOW.md)，AI 会话的硬规则见 [AGENTS.md](AGENTS.md)。
+
 ## 本地开发
 
 ```bash
