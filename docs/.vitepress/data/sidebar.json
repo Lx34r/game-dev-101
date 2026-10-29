@@ -1136,6 +1136,10 @@
       "collapsed": false,
       "items": [
         {
+          "text": "3D 数学基础：坐标空间、变换与游戏渲染管线",
+          "link": "/notes/3d-math-primer"
+        },
+        {
           "text": "独立游戏上架 Steam：从 100 美元到商店页的实务清单",
           "link": "/notes/steam-publishing-checklist"
         },

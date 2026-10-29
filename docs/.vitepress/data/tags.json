@@ -11,7 +11,7 @@
   },
   "unity": {
     "label": "Unity",
-    "count": 53,
+    "count": 54,
     "kind": "keyword"
   },
   "combat": {
@@ -76,7 +76,7 @@
   },
   "math": {
     "label": "数学",
-    "count": 23,
+    "count": 24,
     "kind": "keyword"
   },
   "defense": {
@@ -159,6 +159,11 @@
     "count": 13,
     "kind": "keyword"
   },
+  "module-notes": {
+    "label": "笔记",
+    "count": 12,
+    "kind": "module"
+  },
   "animation": {
     "label": "动画",
     "count": 12,
@@ -178,11 +183,6 @@
     "label": "Shader",
     "count": 12,
     "kind": "keyword"
-  },
-  "module-notes": {
-    "label": "笔记",
-    "count": 11,
-    "kind": "module"
   },
   "economy": {
     "label": "经济",
@@ -246,16 +246,16 @@
   },
   "camera": {
     "label": "摄像机",
-    "count": 6,
-    "kind": "keyword"
-  },
-  "narrative": {
-    "label": "叙事",
-    "count": 6,
+    "count": 7,
     "kind": "keyword"
   },
   "rotation": {
     "label": "旋转",
+    "count": 7,
+    "kind": "keyword"
+  },
+  "narrative": {
+    "label": "叙事",
     "count": 6,
     "kind": "keyword"
   },
@@ -274,6 +274,11 @@
     "count": 5,
     "kind": "module"
   },
+  "graphics": {
+    "label": "图形",
+    "count": 5,
+    "kind": "keyword"
+  },
   "ftue": {
     "label": "新手引导",
     "count": 5,
@@ -281,11 +286,6 @@
   },
   "save": {
     "label": "存档",
-    "count": 4,
-    "kind": "keyword"
-  },
-  "graphics": {
-    "label": "图形",
     "count": 4,
     "kind": "keyword"
   },

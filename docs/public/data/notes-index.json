@@ -1,6 +1,37 @@
 {
-  "generatedAt": "2026-10-29T17:32:00.170Z",
+  "generatedAt": "2026-10-29T17:41:17.276Z",
   "notes": [
+    {
+      "title": "3D 数学基础：坐标空间、变换与游戏渲染管线",
+      "link": "/notes/3d-math-primer",
+      "description": "把坐标空间、矩阵、旋转表示、几何检测与渲染管线串成一条工程路径，并列出常见陷阱。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "math",
+          "label": "数学"
+        },
+        {
+          "id": "rotation",
+          "label": "旋转"
+        },
+        {
+          "id": "graphics",
+          "label": "图形"
+        },
+        {
+          "id": "camera",
+          "label": "摄像机"
+        },
+        {
+          "id": "unity",
+          "label": "Unity"
+        }
+      ]
+    },
     {
       "title": "独立游戏上架 Steam：从 100 美元到商店页的实务清单",
       "link": "/notes/steam-publishing-checklist",

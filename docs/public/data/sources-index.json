@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-29T17:32:00.170Z",
-  "docs": 199,
+  "generatedAt": "2026-10-29T17:41:17.276Z",
+  "docs": 200,
   "tags": 59,
   "sources": [
     {
@@ -67,14 +67,14 @@
       "id": "notes",
       "name": "GameDev Atlas 笔记",
       "url": "",
-      "pages": 11,
+      "pages": 12,
       "lastSync": "2026-10-29",
       "path": "/notes/",
       "topTags": [
         {
           "id": "unity",
           "label": "Unity",
-          "count": 6
+          "count": 7
         },
         {
           "id": "team",
@@ -92,6 +92,21 @@
           "count": 3
         },
         {
+          "id": "math",
+          "label": "数学",
+          "count": 2
+        },
+        {
+          "id": "rotation",
+          "label": "旋转",
+          "count": 2
+        },
+        {
+          "id": "camera",
+          "label": "摄像机",
+          "count": 2
+        },
+        {
           "id": "publishing",
           "label": "发行",
           "count": 2
@@ -104,21 +119,6 @@
         {
           "id": "algorithm",
           "label": "算法",
-          "count": 2
-        },
-        {
-          "id": "input",
-          "label": "输入",
-          "count": 2
-        },
-        {
-          "id": "combat",
-          "label": "战斗",
-          "count": 2
-        },
-        {
-          "id": "narrative",
-          "label": "叙事",
           "count": 2
         }
       ]
