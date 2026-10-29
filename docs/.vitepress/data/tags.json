@@ -71,7 +71,7 @@
   },
   "testing": {
     "label": "测试",
-    "count": 24,
+    "count": 25,
     "kind": "keyword"
   },
   "art": {
@@ -99,15 +99,15 @@
     "count": 22,
     "kind": "keyword"
   },
+  "module-notes": {
+    "label": "笔记",
+    "count": 21,
+    "kind": "module"
+  },
   "team": {
     "label": "团队",
     "count": 21,
     "kind": "keyword"
-  },
-  "module-notes": {
-    "label": "笔记",
-    "count": 20,
-    "kind": "module"
   },
   "roguelike": {
     "label": "肉鸽",
@@ -136,7 +136,7 @@
   },
   "psychology": {
     "label": "心理",
-    "count": 16,
+    "count": 17,
     "kind": "keyword"
   },
   "publishing": {
@@ -164,6 +164,11 @@
     "count": 13,
     "kind": "keyword"
   },
+  "input": {
+    "label": "输入",
+    "count": 13,
+    "kind": "keyword"
+  },
   "towerdefense": {
     "label": "塔防",
     "count": 13,
@@ -174,14 +179,14 @@
     "count": 12,
     "kind": "keyword"
   },
-  "input": {
-    "label": "输入",
-    "count": 12,
-    "kind": "keyword"
-  },
   "shader": {
     "label": "Shader",
     "count": 12,
+    "kind": "keyword"
+  },
+  "animation": {
+    "label": "动画",
+    "count": 11,
     "kind": "keyword"
   },
   "pixel": {
@@ -201,11 +206,6 @@
   },
   "debugging": {
     "label": "调试",
-    "count": 10,
-    "kind": "keyword"
-  },
-  "animation": {
-    "label": "动画",
     "count": 10,
     "kind": "keyword"
   },
@@ -249,14 +249,14 @@
     "count": 8,
     "kind": "keyword"
   },
-  "mobile": {
-    "label": "移动端",
+  "camera": {
+    "label": "摄像机",
     "count": 8,
     "kind": "keyword"
   },
-  "camera": {
-    "label": "摄像机",
-    "count": 7,
+  "mobile": {
+    "label": "移动端",
+    "count": 8,
     "kind": "keyword"
   },
   "graphics": {

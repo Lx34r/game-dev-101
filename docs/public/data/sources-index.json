@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-29T19:28:25.099Z",
-  "docs": 208,
+  "generatedAt": "2026-10-29T19:35:40.288Z",
+  "docs": 209,
   "tags": 65,
   "sources": [
     {
@@ -67,7 +67,7 @@
       "id": "notes",
       "name": "GameDev Atlas 笔记",
       "url": "",
-      "pages": 20,
+      "pages": 21,
       "lastSync": "2026-10-29",
       "path": "/notes/",
       "topTags": [
@@ -102,6 +102,11 @@
           "count": 4
         },
         {
+          "id": "camera",
+          "label": "摄像机",
+          "count": 3
+        },
+        {
           "id": "publishing",
           "label": "发行",
           "count": 3
@@ -112,13 +117,8 @@
           "count": 3
         },
         {
-          "id": "narrative",
-          "label": "叙事",
-          "count": 3
-        },
-        {
-          "id": "roguelike",
-          "label": "肉鸽",
+          "id": "input",
+          "label": "输入",
           "count": 3
         }
       ]

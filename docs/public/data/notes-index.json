@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T19:28:25.099Z",
+  "generatedAt": "2026-10-29T19:35:40.288Z",
   "notes": [
     {
       "title": "3D 数学基础：坐标空间、变换与游戏渲染管线",
@@ -432,6 +432,37 @@
         {
           "id": "team",
           "label": "团队"
+        }
+      ]
+    },
+    {
+      "title": "游戏感：虚拟感觉的六个要素",
+      "link": "/notes/game-feel",
+      "description": "从实时控制、模拟空间与润色出发，拆解输入、响应、环境、润色、载体、模拟六要素，给出测量、调参与案例对照。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "input",
+          "label": "输入"
+        },
+        {
+          "id": "animation",
+          "label": "动画"
+        },
+        {
+          "id": "camera",
+          "label": "摄像机"
+        },
+        {
+          "id": "psychology",
+          "label": "心理"
+        },
+        {
+          "id": "testing",
+          "label": "测试"
         }
       ]
     },
