@@ -287,12 +287,13 @@
   width: 100%;
   max-width: 520px;
   margin-left: auto;
-  perspective: 1200px;
 }
 
 .atlas-panel {
   position: relative;
-  height: 470px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   overflow: hidden;
   border: 1px solid var(--home-line);
   border-radius: 26px;
@@ -300,13 +301,21 @@
     radial-gradient(120% 90% at 20% 0%, color-mix(in srgb, var(--home-accent) 9%, transparent), transparent 60%),
     radial-gradient(100% 80% at 100% 100%, color-mix(in srgb, var(--home-accent-2) 10%, transparent), transparent 65%),
     var(--home-card);
+  padding: 16px;
   box-shadow: var(--home-shadow);
-  transform: rotateX(var(--ry, 0deg)) rotateY(var(--rx, 0deg));
-  transition: transform 0.25s ease-out;
   backdrop-filter: blur(14px);
 }
 
-.atlas-panel::before {
+.atlas-map {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  border: 1px solid var(--home-line);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--home-bg) 55%, transparent);
+}
+
+.atlas-map::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -314,17 +323,16 @@
     linear-gradient(var(--home-line) 1px, transparent 1px),
     linear-gradient(90deg, var(--home-line) 1px, transparent 1px);
   background-size: 40px 40px;
-  mask-image: radial-gradient(ellipse 80% 80% at 50% 45%, #000, transparent 85%);
-  opacity: 0.5;
+  mask-image: radial-gradient(ellipse 85% 85% at 50% 45%, #000, transparent 88%);
+  opacity: 0.55;
+  pointer-events: none;
 }
 
 .atlas-head {
-  position: absolute;
-  top: 18px;
-  left: 20px;
-  right: 20px;
+  position: relative;
   display: flex;
   justify-content: space-between;
+  padding: 2px 4px 0;
   color: var(--home-muted);
   font-family: var(--vp-font-family-mono);
   font-size: 10px;
@@ -349,9 +357,9 @@
 
 .atlas-lines {
   position: absolute;
-  inset: 44px 18px 18px;
-  width: calc(100% - 36px);
-  height: calc(100% - 62px);
+  inset: 0;
+  width: 100%;
+  height: 100%;
   fill: none;
   stroke: color-mix(in srgb, var(--home-accent) 38%, transparent);
   stroke-width: 1;
@@ -395,45 +403,38 @@
 }
 
 .node-design {
-  top: 20%;
+  top: 17%;
   left: 7%;
 }
 
 .node-tech {
-  top: 13%;
+  top: 12%;
   right: 7%;
 }
 
 .node-case {
-  top: 45%;
+  top: 52%;
   left: 4%;
 }
 
 .node-art {
-  top: 39%;
+  top: 38%;
   right: 6%;
 }
 
 .node-release {
-  right: 15%;
-  bottom: 42%;
+  right: 14%;
+  bottom: 11%;
 }
 
 .atlas-card {
-  position: absolute;
-  left: 50%;
-  bottom: 22px;
   display: flex;
   flex-direction: column;
-  width: min(330px, 76%);
   border: 1px solid color-mix(in srgb, var(--home-accent) 28%, var(--home-line));
   border-radius: 16px;
   background: color-mix(in srgb, var(--home-card-solid) 86%, transparent);
-  padding: 16px 18px 18px;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
-  transform: translateX(-50%);
+  padding: 14px 16px 16px;
   backdrop-filter: blur(12px);
-  animation: home-float 7s ease-in-out infinite;
 }
 
 .atlas-card-kicker {
@@ -466,36 +467,13 @@
 
 .atlas-coord {
   position: absolute;
-  left: 20px;
-  bottom: 16px;
+  left: 14px;
+  bottom: 12px;
   color: var(--home-muted);
   font-family: var(--vp-font-family-mono);
   font-size: 9px;
   letter-spacing: 0.08em;
   opacity: 0.7;
-}
-
-.atlas-chip {
-  position: absolute;
-  z-index: 2;
-  border: 1px solid var(--home-line);
-  border-radius: 999px;
-  background: var(--home-card-solid);
-  padding: 7px 11px;
-  color: var(--home-fg);
-  font-family: var(--vp-font-family-mono);
-  font-size: 10px;
-  box-shadow: var(--home-shadow);
-}
-
-.chip-docs {
-  top: 38px;
-  right: -18px;
-}
-
-.chip-diagrams {
-  bottom: 96px;
-  left: -26px;
 }
 
 .home-section {
@@ -955,16 +933,6 @@
   }
 }
 
-@keyframes home-float {
-  0%,
-  100% {
-    transform: translate(-50%, 0);
-  }
-  50% {
-    transform: translate(-50%, -7px);
-  }
-}
-
 @keyframes home-drift-a {
   to {
     transform: translate(40px, 30px) scale(1.08);
@@ -1081,18 +1049,8 @@
     max-width: 100%;
   }
 
-  .atlas-panel {
-    height: 390px;
-  }
-
-  .chip-docs {
-    top: 26px;
-    right: -6px;
-  }
-
-  .chip-diagrams {
-    bottom: 72px;
-    left: -6px;
+  .atlas-map {
+    height: 260px;
   }
 
   .node-case,
@@ -1146,15 +1104,10 @@
 
 @media (prefers-reduced-motion: reduce) {
   .orb,
-  .atlas-card,
   .atlas-lines path,
   .live-dot,
   .atlas-live::before {
     animation: none;
-  }
-
-  .atlas-panel {
-    transform: none;
   }
 
   .reveal {

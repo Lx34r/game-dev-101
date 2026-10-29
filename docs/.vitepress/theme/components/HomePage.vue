@@ -130,8 +130,6 @@ function handlePointer(event) {
   const y = event.clientY - rect.top
   element.style.setProperty('--mx', `${x}px`)
   element.style.setProperty('--my', `${y}px`)
-  element.style.setProperty('--rx', `${((x / rect.width) - 0.5) * 6}deg`)
-  element.style.setProperty('--ry', `${((y / rect.height) - 0.5) * -6}deg`)
 }
 
 function openSearch() {
@@ -142,8 +140,8 @@ function openSearch() {
 </script>
 
 <template>
-  <div ref="heroEl" class="home" @pointermove="handlePointer">
-    <section class="home-hero">
+  <div class="home">
+    <section ref="heroEl" class="home-hero" @pointermove="handlePointer">
       <div class="home-hero-bg" aria-hidden="true">
         <span class="orb orb-a"></span>
         <span class="orb orb-b"></span>
@@ -206,26 +204,26 @@ function openSearch() {
               <span>ATLAS / 01</span>
               <span class="atlas-live">LIVE INDEX</span>
             </div>
-            <svg class="atlas-lines" viewBox="0 0 460 420" preserveAspectRatio="none">
-              <path d="M70 300 C140 280 160 220 230 200 S330 140 390 90" />
-              <path d="M90 100 C160 140 210 150 260 190 S340 260 372 320" />
-              <path d="M70 300 C120 330 240 330 300 280 S350 220 390 90" />
-            </svg>
-            <span class="atlas-node node-design"><b>01</b> 设计</span>
-            <span class="atlas-node node-tech"><b>02</b> 技术</span>
-            <span class="atlas-node node-case"><b>03</b> 案例</span>
-            <span class="atlas-node node-art"><b>04</b> 美术</span>
-            <span class="atlas-node node-release"><b>05</b> 发行</span>
+            <div class="atlas-map">
+              <svg class="atlas-lines" viewBox="0 0 460 300" preserveAspectRatio="none">
+                <path d="M70 230 C140 210 160 160 230 150 S330 100 390 60" />
+                <path d="M90 80 C160 110 210 120 260 150 S340 210 372 250" />
+                <path d="M70 230 C120 260 240 260 300 220 S350 170 390 60" />
+              </svg>
+              <span class="atlas-node node-design"><b>01</b> 设计</span>
+              <span class="atlas-node node-tech"><b>02</b> 技术</span>
+              <span class="atlas-node node-case"><b>03</b> 案例</span>
+              <span class="atlas-node node-art"><b>04</b> 美术</span>
+              <span class="atlas-node node-release"><b>05</b> 发行</span>
+              <span class="atlas-coord">X 128.4 / Y 36.2</span>
+            </div>
             <div class="atlas-card">
               <span class="atlas-card-kicker">FEATURED</span>
               <strong>核心数值体系定义手册</strong>
               <span class="atlas-card-meta">DESIGN · 数值 / 经济 / 成长</span>
               <span class="atlas-card-line"></span>
             </div>
-            <span class="atlas-coord">X 128.4 / Y 36.2</span>
           </div>
-          <span class="atlas-chip chip-docs">{{ site.docs }} 篇文章</span>
-          <span class="atlas-chip chip-diagrams">46 张图表</span>
         </div>
       </div>
     </section>
