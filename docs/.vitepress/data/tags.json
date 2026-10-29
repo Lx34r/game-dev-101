@@ -6,7 +6,7 @@
   },
   "performance": {
     "label": "性能",
-    "count": 62,
+    "count": 63,
     "kind": "keyword"
   },
   "unity": {
@@ -29,15 +29,15 @@
     "count": 49,
     "kind": "module"
   },
+  "architecture": {
+    "label": "架构",
+    "count": 40,
+    "kind": "keyword"
+  },
   "module-tech": {
     "label": "技术实现",
     "count": 39,
     "kind": "module"
-  },
-  "architecture": {
-    "label": "架构",
-    "count": 39,
-    "kind": "keyword"
   },
   "module-dev": {
     "label": "开发指南",
@@ -89,6 +89,11 @@
     "count": 24,
     "kind": "keyword"
   },
+  "module-notes": {
+    "label": "笔记",
+    "count": 22,
+    "kind": "module"
+  },
   "defense": {
     "label": "防御",
     "count": 22,
@@ -98,11 +103,6 @@
     "label": "构筑",
     "count": 22,
     "kind": "keyword"
-  },
-  "module-notes": {
-    "label": "笔记",
-    "count": 21,
-    "kind": "module"
   },
   "team": {
     "label": "团队",
@@ -179,6 +179,11 @@
     "count": 12,
     "kind": "keyword"
   },
+  "ai": {
+    "label": "AI",
+    "count": 12,
+    "kind": "keyword"
+  },
   "shader": {
     "label": "Shader",
     "count": 12,
@@ -199,13 +204,13 @@
     "count": 11,
     "kind": "keyword"
   },
-  "ai": {
-    "label": "AI",
-    "count": 11,
-    "kind": "keyword"
-  },
   "debugging": {
     "label": "调试",
+    "count": 10,
+    "kind": "keyword"
+  },
+  "network": {
+    "label": "网络",
     "count": 10,
     "kind": "keyword"
   },
@@ -216,11 +221,6 @@
   },
   "config": {
     "label": "配表",
-    "count": 9,
-    "kind": "keyword"
-  },
-  "network": {
-    "label": "网络",
     "count": 9,
     "kind": "keyword"
   },
@@ -254,14 +254,14 @@
     "count": 8,
     "kind": "keyword"
   },
-  "mobile": {
-    "label": "移动端",
+  "graphics": {
+    "label": "图形",
     "count": 8,
     "kind": "keyword"
   },
-  "graphics": {
-    "label": "图形",
-    "count": 7,
+  "mobile": {
+    "label": "移动端",
+    "count": 8,
     "kind": "keyword"
   },
   "narrative": {

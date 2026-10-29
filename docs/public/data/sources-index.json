@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-29T19:35:40.288Z",
-  "docs": 209,
+  "generatedAt": "2026-10-29T19:58:26.189Z",
+  "docs": 210,
   "tags": 65,
   "sources": [
     {
@@ -67,7 +67,7 @@
       "id": "notes",
       "name": "GameDev Atlas 笔记",
       "url": "",
-      "pages": 21,
+      "pages": 22,
       "lastSync": "2026-10-29",
       "path": "/notes/",
       "topTags": [
@@ -84,12 +84,12 @@
         {
           "id": "architecture",
           "label": "架构",
-          "count": 6
+          "count": 7
         },
         {
           "id": "graphics",
           "label": "图形",
-          "count": 5
+          "count": 6
         },
         {
           "id": "patterns",

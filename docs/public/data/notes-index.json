@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T19:35:40.288Z",
+  "generatedAt": "2026-10-29T19:58:26.189Z",
   "notes": [
     {
       "title": "3D 数学基础：坐标空间、变换与游戏渲染管线",
@@ -370,6 +370,37 @@
         {
           "id": "unity",
           "label": "Unity"
+        }
+      ]
+    },
+    {
+      "title": "游戏编程精粹：六卷精选的十种工程技巧",
+      "link": "/notes/game-programming-gems",
+      "description": "从 Game Programming Gems 1–4、6、8 中提炼十个跨卷主题：数据驱动、性能测量、数值稳定、AI 分层、物理、渲染、网络、音频、工具链与大世界。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "architecture",
+          "label": "架构"
+        },
+        {
+          "id": "graphics",
+          "label": "图形"
+        },
+        {
+          "id": "ai",
+          "label": "AI"
+        },
+        {
+          "id": "network",
+          "label": "网络"
+        },
+        {
+          "id": "performance",
+          "label": "性能"
         }
       ]
     },
