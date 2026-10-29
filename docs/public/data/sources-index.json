@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-29T20:30:01.475Z",
-  "docs": 213,
+  "generatedAt": "2026-10-29T20:43:11.882Z",
+  "docs": 214,
   "tags": 65,
   "sources": [
     {
@@ -67,7 +67,7 @@
       "id": "notes",
       "name": "GameDev Atlas 笔记",
       "url": "",
-      "pages": 25,
+      "pages": 26,
       "lastSync": "2026-10-29",
       "path": "/notes/",
       "topTags": [
@@ -79,7 +79,7 @@
         {
           "id": "team",
           "label": "团队",
-          "count": 10
+          "count": 11
         },
         {
           "id": "architecture",
@@ -92,6 +92,11 @@
           "count": 6
         },
         {
+          "id": "testing",
+          "label": "测试",
+          "count": 5
+        },
+        {
           "id": "patterns",
           "label": "设计模式",
           "count": 5
@@ -100,11 +105,6 @@
           "id": "algorithm",
           "label": "算法",
           "count": 5
-        },
-        {
-          "id": "testing",
-          "label": "测试",
-          "count": 4
         },
         {
           "id": "csharp",

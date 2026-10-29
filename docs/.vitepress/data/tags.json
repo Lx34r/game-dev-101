@@ -59,39 +59,44 @@
     "count": 32,
     "kind": "keyword"
   },
+  "testing": {
+    "label": "测试",
+    "count": 27,
+    "kind": "keyword"
+  },
   "module-case": {
     "label": "案例研究",
     "count": 26,
     "kind": "module"
   },
-  "testing": {
-    "label": "测试",
+  "module-notes": {
+    "label": "笔记",
     "count": 26,
-    "kind": "keyword"
+    "kind": "module"
   },
   "ui": {
     "label": "UI",
     "count": 26,
     "kind": "keyword"
   },
-  "module-notes": {
-    "label": "笔记",
+  "art": {
+    "label": "美术",
     "count": 25,
-    "kind": "module"
+    "kind": "keyword"
   },
   "algorithm": {
     "label": "算法",
     "count": 25,
     "kind": "keyword"
   },
-  "art": {
-    "label": "美术",
-    "count": 24,
-    "kind": "keyword"
-  },
   "math": {
     "label": "数学",
     "count": 24,
+    "kind": "keyword"
+  },
+  "team": {
+    "label": "团队",
+    "count": 23,
     "kind": "keyword"
   },
   "defense": {
@@ -104,14 +109,9 @@
     "count": 22,
     "kind": "keyword"
   },
-  "team": {
-    "label": "团队",
-    "count": 22,
-    "kind": "keyword"
-  },
   "level": {
     "label": "关卡",
-    "count": 19,
+    "count": 20,
     "kind": "keyword"
   },
   "roguelike": {

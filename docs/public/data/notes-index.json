@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T20:30:01.475Z",
+  "generatedAt": "2026-10-29T20:43:11.882Z",
   "notes": [
     {
       "title": "3D 数学基础：坐标空间、变换与游戏渲染管线",
@@ -552,6 +552,33 @@
         {
           "id": "testing",
           "label": "测试"
+        }
+      ]
+    },
+    {
+      "title": "游戏关卡设计：从纸面到可玩空间",
+      "link": "/notes/level-design",
+      "description": "按《游戏关卡设计》的九章流程，梳理定义游戏、挑战设计、头脑风暴、关卡图、白盒、试玩、视觉层与发行。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "level",
+          "label": "关卡"
+        },
+        {
+          "id": "art",
+          "label": "美术"
+        },
+        {
+          "id": "testing",
+          "label": "测试"
+        },
+        {
+          "id": "team",
+          "label": "团队"
         }
       ]
     },
