@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-29T19:21:34.844Z",
-  "docs": 207,
+  "generatedAt": "2026-10-29T19:28:25.099Z",
+  "docs": 208,
   "tags": 65,
   "sources": [
     {
@@ -67,7 +67,7 @@
       "id": "notes",
       "name": "GameDev Atlas 笔记",
       "url": "",
-      "pages": 19,
+      "pages": 20,
       "lastSync": "2026-10-29",
       "path": "/notes/",
       "topTags": [
@@ -79,7 +79,7 @@
         {
           "id": "team",
           "label": "团队",
-          "count": 8
+          "count": 9
         },
         {
           "id": "architecture",
@@ -112,14 +112,14 @@
           "count": 3
         },
         {
-          "id": "roguelike",
-          "label": "肉鸽",
+          "id": "narrative",
+          "label": "叙事",
           "count": 3
         },
         {
-          "id": "math",
-          "label": "数学",
-          "count": 2
+          "id": "roguelike",
+          "label": "肉鸽",
+          "count": 3
         }
       ]
     }

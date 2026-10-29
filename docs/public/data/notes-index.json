@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T19:21:34.844Z",
+  "generatedAt": "2026-10-29T19:28:25.099Z",
   "notes": [
     {
       "title": "3D 数学基础：坐标空间、变换与游戏渲染管线",
@@ -401,6 +401,37 @@
         {
           "id": "ai",
           "label": "AI"
+        }
+      ]
+    },
+    {
+      "title": "游戏改变世界：游戏化如何修复现实",
+      "link": "/notes/games-change-the-world",
+      "description": "按《游戏改变世界》的四部分结构，梳理游戏的定义、四大目标、运作机制与现实价值，并给出游戏化设计的边界与检查清单。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "psychology",
+          "label": "心理"
+        },
+        {
+          "id": "community",
+          "label": "社区"
+        },
+        {
+          "id": "economy",
+          "label": "经济"
+        },
+        {
+          "id": "narrative",
+          "label": "叙事"
+        },
+        {
+          "id": "team",
+          "label": "团队"
         }
       ]
     },
