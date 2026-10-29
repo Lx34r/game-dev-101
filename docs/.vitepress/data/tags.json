@@ -11,7 +11,7 @@
   },
   "unity": {
     "label": "Unity",
-    "count": 55,
+    "count": 56,
     "kind": "keyword"
   },
   "combat": {
@@ -34,15 +34,15 @@
     "count": 39,
     "kind": "module"
   },
+  "architecture": {
+    "label": "架构",
+    "count": 38,
+    "kind": "keyword"
+  },
   "module-dev": {
     "label": "开发指南",
     "count": 38,
     "kind": "module"
-  },
-  "architecture": {
-    "label": "架构",
-    "count": 37,
-    "kind": "keyword"
   },
   "analytics": {
     "label": "数据",
@@ -104,6 +104,11 @@
     "count": 19,
     "kind": "keyword"
   },
+  "team": {
+    "label": "团队",
+    "count": 19,
+    "kind": "keyword"
+  },
   "level": {
     "label": "关卡",
     "count": 18,
@@ -114,10 +119,10 @@
     "count": 18,
     "kind": "keyword"
   },
-  "team": {
-    "label": "团队",
-    "count": 18,
-    "kind": "keyword"
+  "module-notes": {
+    "label": "笔记",
+    "count": 17,
+    "kind": "module"
   },
   "procedural": {
     "label": "程序化",
@@ -128,11 +133,6 @@
     "label": "工具",
     "count": 17,
     "kind": "keyword"
-  },
-  "module-notes": {
-    "label": "笔记",
-    "count": 16,
-    "kind": "module"
   },
   "publishing": {
     "label": "发行",
@@ -294,8 +294,18 @@
     "count": 5,
     "kind": "keyword"
   },
+  "csharp": {
+    "label": "C#",
+    "count": 5,
+    "kind": "keyword"
+  },
   "save": {
     "label": "存档",
+    "count": 4,
+    "kind": "keyword"
+  },
+  "patterns": {
+    "label": "设计模式",
     "count": 4,
     "kind": "keyword"
   },
@@ -309,11 +319,6 @@
     "count": 4,
     "kind": "module"
   },
-  "csharp": {
-    "label": "C#",
-    "count": 4,
-    "kind": "keyword"
-  },
   "ecs": {
     "label": "ECS",
     "count": 4,
@@ -321,11 +326,6 @@
   },
   "retro": {
     "label": "复古",
-    "count": 3,
-    "kind": "keyword"
-  },
-  "patterns": {
-    "label": "设计模式",
     "count": 3,
     "kind": "keyword"
   },

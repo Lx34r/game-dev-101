@@ -253,3 +253,24 @@ body {
   color: var(--vp-c-brand-1);
 }
 
+
+/* 深入设计模式：模式卡片的标题分节 */
+.dive-patterns .vp-doc h3 {
+  margin: 44px 0 18px;
+  padding: 10px 14px;
+  border-left: 3px solid var(--vp-c-brand-1);
+  border-radius: 0 8px 8px 0;
+  background: linear-gradient(90deg, var(--vp-c-brand-soft), transparent 72%);
+}
+
+.dive-patterns .vp-doc h3 + p strong {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .dive-patterns .vp-doc h3 {
+    margin-top: 34px;
+    padding: 8px 12px;
+  }
+}
