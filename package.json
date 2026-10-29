@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "塔防 + Roguelike + 刷宝 游戏开发知识库镜像",
+  "description": "开发知识备忘站",
   "scripts": {
     "sync": "node scripts/sync-docs.mjs",
     "check:links": "node scripts/check-links.mjs",

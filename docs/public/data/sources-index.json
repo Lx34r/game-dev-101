@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-29T16:56:43.802Z",
-  "docs": 197,
-  "tags": 57,
+  "generatedAt": "2026-10-29T17:17:49.145Z",
+  "docs": 198,
+  "tags": 58,
   "sources": [
     {
       "id": "wanyouxi",
@@ -67,19 +67,24 @@
       "id": "notes",
       "name": "GameDev Atlas 笔记",
       "url": "",
-      "pages": 9,
+      "pages": 10,
       "lastSync": "2026-10-29",
       "path": "/notes/",
       "topTags": [
         {
           "id": "unity",
           "label": "Unity",
-          "count": 5
+          "count": 6
         },
         {
           "id": "team",
           "label": "团队",
-          "count": 4
+          "count": 5
+        },
+        {
+          "id": "architecture",
+          "label": "架构",
+          "count": 3
         },
         {
           "id": "roguelike",
@@ -97,8 +102,8 @@
           "count": 2
         },
         {
-          "id": "architecture",
-          "label": "架构",
+          "id": "algorithm",
+          "label": "算法",
           "count": 2
         },
         {
@@ -114,11 +119,6 @@
         {
           "id": "steam",
           "label": "Steam",
-          "count": 1
-        },
-        {
-          "id": "analytics",
-          "label": "数据",
           "count": 1
         }
       ]

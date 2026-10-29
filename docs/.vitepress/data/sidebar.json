@@ -1140,6 +1140,10 @@
           "link": "/notes/steam-publishing-checklist"
         },
         {
+          "text": "设计模式与游戏完美开发：按问题选模式，而不是按目录抄",
+          "link": "/notes/design-patterns-game-dev"
+        },
+        {
           "text": "守望先锋的 ECS 架构与网络代码：从命令帧到命中回溯",
           "link": "/notes/overwatch-ecs-netcode"
         },

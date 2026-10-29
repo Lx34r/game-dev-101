@@ -11,7 +11,7 @@
   },
   "unity": {
     "label": "Unity",
-    "count": 52,
+    "count": 53,
     "kind": "keyword"
   },
   "combat": {
@@ -46,7 +46,7 @@
   },
   "architecture": {
     "label": "架构",
-    "count": 35,
+    "count": 36,
     "kind": "keyword"
   },
   "analytics": {
@@ -96,7 +96,7 @@
   },
   "algorithm": {
     "label": "算法",
-    "count": 21,
+    "count": 22,
     "kind": "keyword"
   },
   "vfx": {
@@ -126,7 +126,7 @@
   },
   "team": {
     "label": "团队",
-    "count": 16,
+    "count": 17,
     "kind": "keyword"
   },
   "module-art": {
@@ -194,6 +194,11 @@
     "count": 11,
     "kind": "keyword"
   },
+  "module-notes": {
+    "label": "笔记",
+    "count": 10,
+    "kind": "module"
+  },
   "debugging": {
     "label": "调试",
     "count": 10,
@@ -203,11 +208,6 @@
     "label": "Steam",
     "count": 10,
     "kind": "keyword"
-  },
-  "module-notes": {
-    "label": "笔记",
-    "count": 9,
-    "kind": "module"
   },
   "aim": {
     "label": "瞄准",
@@ -279,11 +279,6 @@
     "count": 5,
     "kind": "keyword"
   },
-  "ecs": {
-    "label": "ECS",
-    "count": 5,
-    "kind": "keyword"
-  },
   "save": {
     "label": "存档",
     "count": 4,
@@ -309,6 +304,11 @@
     "count": 4,
     "kind": "keyword"
   },
+  "ecs": {
+    "label": "ECS",
+    "count": 4,
+    "kind": "keyword"
+  },
   "module-research": {
     "label": "研究",
     "count": 3,
@@ -321,6 +321,11 @@
   },
   "hotupdate": {
     "label": "热更新",
+    "count": 2,
+    "kind": "keyword"
+  },
+  "patterns": {
+    "label": "设计模式",
     "count": 2,
     "kind": "keyword"
   },

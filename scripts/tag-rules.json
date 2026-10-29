@@ -141,6 +141,16 @@
       ]
     },
     {
+      "id": "patterns",
+      "label": "设计模式",
+      "patterns": [
+        "设计模式",
+        "Design Pattern",
+        "\bGoF\b",
+        "模式化设计"
+      ]
+    },
+    {
       "id": "algorithm",
       "label": "算法",
       "patterns": [

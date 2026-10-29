@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T16:56:43.802Z",
+  "generatedAt": "2026-10-29T17:17:49.145Z",
   "notes": [
     {
       "title": "独立游戏上架 Steam：从 100 美元到商店页的实务清单",
@@ -29,6 +29,37 @@
         {
           "id": "analytics",
           "label": "数据"
+        }
+      ]
+    },
+    {
+      "title": "设计模式与游戏完美开发：按问题选模式，而不是按目录抄",
+      "link": "/notes/design-patterns-game-dev",
+      "description": "把 State、Bridge、Strategy、Command、Observer 等模式放回游戏功能与变化场景中，讨论何时用、何时不用。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "architecture",
+          "label": "架构"
+        },
+        {
+          "id": "patterns",
+          "label": "设计模式"
+        },
+        {
+          "id": "unity",
+          "label": "Unity"
+        },
+        {
+          "id": "algorithm",
+          "label": "算法"
+        },
+        {
+          "id": "team",
+          "label": "团队"
         }
       ]
     },
