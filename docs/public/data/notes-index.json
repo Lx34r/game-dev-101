@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T18:10:01.759Z",
+  "generatedAt": "2026-10-29T18:17:35.098Z",
   "notes": [
     {
       "title": "3D 数学基础：坐标空间、变换与游戏渲染管线",
@@ -91,6 +91,37 @@
         {
           "id": "pixel",
           "label": "像素"
+        }
+      ]
+    },
+    {
+      "title": "家用游戏机简史：平台战争如何改变游戏设计",
+      "link": "/notes/home-console-history",
+      "description": "从 Atari Shock、Famicom 到 CD-ROM 与 3D 时代，梳理硬件、媒介与平台策略如何塑造游戏类型与设计边界。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "retro",
+          "label": "复古"
+        },
+        {
+          "id": "history",
+          "label": "历史"
+        },
+        {
+          "id": "hardware",
+          "label": "硬件"
+        },
+        {
+          "id": "graphics",
+          "label": "图形"
+        },
+        {
+          "id": "publishing",
+          "label": "发行"
         }
       ]
     },

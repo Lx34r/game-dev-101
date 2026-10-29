@@ -1,7 +1,7 @@
 ---
 title: "Git 极客生存指南：从命令行到私有云搭建"
 description: "本文聚焦「Git 极客生存指南：从命令行到私有云搭建」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-guides","art","performance","team","unity","testing"]
+tags: ["module-guides","art","performance","team","unity","history"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Guides/Collaboration/Git_Complete_Guide.md"

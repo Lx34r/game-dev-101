@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T18:10:01.759Z",
+  "generatedAt": "2026-10-29T18:17:35.098Z",
   "sources": [
     {
       "id": "wanyouxi",
@@ -11,13 +11,13 @@
     {
       "id": "notes",
       "name": "GameDev Atlas 笔记",
-      "pages": 14,
+      "pages": 15,
       "failed": 0,
       "url": "/notes/"
     }
   ],
-  "pages": 202,
-  "tags": 75,
+  "pages": 203,
+  "tags": 77,
   "brokenLinks": [
     {
       "from": "Full_Index.md",

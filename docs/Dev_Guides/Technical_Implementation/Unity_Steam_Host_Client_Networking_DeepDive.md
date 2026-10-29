@@ -1,7 +1,7 @@
 ---
 title: "Unity Steam Host+Client 联网游戏深度研究"
 description: "本文专门写给两类人：1）第一次做联网游戏的 Unity 开发者；2）已经有单机项目，准备无损升级到 Steam 联机的团队。核心目标是三件事：框架选型不踩雷、单机到联网思维切换、联网代码可插拔可回退。"
-tags: ["module-dev","network","steam","unity","multiplayer","combat"]
+tags: ["module-dev","network","steam","unity","multiplayer","hardware"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Technical_Implementation/Unity_Steam_Host_Client_Networking_DeepDive.md"

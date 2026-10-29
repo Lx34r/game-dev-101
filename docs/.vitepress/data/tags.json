@@ -16,7 +16,7 @@
   },
   "combat": {
     "label": "战斗",
-    "count": 51,
+    "count": 50,
     "kind": "keyword"
   },
   "numerical": {
@@ -69,11 +69,6 @@
     "count": 26,
     "kind": "keyword"
   },
-  "testing": {
-    "label": "测试",
-    "count": 24,
-    "kind": "keyword"
-  },
   "art": {
     "label": "美术",
     "count": 24,
@@ -82,6 +77,11 @@
   "math": {
     "label": "数学",
     "count": 24,
+    "kind": "keyword"
+  },
+  "testing": {
+    "label": "测试",
+    "count": 23,
     "kind": "keyword"
   },
   "defense": {
@@ -129,6 +129,16 @@
     "count": 17,
     "kind": "keyword"
   },
+  "module-notes": {
+    "label": "笔记",
+    "count": 15,
+    "kind": "module"
+  },
+  "publishing": {
+    "label": "发行",
+    "count": 15,
+    "kind": "keyword"
+  },
   "module-art": {
     "label": "美术",
     "count": 15,
@@ -137,16 +147,6 @@
   "psychology": {
     "label": "心理",
     "count": 15,
-    "kind": "keyword"
-  },
-  "module-notes": {
-    "label": "笔记",
-    "count": 14,
-    "kind": "module"
-  },
-  "publishing": {
-    "label": "发行",
-    "count": 14,
     "kind": "keyword"
   },
   "color": {
@@ -259,6 +259,11 @@
     "count": 7,
     "kind": "keyword"
   },
+  "graphics": {
+    "label": "图形",
+    "count": 6,
+    "kind": "keyword"
+  },
   "narrative": {
     "label": "叙事",
     "count": 6,
@@ -278,11 +283,6 @@
     "label": "规范标准",
     "count": 5,
     "kind": "module"
-  },
-  "graphics": {
-    "label": "图形",
-    "count": 5,
-    "kind": "keyword"
   },
   "ftue": {
     "label": "新手引导",
@@ -319,6 +319,11 @@
     "count": 4,
     "kind": "keyword"
   },
+  "retro": {
+    "label": "复古",
+    "count": 3,
+    "kind": "keyword"
+  },
   "flow": {
     "label": "心流",
     "count": 3,
@@ -334,13 +339,13 @@
     "count": 2,
     "kind": "module"
   },
-  "retro": {
-    "label": "复古",
+  "accessibility": {
+    "label": "可访问性",
     "count": 2,
     "kind": "keyword"
   },
-  "accessibility": {
-    "label": "可访问性",
+  "history": {
+    "label": "历史",
     "count": 2,
     "kind": "keyword"
   },
@@ -351,6 +356,11 @@
   },
   "patterns": {
     "label": "设计模式",
+    "count": 2,
+    "kind": "keyword"
+  },
+  "hardware": {
+    "label": "硬件",
     "count": 2,
     "kind": "keyword"
   },

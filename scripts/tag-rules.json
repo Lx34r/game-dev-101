@@ -120,6 +120,29 @@
       ]
     },
     {
+      "id": "history",
+      "label": "历史",
+      "patterns": [
+        "历史",
+        "History",
+        "简史",
+        "发展史",
+        "代际"
+      ]
+    },
+    {
+      "id": "hardware",
+      "label": "硬件",
+      "patterns": [
+        "硬件",
+        "Hardware",
+        "主机",
+        "Console",
+        "卡带",
+        "光盘"
+      ]
+    },
+    {
       "id": "pixel",
       "label": "像素",
       "patterns": [
