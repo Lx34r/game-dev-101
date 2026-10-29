@@ -11,7 +11,7 @@
   },
   "unity": {
     "label": "Unity",
-    "count": 56,
+    "count": 57,
     "kind": "keyword"
   },
   "combat": {
@@ -86,7 +86,7 @@
   },
   "algorithm": {
     "label": "算法",
-    "count": 23,
+    "count": 24,
     "kind": "keyword"
   },
   "defense": {
@@ -104,15 +104,15 @@
     "count": 20,
     "kind": "keyword"
   },
+  "module-notes": {
+    "label": "笔记",
+    "count": 19,
+    "kind": "module"
+  },
   "roguelike": {
     "label": "肉鸽",
     "count": 19,
     "kind": "keyword"
-  },
-  "module-notes": {
-    "label": "笔记",
-    "count": 18,
-    "kind": "module"
   },
   "level": {
     "label": "关卡",
@@ -194,6 +194,11 @@
     "count": 11,
     "kind": "keyword"
   },
+  "ai": {
+    "label": "AI",
+    "count": 11,
+    "kind": "keyword"
+  },
   "debugging": {
     "label": "调试",
     "count": 10,
@@ -201,11 +206,6 @@
   },
   "animation": {
     "label": "动画",
-    "count": 10,
-    "kind": "keyword"
-  },
-  "ai": {
-    "label": "AI",
     "count": 10,
     "kind": "keyword"
   },
@@ -261,7 +261,12 @@
   },
   "graphics": {
     "label": "图形",
-    "count": 6,
+    "count": 7,
+    "kind": "keyword"
+  },
+  "csharp": {
+    "label": "C#",
+    "count": 7,
     "kind": "keyword"
   },
   "narrative": {
@@ -273,11 +278,6 @@
     "label": "音频",
     "count": 6,
     "kind": "module"
-  },
-  "csharp": {
-    "label": "C#",
-    "count": 6,
-    "kind": "keyword"
   },
   "liveops": {
     "label": "LiveOps",

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-29T19:09:54.955Z",
-  "docs": 206,
+  "generatedAt": "2026-10-29T19:21:34.844Z",
+  "docs": 207,
   "tags": 65,
   "sources": [
     {
@@ -67,14 +67,14 @@
       "id": "notes",
       "name": "GameDev Atlas 笔记",
       "url": "",
-      "pages": 18,
+      "pages": 19,
       "lastSync": "2026-10-29",
       "path": "/notes/",
       "topTags": [
         {
           "id": "unity",
           "label": "Unity",
-          "count": 9
+          "count": 10
         },
         {
           "id": "team",
@@ -89,11 +89,16 @@
         {
           "id": "graphics",
           "label": "图形",
-          "count": 4
+          "count": 5
         },
         {
           "id": "patterns",
           "label": "设计模式",
+          "count": 4
+        },
+        {
+          "id": "algorithm",
+          "label": "算法",
           "count": 4
         },
         {
@@ -102,8 +107,8 @@
           "count": 3
         },
         {
-          "id": "algorithm",
-          "label": "算法",
+          "id": "csharp",
+          "label": "C#",
           "count": 3
         },
         {
@@ -114,11 +119,6 @@
         {
           "id": "math",
           "label": "数学",
-          "count": 2
-        },
-        {
-          "id": "rotation",
-          "label": "旋转",
           "count": 2
         }
       ]
