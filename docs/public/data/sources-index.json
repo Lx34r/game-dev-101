@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-29T20:43:11.882Z",
-  "docs": 214,
+  "generatedAt": "2026-10-29T21:00:12.115Z",
+  "docs": 215,
   "tags": 65,
   "sources": [
     {
@@ -67,14 +67,14 @@
       "id": "notes",
       "name": "GameDev Atlas 笔记",
       "url": "",
-      "pages": 26,
+      "pages": 27,
       "lastSync": "2026-10-29",
       "path": "/notes/",
       "topTags": [
         {
           "id": "unity",
           "label": "Unity",
-          "count": 11
+          "count": 12
         },
         {
           "id": "team",
@@ -84,7 +84,7 @@
         {
           "id": "architecture",
           "label": "架构",
-          "count": 8
+          "count": 9
         },
         {
           "id": "graphics",
@@ -92,13 +92,13 @@
           "count": 6
         },
         {
-          "id": "testing",
-          "label": "测试",
-          "count": 5
-        },
-        {
           "id": "patterns",
           "label": "设计模式",
+          "count": 6
+        },
+        {
+          "id": "testing",
+          "label": "测试",
           "count": 5
         },
         {
@@ -109,7 +109,7 @@
         {
           "id": "csharp",
           "label": "C#",
-          "count": 4
+          "count": 5
         },
         {
           "id": "psychology",
@@ -117,9 +117,9 @@
           "count": 4
         },
         {
-          "id": "camera",
-          "label": "摄像机",
-          "count": 3
+          "id": "performance",
+          "label": "性能",
+          "count": 4
         }
       ]
     }

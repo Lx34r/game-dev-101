@@ -255,7 +255,7 @@ body {
 
 
 /* 深入设计模式：模式卡片的标题分节 */
-:is(.dive-patterns, .refactor-patterns, .game-algorithms, .game-world, .game-feel, .game-gems, .game-ai, .game-mechanics, .mythical-man-month, .level-design) .vp-doc h3 {
+:is(.dive-patterns, .refactor-patterns, .game-algorithms, .game-world, .game-feel, .game-gems, .game-ai, .game-mechanics, .mythical-man-month, .level-design, .game-programming-patterns) .vp-doc h3 {
   margin: 44px 0 18px;
   padding: 10px 14px;
   border-left: 3px solid var(--vp-c-brand-1);
@@ -263,13 +263,13 @@ body {
   background: linear-gradient(90deg, var(--vp-c-brand-soft), transparent 72%);
 }
 
-:is(.dive-patterns, .refactor-patterns, .game-algorithms, .game-world, .game-feel, .game-gems, .game-ai, .game-mechanics, .mythical-man-month, .level-design) .vp-doc h3 + p strong {
+:is(.dive-patterns, .refactor-patterns, .game-algorithms, .game-world, .game-feel, .game-gems, .game-ai, .game-mechanics, .mythical-man-month, .level-design, .game-programming-patterns) .vp-doc h3 + p strong {
   color: var(--vp-c-brand-1);
   font-weight: 600;
 }
 
 @media (max-width: 640px) {
-  :is(.dive-patterns, .refactor-patterns, .game-algorithms, .game-world, .game-feel, .game-gems, .game-ai, .game-mechanics, .mythical-man-month, .level-design) .vp-doc h3 {
+  :is(.dive-patterns, .refactor-patterns, .game-algorithms, .game-world, .game-feel, .game-gems, .game-ai, .game-mechanics, .mythical-man-month, .level-design, .game-programming-patterns) .vp-doc h3 {
     margin-top: 34px;
     padding: 8px 12px;
   }

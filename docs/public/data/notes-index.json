@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T20:43:11.882Z",
+  "generatedAt": "2026-10-29T21:00:12.115Z",
   "notes": [
     {
       "title": "3D 数学基础：坐标空间、变换与游戏渲染管线",
@@ -459,6 +459,37 @@
         {
           "id": "performance",
           "label": "性能"
+        }
+      ]
+    },
+    {
+      "title": "游戏编程模式：19 个模式的取舍",
+      "link": "/notes/game-programming-patterns",
+      "description": "按《游戏编程模式》的五部分结构，梳理命令、享元、观察者、游戏循环、组件、事件队列、对象池、数据局部性等 19 个模式的意图、代码与代价。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "patterns",
+          "label": "设计模式"
+        },
+        {
+          "id": "architecture",
+          "label": "架构"
+        },
+        {
+          "id": "performance",
+          "label": "性能"
+        },
+        {
+          "id": "unity",
+          "label": "Unity"
+        },
+        {
+          "id": "csharp",
+          "label": "C#"
         }
       ]
     },

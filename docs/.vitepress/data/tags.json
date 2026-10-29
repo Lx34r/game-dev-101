@@ -6,12 +6,12 @@
   },
   "performance": {
     "label": "性能",
-    "count": 64,
+    "count": 65,
     "kind": "keyword"
   },
   "unity": {
     "label": "Unity",
-    "count": 58,
+    "count": 59,
     "kind": "keyword"
   },
   "combat": {
@@ -31,7 +31,7 @@
   },
   "architecture": {
     "label": "架构",
-    "count": 41,
+    "count": 42,
     "kind": "keyword"
   },
   "module-tech": {
@@ -59,6 +59,11 @@
     "count": 32,
     "kind": "keyword"
   },
+  "module-notes": {
+    "label": "笔记",
+    "count": 27,
+    "kind": "module"
+  },
   "testing": {
     "label": "测试",
     "count": 27,
@@ -66,11 +71,6 @@
   },
   "module-case": {
     "label": "案例研究",
-    "count": 26,
-    "kind": "module"
-  },
-  "module-notes": {
-    "label": "笔记",
     "count": 26,
     "kind": "module"
   },
@@ -224,6 +224,11 @@
     "count": 9,
     "kind": "keyword"
   },
+  "csharp": {
+    "label": "C#",
+    "count": 9,
+    "kind": "keyword"
+  },
   "steam": {
     "label": "Steam",
     "count": 9,
@@ -264,19 +269,14 @@
     "count": 8,
     "kind": "keyword"
   },
-  "csharp": {
-    "label": "C#",
-    "count": 8,
+  "patterns": {
+    "label": "设计模式",
+    "count": 7,
     "kind": "keyword"
   },
   "narrative": {
     "label": "叙事",
     "count": 7,
-    "kind": "keyword"
-  },
-  "patterns": {
-    "label": "设计模式",
-    "count": 6,
     "kind": "keyword"
   },
   "module-audio": {

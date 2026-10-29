@@ -1196,6 +1196,10 @@
           "link": "/notes/game-programming-gems"
         },
         {
+          "text": "游戏编程模式：19 个模式的取舍",
+          "link": "/notes/game-programming-patterns"
+        },
+        {
           "text": "游戏编程算法与技巧：核心系统地图",
           "link": "/notes/game-programming-algorithms"
         },
