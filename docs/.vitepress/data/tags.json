@@ -46,7 +46,7 @@
   },
   "architecture": {
     "label": "架构",
-    "count": 36,
+    "count": 37,
     "kind": "keyword"
   },
   "analytics": {
@@ -159,6 +159,11 @@
     "count": 12,
     "kind": "keyword"
   },
+  "input": {
+    "label": "输入",
+    "count": 12,
+    "kind": "keyword"
+  },
   "team": {
     "label": "团队",
     "count": 12,
@@ -174,8 +179,8 @@
     "count": 11,
     "kind": "keyword"
   },
-  "input": {
-    "label": "输入",
+  "network": {
+    "label": "网络",
     "count": 11,
     "kind": "keyword"
   },
@@ -191,11 +196,6 @@
   },
   "retention": {
     "label": "留存",
-    "count": 10,
-    "kind": "keyword"
-  },
-  "network": {
-    "label": "网络",
     "count": 10,
     "kind": "keyword"
   },
@@ -221,7 +221,7 @@
   },
   "multiplayer": {
     "label": "多人",
-    "count": 7,
+    "count": 8,
     "kind": "keyword"
   },
   "camera": {
@@ -259,10 +259,20 @@
     "count": 5,
     "kind": "keyword"
   },
+  "ecs": {
+    "label": "ECS",
+    "count": 5,
+    "kind": "keyword"
+  },
   "liveops": {
     "label": "LiveOps",
     "count": 5,
     "kind": "keyword"
+  },
+  "module-notes": {
+    "label": "笔记",
+    "count": 4,
+    "kind": "module"
   },
   "hotupdate": {
     "label": "热更新",
@@ -288,16 +298,6 @@
     "label": "C#",
     "count": 4,
     "kind": "keyword"
-  },
-  "ecs": {
-    "label": "ECS",
-    "count": 4,
-    "kind": "keyword"
-  },
-  "module-notes": {
-    "label": "笔记",
-    "count": 3,
-    "kind": "module"
   },
   "module-research": {
     "label": "研究",

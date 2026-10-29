@@ -1,6 +1,37 @@
 {
-  "generatedAt": "2026-10-29T13:07:39.056Z",
+  "generatedAt": "2026-10-29T13:28:53.154Z",
   "notes": [
+    {
+      "title": "守望先锋的 ECS 架构与网络代码：从命令帧到命中回溯",
+      "link": "/notes/overwatch-ecs-netcode",
+      "description": "拆解守望先锋的 ECS 设计、固定命令帧、客户端预测回滚、命中重演与延迟处理，并给出可落地的 C# 结构。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "architecture",
+          "label": "架构"
+        },
+        {
+          "id": "network",
+          "label": "网络"
+        },
+        {
+          "id": "ecs",
+          "label": "ECS"
+        },
+        {
+          "id": "multiplayer",
+          "label": "多人"
+        },
+        {
+          "id": "input",
+          "label": "输入"
+        }
+      ]
+    },
     {
       "title": "双摇杆射击的辅助瞄准：从死区到自动瞄准",
       "link": "/notes/dual-stick-aim-assist",

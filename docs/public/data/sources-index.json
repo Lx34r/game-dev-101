@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-29T13:07:39.056Z",
-  "docs": 191,
+  "generatedAt": "2026-10-29T13:28:53.154Z",
+  "docs": 192,
   "tags": 53,
   "sources": [
     {
@@ -67,7 +67,7 @@
       "id": "notes",
       "name": "GameDev Atlas 笔记",
       "url": "",
-      "pages": 3,
+      "pages": 4,
       "lastSync": "2026-10-29",
       "path": "/notes/",
       "topTags": [
@@ -75,6 +75,11 @@
           "id": "unity",
           "label": "Unity",
           "count": 3
+        },
+        {
+          "id": "input",
+          "label": "输入",
+          "count": 2
         },
         {
           "id": "combat",
@@ -87,8 +92,23 @@
           "count": 2
         },
         {
-          "id": "input",
-          "label": "输入",
+          "id": "architecture",
+          "label": "架构",
+          "count": 1
+        },
+        {
+          "id": "network",
+          "label": "网络",
+          "count": 1
+        },
+        {
+          "id": "ecs",
+          "label": "ECS",
+          "count": 1
+        },
+        {
+          "id": "multiplayer",
+          "label": "多人",
           "count": 1
         },
         {
@@ -99,26 +119,6 @@
         {
           "id": "camera",
           "label": "摄像机",
-          "count": 1
-        },
-        {
-          "id": "procedural",
-          "label": "程序化",
-          "count": 1
-        },
-        {
-          "id": "level",
-          "label": "关卡",
-          "count": 1
-        },
-        {
-          "id": "algorithm",
-          "label": "算法",
-          "count": 1
-        },
-        {
-          "id": "numerical",
-          "label": "数值",
           "count": 1
         }
       ]
