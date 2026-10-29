@@ -1,7 +1,7 @@
 ---
 title: "性能预算与优化标准"
 description: "本文聚焦「性能预算与优化标准」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-tech","memory","performance","analytics","rendering","vfx"]
+tags: ["module-tech","memory","performance","pixel","analytics","rendering"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Performance_Budget.md"

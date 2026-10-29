@@ -1,7 +1,7 @@
 ---
 title: "特效优化黑魔法"
 description: "本文聚焦「特效优化黑魔法」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-art","vfx","performance","shader","rendering","mobile"]
+tags: ["module-art","vfx","performance","shader","pixel","rendering"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Art/VFX/VFX_Optimization_Guide.md"

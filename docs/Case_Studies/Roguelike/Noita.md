@@ -1,7 +1,7 @@
 ---
 title: "《Noita》核心设计知识图谱"
 description: "本文档拆解《诺伊塔》的**法术模块化系统**、**像素级物理模拟**和**涌现式玩法**。"
-tags: ["module-case","build","combat","community","numerical","skill"]
+tags: ["module-case","build","pixel","combat","community","numerical"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Case_Studies/Roguelike/Noita.md"

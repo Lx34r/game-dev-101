@@ -44,19 +44,19 @@
     "count": 36,
     "kind": "keyword"
   },
-  "skill": {
-    "label": "技能",
-    "count": 35,
-    "kind": "keyword"
-  },
   "analytics": {
     "label": "数据",
     "count": 35,
     "kind": "keyword"
   },
+  "skill": {
+    "label": "技能",
+    "count": 34,
+    "kind": "keyword"
+  },
   "loot": {
     "label": "掉落",
-    "count": 33,
+    "count": 32,
     "kind": "keyword"
   },
   "module-case": {
@@ -74,14 +74,14 @@
     "count": 24,
     "kind": "keyword"
   },
-  "math": {
-    "label": "数学",
+  "art": {
+    "label": "美术",
     "count": 24,
     "kind": "keyword"
   },
-  "art": {
-    "label": "美术",
-    "count": 23,
+  "math": {
+    "label": "数学",
+    "count": 24,
     "kind": "keyword"
   },
   "defense": {
@@ -99,19 +99,9 @@
     "count": 22,
     "kind": "keyword"
   },
-  "vfx": {
-    "label": "特效",
-    "count": 20,
-    "kind": "keyword"
-  },
   "roguelike": {
     "label": "肉鸽",
     "count": 19,
-    "kind": "keyword"
-  },
-  "tooling": {
-    "label": "工具",
-    "count": 18,
     "kind": "keyword"
   },
   "level": {
@@ -119,8 +109,18 @@
     "count": 18,
     "kind": "keyword"
   },
+  "vfx": {
+    "label": "特效",
+    "count": 18,
+    "kind": "keyword"
+  },
   "procedural": {
     "label": "程序化",
+    "count": 17,
+    "kind": "keyword"
+  },
+  "tooling": {
+    "label": "工具",
     "count": 17,
     "kind": "keyword"
   },
@@ -139,8 +139,18 @@
     "count": 15,
     "kind": "keyword"
   },
+  "module-notes": {
+    "label": "笔记",
+    "count": 14,
+    "kind": "module"
+  },
   "publishing": {
     "label": "发行",
+    "count": 14,
+    "kind": "keyword"
+  },
+  "color": {
+    "label": "配色",
     "count": 14,
     "kind": "keyword"
   },
@@ -149,18 +159,8 @@
     "count": 14,
     "kind": "keyword"
   },
-  "module-notes": {
-    "label": "笔记",
-    "count": 13,
-    "kind": "module"
-  },
   "memory": {
     "label": "内存",
-    "count": 13,
-    "kind": "keyword"
-  },
-  "color": {
-    "label": "配色",
     "count": 13,
     "kind": "keyword"
   },
@@ -179,18 +179,13 @@
     "count": 12,
     "kind": "keyword"
   },
-  "animation": {
-    "label": "动画",
-    "count": 11,
-    "kind": "keyword"
-  },
   "economy": {
     "label": "经济",
     "count": 11,
     "kind": "keyword"
   },
-  "network": {
-    "label": "网络",
+  "pixel": {
+    "label": "像素",
     "count": 11,
     "kind": "keyword"
   },
@@ -199,13 +194,18 @@
     "count": 11,
     "kind": "keyword"
   },
-  "ai": {
-    "label": "AI",
-    "count": 11,
-    "kind": "keyword"
-  },
   "debugging": {
     "label": "调试",
+    "count": 10,
+    "kind": "keyword"
+  },
+  "animation": {
+    "label": "动画",
+    "count": 10,
+    "kind": "keyword"
+  },
+  "ai": {
+    "label": "AI",
     "count": 10,
     "kind": "keyword"
   },
@@ -219,8 +219,8 @@
     "count": 9,
     "kind": "keyword"
   },
-  "mobile": {
-    "label": "移动端",
+  "network": {
+    "label": "网络",
     "count": 9,
     "kind": "keyword"
   },
@@ -244,6 +244,11 @@
     "count": 8,
     "kind": "keyword"
   },
+  "mobile": {
+    "label": "移动端",
+    "count": 8,
+    "kind": "keyword"
+  },
   "community": {
     "label": "社区",
     "count": 7,
@@ -256,11 +261,6 @@
   },
   "narrative": {
     "label": "叙事",
-    "count": 6,
-    "kind": "keyword"
-  },
-  "rotation": {
-    "label": "旋转",
     "count": 6,
     "kind": "keyword"
   },
@@ -279,18 +279,23 @@
     "count": 5,
     "kind": "module"
   },
+  "graphics": {
+    "label": "图形",
+    "count": 5,
+    "kind": "keyword"
+  },
   "ftue": {
     "label": "新手引导",
     "count": 5,
     "kind": "keyword"
   },
-  "save": {
-    "label": "存档",
-    "count": 4,
+  "rotation": {
+    "label": "旋转",
+    "count": 5,
     "kind": "keyword"
   },
-  "graphics": {
-    "label": "图形",
+  "save": {
+    "label": "存档",
     "count": 4,
     "kind": "keyword"
   },
@@ -328,6 +333,11 @@
     "label": "发行指南",
     "count": 2,
     "kind": "module"
+  },
+  "retro": {
+    "label": "复古",
+    "count": 2,
+    "kind": "keyword"
   },
   "accessibility": {
     "label": "可访问性",

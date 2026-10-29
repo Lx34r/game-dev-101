@@ -1,7 +1,7 @@
 ---
 title: "关卡生成算法(PCG)"
 description: "本文聚焦「关卡生成算法(PCG)」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-tech","procedural","algorithm","level","performance","rotation"]
+tags: ["module-tech","procedural","algorithm","level","pixel","performance"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Algorithms/Procedural_Generation_Complete.md"

@@ -107,6 +107,30 @@
       ]
     },
     {
+      "id": "retro",
+      "label": "复古",
+      "patterns": [
+        "复古",
+        "Retro",
+        "红白机",
+        "Famicom",
+        "\bNES\b",
+        "8-bit",
+        "8 位"
+      ]
+    },
+    {
+      "id": "pixel",
+      "label": "像素",
+      "patterns": [
+        "像素",
+        "Pixel",
+        "Sprite",
+        "Tile",
+        "瓦片"
+      ]
+    },
+    {
       "id": "performance",
       "label": "性能",
       "patterns": [

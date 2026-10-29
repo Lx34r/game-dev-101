@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T17:57:48.667Z",
+  "generatedAt": "2026-10-29T18:10:01.759Z",
   "notes": [
     {
       "title": "3D 数学基础：坐标空间、变换与游戏渲染管线",
@@ -60,6 +60,37 @@
         {
           "id": "analytics",
           "label": "数据"
+        }
+      ]
+    },
+    {
+      "title": "红白机视觉史：硬件预算如何塑造像素美学",
+      "link": "/notes/nes-visual-history",
+      "description": "从 NES/Famicom 的分辨率、调色板、Tile 与 Sprite 预算出发，解释 8 位视觉风格为何成立，以及现代像素游戏的借鉴方式。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "art",
+          "label": "美术"
+        },
+        {
+          "id": "graphics",
+          "label": "图形"
+        },
+        {
+          "id": "color",
+          "label": "配色"
+        },
+        {
+          "id": "retro",
+          "label": "复古"
+        },
+        {
+          "id": "pixel",
+          "label": "像素"
         }
       ]
     },

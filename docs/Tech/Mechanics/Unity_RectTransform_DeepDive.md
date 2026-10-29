@@ -1,7 +1,7 @@
 ---
 title: "Unity RectTransform 深度解析"
 description: "本文聚焦「Unity RectTransform 深度解析」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-tech","ui","unity","performance","camera","network"]
+tags: ["module-tech","ui","unity","performance","camera","pixel"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Mechanics/Unity_RectTransform_DeepDive.md"
