@@ -1,0 +1,22 @@
+{
+  "name": "game-dev-101",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "塔防 + Roguelike + 刷宝 游戏开发知识库镜像",
+  "scripts": {
+    "sync": "node scripts/sync-docs.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "check:content": "node scripts/check-content.mjs",
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "markdown-it-mathjax3": "^4.3.2",
+    "mermaid": "^11.17.2",
+    "vitepress": "1.6.4",
+    "vitepress-plugin-mermaid": "^2.0.17",
+    "vue": "^3.5.44"
+  }
+}

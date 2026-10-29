@@ -1,0 +1,72 @@
+[
+  {
+    "dir": "Design",
+    "label": "游戏设计",
+    "emoji": "🎮",
+    "count": 49,
+    "link": "/Design/"
+  },
+  {
+    "dir": "Tech",
+    "label": "技术实现",
+    "emoji": "🖥️",
+    "count": 39,
+    "link": "/Tech/"
+  },
+  {
+    "dir": "Case_Studies",
+    "label": "案例研究",
+    "emoji": "📖",
+    "count": 26,
+    "link": "/Case_Studies/"
+  },
+  {
+    "dir": "Dev_Guides",
+    "label": "开发指南",
+    "emoji": "🛠️",
+    "count": 38,
+    "link": "/Dev_Guides/"
+  },
+  {
+    "dir": "Art",
+    "label": "美术",
+    "emoji": "🎨",
+    "count": 15,
+    "link": "/Art/"
+  },
+  {
+    "dir": "Audio",
+    "label": "音频",
+    "emoji": "🎵",
+    "count": 6,
+    "link": "/Audio/"
+  },
+  {
+    "dir": "Unity_Standards",
+    "label": "规范标准",
+    "emoji": "📋",
+    "count": 5,
+    "link": "/Unity_Standards/"
+  },
+  {
+    "dir": "Guides",
+    "label": "发行指南",
+    "emoji": "🚀",
+    "count": 2,
+    "link": "/Guides/"
+  },
+  {
+    "dir": "Research",
+    "label": "研究",
+    "emoji": "🧪",
+    "count": 3,
+    "link": "/Research/"
+  },
+  {
+    "dir": "Tools",
+    "label": "工具",
+    "emoji": "🧰",
+    "count": 1,
+    "link": "/Tools/"
+  }
+]

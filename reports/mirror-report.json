@@ -1,0 +1,111 @@
+{
+  "generatedAt": "2026-10-29T09:23:35.583Z",
+  "origin": "https://docs.wanyouxi.online",
+  "pages": 188,
+  "brokenLinks": [
+    {
+      "from": "Full_Index.md",
+      "target": "portal.html"
+    },
+    {
+      "from": "Research/Research_TODO.md",
+      "target": "../Tech/Algorithms/Procedural_Generation_Guide.md",
+      "resolved": "Tech/Algorithms/Procedural_Generation_Guide.md"
+    },
+    {
+      "from": "Tools/Odin_Inspector_Complete.md",
+      "target": "Odin_Luban_Integration_Guide.md",
+      "resolved": "Tools/Odin_Luban_Integration_Guide.md"
+    }
+  ],
+  "remappedLinks": [
+    {
+      "from": "Art/Tech_Art/Asset_Validation_Standards.md",
+      "target": "../Tech/Mobile_Optimization_Guide.md",
+      "resolved": "Tech/Performance/Mobile_Optimization_Complete.md"
+    },
+    {
+      "from": "Design/Content/Level_Design_Guide.md",
+      "target": "https://docs.wanyouxi.online/docs/Design/Content/Level_Design_Theory",
+      "resolved": "Design/Content/Level_Design_Guide.md"
+    },
+    {
+      "from": "Dev_Guides/Art_Pipeline/Indie_Team_Art_Strategy.md",
+      "target": "../Technical_Implementation/Procedural_Generation_WFC.md",
+      "resolved": "Tech/Algorithms/Procedural_Generation_Complete.md"
+    },
+    {
+      "from": "NAVIGATION.md",
+      "target": "Tech/Architecture/ECS_Theory_And_Practice",
+      "resolved": "Tech/Architecture/ECS_Complete_Guide.md"
+    },
+    {
+      "from": "NAVIGATION.md",
+      "target": "Dev_Guides/Publishing/Steam_Strategy",
+      "resolved": "Guides/Publishing/Steam_Complete_Guide.md"
+    },
+    {
+      "from": "NAVIGATION.md",
+      "target": "Dev_Guides/Publishing/Steam_Unity_Quality_Standards",
+      "resolved": "Dev_Guides/Publishing/Steam_Unity_Functionality_Floor_Ceiling_KB.md"
+    },
+    {
+      "from": "NAVIGATION.md",
+      "target": "Dev_Guides/Technical_Implementation/ECS_Performance_Optimization",
+      "resolved": "Tech/Architecture/ECS_Complete_Guide.md"
+    },
+    {
+      "from": "NAVIGATION.md",
+      "target": "Tech/Mobile_Optimization_Guide",
+      "resolved": "Tech/Performance/Mobile_Optimization_Complete.md"
+    },
+    {
+      "from": "START_HERE.md",
+      "target": "Dev_Guides/Collaboration/Git_Commit_Standards",
+      "resolved": "Guides/Collaboration/Git_Complete_Guide.md"
+    },
+    {
+      "from": "Tech/Mechanics/Targeting_System_Complete.md",
+      "target": "../Architecture/Unified_Decision_System.md",
+      "resolved": "Tech/Architecture/Decision_System.md"
+    }
+  ],
+  "degradedLinks": [
+    {
+      "from": "Full_Index.md",
+      "target": "portal.html"
+    },
+    {
+      "from": "Research/Research_TODO.md",
+      "target": "../Tech/Algorithms/Procedural_Generation_Guide.md",
+      "resolved": "Tech/Algorithms/Procedural_Generation_Guide.md"
+    },
+    {
+      "from": "Tools/Odin_Inspector_Complete.md",
+      "target": "Odin_Luban_Integration_Guide.md",
+      "resolved": "Tools/Odin_Luban_Integration_Guide.md"
+    }
+  ],
+  "images": [
+    {
+      "from": "Dev_Guides/Art_Pipeline/Indie_Team_Art_Strategy.md",
+      "url": "https://mintcdn.com/person-d58caa4b/pN3tnTK5uWHOdcsO/docs/Dev_Guides/Art_Pipeline/uploaded_image_1764749419457.png?fit=max&auto=format&n=pN3tnTK5uWHOdcsO&q=85&s=6e063924ca7c0a51cbe90947412490f5",
+      "file": "9abc975e01ec.png"
+    },
+    {
+      "from": "Tech/Optimization/Unity_Advanced_CSharp_Performance.md",
+      "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230623123101/Stack-vs-Heap-Memory-Allocation.png",
+      "file": "stack-vs-heap-memory.svg"
+    }
+  ],
+  "skippedTargets": [
+    {
+      "rel": "Tools/Odin_Luban_Integration_Guide.md",
+      "status": 404
+    },
+    {
+      "rel": "Tech/Algorithms/Procedural_Generation_Guide.md",
+      "status": 404
+    }
+  ]
+}

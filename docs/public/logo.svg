@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="游戏开发 101">
+  <rect width="64" height="64" rx="14" fill="#16a34a"/>
+  <path d="M16 18h22a10 10 0 0 1 10 10v18H26a10 10 0 0 1-10-10V18z" fill="#0b0c0e"/>
+  <text x="33" y="41" font-family="Inter, 'Segoe UI', sans-serif" font-size="19" font-weight="700" fill="#4ade80" text-anchor="middle">101</text>
+</svg>

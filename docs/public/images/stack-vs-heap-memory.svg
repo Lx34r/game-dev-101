@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" role="img" aria-label="Stack 栈与 Heap 堆的内存分配对比">
+  <rect width="900" height="400" rx="16" fill="#0f1113"/>
+  <text x="40" y="48" fill="#e8eaec" font-family="Inter, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="22" font-weight="700">Stack 栈 vs Heap 堆</text>
+  <text x="40" y="76" fill="#a7adb4" font-family="Inter, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14">值类型与方法调用帧在栈上连续分配；引用类型对象在堆上由 GC 管理。</text>
+
+  <g>
+    <rect x="40" y="104" width="360" height="256" rx="12" fill="#121416" stroke="#24282c"/>
+    <text x="60" y="136" fill="#4ade80" font-family="Inter, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" font-weight="700">Stack 栈</text>
+    <rect x="60" y="156" width="320" height="44" rx="8" fill="#16a34a" fill-opacity="0.16" stroke="#22c55e"/>
+    <text x="76" y="184" fill="#e8eaec" font-family="'JetBrains Mono', Consolas, monospace" font-size="14">int hp = 120</text>
+    <rect x="60" y="208" width="320" height="44" rx="8" fill="#16a34a" fill-opacity="0.16" stroke="#22c55e"/>
+    <text x="76" y="236" fill="#e8eaec" font-family="'JetBrains Mono', Consolas, monospace" font-size="14">Vector3 position</text>
+    <rect x="60" y="260" width="320" height="44" rx="8" fill="#16a34a" fill-opacity="0.16" stroke="#22c55e"/>
+    <text x="76" y="288" fill="#e8eaec" font-family="'JetBrains Mono', Consolas, monospace" font-size="14">float damage</text>
+    <text x="60" y="336" fill="#a7adb4" font-family="Inter, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="13">LIFO · 随调用帧自动回收 · 容量小</text>
+  </g>
+
+  <g>
+    <rect x="500" y="104" width="360" height="256" rx="12" fill="#121416" stroke="#24282c"/>
+    <text x="520" y="136" fill="#22d3ee" font-family="Inter, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" font-weight="700">Heap 堆</text>
+    <rect x="520" y="156" width="150" height="44" rx="8" fill="#22d3ee" fill-opacity="0.12" stroke="#22d3ee"/>
+    <text x="536" y="184" fill="#e8eaec" font-family="'JetBrains Mono', Consolas, monospace" font-size="14">Enemy</text>
+    <rect x="690" y="156" width="150" height="44" rx="8" fill="#22d3ee" fill-opacity="0.12" stroke="#22d3ee"/>
+    <text x="706" y="184" fill="#e8eaec" font-family="'JetBrains Mono', Consolas, monospace" font-size="14">PerkData</text>
+    <rect x="520" y="216" width="150" height="44" rx="8" fill="#22d3ee" fill-opacity="0.12" stroke="#22d3ee"/>
+    <text x="536" y="244" fill="#e8eaec" font-family="'JetBrains Mono', Consolas, monospace" font-size="14">Texture2D</text>
+    <rect x="690" y="216" width="150" height="44" rx="8" fill="#22d3ee" fill-opacity="0.12" stroke="#22d3ee"/>
+    <text x="706" y="244" fill="#e8eaec" font-family="'JetBrains Mono', Consolas, monospace" font-size="14">List&lt;Buff&gt;</text>
+    <text x="520" y="336" fill="#a7adb4" font-family="Inter, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="13">引用可达 · GC 回收 · 碎片与分配开销</text>
+  </g>
+
+  <path d="M400 226 C440 226 460 178 500 178" fill="none" stroke="#6f767d" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+  <path d="M400 226 C440 226 460 238 500 238" fill="none" stroke="#6f767d" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#6f767d"/>
+    </marker>
+  </defs>
+</svg>
