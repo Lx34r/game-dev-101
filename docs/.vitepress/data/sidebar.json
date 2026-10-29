@@ -1188,6 +1188,10 @@
           "link": "/notes/combat-formulas"
         },
         {
+          "text": "重构手册：23 种坏味道与 66 种手法",
+          "link": "/notes/refactoring-handbook"
+        },
+        {
           "text": "GoF 设计模式：可复用面向对象设计的四条原则与一张模式地图",
           "link": "/notes/gof-design-patterns"
         },

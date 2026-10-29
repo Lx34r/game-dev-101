@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T18:45:49.793Z",
+  "generatedAt": "2026-10-29T19:09:54.955Z",
   "notes": [
     {
       "title": "3D 数学基础：坐标空间、变换与游戏渲染管线",
@@ -401,6 +401,37 @@
         {
           "id": "unity",
           "label": "Unity"
+        }
+      ]
+    },
+    {
+      "title": "重构手册：23 种坏味道与 66 种手法",
+      "link": "/notes/refactoring-handbook",
+      "description": "按 Refactoring.Guru 的重构目录逐项整理：每种坏味道的症状、成因与重构路线，每种手法的目的、步骤与游戏场景 C# 示例。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "architecture",
+          "label": "架构"
+        },
+        {
+          "id": "patterns",
+          "label": "设计模式"
+        },
+        {
+          "id": "csharp",
+          "label": "C#"
+        },
+        {
+          "id": "testing",
+          "label": "测试"
+        },
+        {
+          "id": "team",
+          "label": "团队"
         }
       ]
     },

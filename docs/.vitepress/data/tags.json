@@ -36,7 +36,7 @@
   },
   "architecture": {
     "label": "架构",
-    "count": 38,
+    "count": 39,
     "kind": "keyword"
   },
   "module-dev": {
@@ -69,6 +69,11 @@
     "count": 26,
     "kind": "keyword"
   },
+  "testing": {
+    "label": "测试",
+    "count": 24,
+    "kind": "keyword"
+  },
   "art": {
     "label": "美术",
     "count": 24,
@@ -77,11 +82,6 @@
   "math": {
     "label": "数学",
     "count": 24,
-    "kind": "keyword"
-  },
-  "testing": {
-    "label": "测试",
-    "count": 23,
     "kind": "keyword"
   },
   "algorithm": {
@@ -99,15 +99,20 @@
     "count": 22,
     "kind": "keyword"
   },
+  "team": {
+    "label": "团队",
+    "count": 20,
+    "kind": "keyword"
+  },
   "roguelike": {
     "label": "肉鸽",
     "count": 19,
     "kind": "keyword"
   },
-  "team": {
-    "label": "团队",
-    "count": 19,
-    "kind": "keyword"
+  "module-notes": {
+    "label": "笔记",
+    "count": 18,
+    "kind": "module"
   },
   "level": {
     "label": "关卡",
@@ -118,11 +123,6 @@
     "label": "特效",
     "count": 18,
     "kind": "keyword"
-  },
-  "module-notes": {
-    "label": "笔记",
-    "count": 17,
-    "kind": "module"
   },
   "procedural": {
     "label": "程序化",
@@ -274,6 +274,11 @@
     "count": 6,
     "kind": "module"
   },
+  "csharp": {
+    "label": "C#",
+    "count": 6,
+    "kind": "keyword"
+  },
   "liveops": {
     "label": "LiveOps",
     "count": 6,
@@ -283,6 +288,11 @@
     "label": "规范标准",
     "count": 5,
     "kind": "module"
+  },
+  "patterns": {
+    "label": "设计模式",
+    "count": 5,
+    "kind": "keyword"
   },
   "ftue": {
     "label": "新手引导",
@@ -294,18 +304,8 @@
     "count": 5,
     "kind": "keyword"
   },
-  "csharp": {
-    "label": "C#",
-    "count": 5,
-    "kind": "keyword"
-  },
   "save": {
     "label": "存档",
-    "count": 4,
-    "kind": "keyword"
-  },
-  "patterns": {
-    "label": "设计模式",
     "count": 4,
     "kind": "keyword"
   },
