@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T18:17:35.098Z",
+  "generatedAt": "2026-10-29T18:24:48.321Z",
   "notes": [
     {
       "title": "3D 数学基础：坐标空间、变换与游戏渲染管线",
@@ -370,6 +370,37 @@
         {
           "id": "unity",
           "label": "Unity"
+        }
+      ]
+    },
+    {
+      "title": "GoF 设计模式：可复用面向对象设计的四条原则与一张模式地图",
+      "link": "/notes/gof-design-patterns",
+      "description": "从 GoF 原书的原则、目录与 Lexi 案例出发，讲清 23 个模式如何选、如何组合，以及游戏开发中的使用边界。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "architecture",
+          "label": "架构"
+        },
+        {
+          "id": "patterns",
+          "label": "设计模式"
+        },
+        {
+          "id": "unity",
+          "label": "Unity"
+        },
+        {
+          "id": "algorithm",
+          "label": "算法"
+        },
+        {
+          "id": "team",
+          "label": "团队"
         }
       ]
     },

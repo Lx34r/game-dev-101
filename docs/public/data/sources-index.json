@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-29T18:17:35.098Z",
-  "docs": 203,
+  "generatedAt": "2026-10-29T18:24:48.321Z",
+  "docs": 204,
   "tags": 65,
   "sources": [
     {
@@ -67,23 +67,28 @@
       "id": "notes",
       "name": "GameDev Atlas 笔记",
       "url": "",
-      "pages": 15,
+      "pages": 16,
       "lastSync": "2026-10-29",
       "path": "/notes/",
       "topTags": [
         {
           "id": "unity",
           "label": "Unity",
-          "count": 7
+          "count": 8
         },
         {
           "id": "team",
           "label": "团队",
-          "count": 5
+          "count": 6
         },
         {
           "id": "graphics",
           "label": "图形",
+          "count": 4
+        },
+        {
+          "id": "architecture",
+          "label": "架构",
           "count": 4
         },
         {
@@ -92,8 +97,8 @@
           "count": 3
         },
         {
-          "id": "architecture",
-          "label": "架构",
+          "id": "algorithm",
+          "label": "算法",
           "count": 3
         },
         {
@@ -114,11 +119,6 @@
         {
           "id": "camera",
           "label": "摄像机",
-          "count": 2
-        },
-        {
-          "id": "monetization",
-          "label": "商业化",
           "count": 2
         }
       ]

@@ -11,7 +11,7 @@
   },
   "unity": {
     "label": "Unity",
-    "count": 54,
+    "count": 55,
     "kind": "keyword"
   },
   "combat": {
@@ -41,7 +41,7 @@
   },
   "architecture": {
     "label": "架构",
-    "count": 36,
+    "count": 37,
     "kind": "keyword"
   },
   "analytics": {
@@ -84,6 +84,11 @@
     "count": 23,
     "kind": "keyword"
   },
+  "algorithm": {
+    "label": "算法",
+    "count": 23,
+    "kind": "keyword"
+  },
   "defense": {
     "label": "防御",
     "count": 22,
@@ -91,11 +96,6 @@
   },
   "build": {
     "label": "构筑",
-    "count": 22,
-    "kind": "keyword"
-  },
-  "algorithm": {
-    "label": "算法",
     "count": 22,
     "kind": "keyword"
   },
@@ -114,6 +114,11 @@
     "count": 18,
     "kind": "keyword"
   },
+  "team": {
+    "label": "团队",
+    "count": 18,
+    "kind": "keyword"
+  },
   "procedural": {
     "label": "程序化",
     "count": 17,
@@ -124,14 +129,9 @@
     "count": 17,
     "kind": "keyword"
   },
-  "team": {
-    "label": "团队",
-    "count": 17,
-    "kind": "keyword"
-  },
   "module-notes": {
     "label": "笔记",
-    "count": 15,
+    "count": 16,
     "kind": "module"
   },
   "publishing": {
@@ -324,6 +324,11 @@
     "count": 3,
     "kind": "keyword"
   },
+  "patterns": {
+    "label": "设计模式",
+    "count": 3,
+    "kind": "keyword"
+  },
   "flow": {
     "label": "心流",
     "count": 3,
@@ -351,11 +356,6 @@
   },
   "hotupdate": {
     "label": "热更新",
-    "count": 2,
-    "kind": "keyword"
-  },
-  "patterns": {
-    "label": "设计模式",
     "count": 2,
     "kind": "keyword"
   },
