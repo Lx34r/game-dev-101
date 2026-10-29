@@ -1,7 +1,7 @@
 ---
 title: "摄像机设计深度指南"
 description: "本文档深入拆解 Unity Camera 的核心参数及 Cinemachine 的调优细节。"
-tags: ["module-art","camera","psychology","enemy","level","vfx"]
+tags: ["module-art","camera","aim","psychology","enemy","level"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Art/Camera_DeepDive_And_Settings.md"

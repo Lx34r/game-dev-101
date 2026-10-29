@@ -1,7 +1,7 @@
 ---
 title: "游戏手感与 \"Juice\""
 description: "本文聚焦「游戏手感与 \\\\\"Juice\\\\\"」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-art","vfx","animation","audio","roguelike","unity"]
+tags: ["module-art","vfx","input","animation","audio","roguelike"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Art/VFX/Game_Feel_And_Juice.md"

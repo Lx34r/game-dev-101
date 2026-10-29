@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-29T11:50:43.347Z",
-  "docs": 189,
-  "tags": 51,
+  "generatedAt": "2026-10-29T12:52:29.305Z",
+  "docs": 190,
+  "tags": 53,
   "sources": [
     {
       "id": "wanyouxi",
@@ -14,7 +14,7 @@
         {
           "id": "enemy",
           "label": "敌人",
-          "count": 71
+          "count": 69
         },
         {
           "id": "performance",
@@ -24,22 +24,17 @@
         {
           "id": "numerical",
           "label": "数值",
-          "count": 54
+          "count": 53
         },
         {
           "id": "combat",
           "label": "战斗",
-          "count": 51
+          "count": 49
         },
         {
           "id": "unity",
           "label": "Unity",
-          "count": 49
-        },
-        {
-          "id": "analytics",
-          "label": "数据",
-          "count": 37
+          "count": 48
         },
         {
           "id": "skill",
@@ -52,6 +47,11 @@
           "count": 36
         },
         {
+          "id": "analytics",
+          "label": "数据",
+          "count": 35
+        },
+        {
           "id": "loot",
           "label": "掉落",
           "count": 34
@@ -59,7 +59,7 @@
         {
           "id": "build",
           "label": "构筑",
-          "count": 26
+          "count": 25
         }
       ]
     },
@@ -67,18 +67,38 @@
       "id": "notes",
       "name": "GameDev Atlas 笔记",
       "url": "",
-      "pages": 1,
+      "pages": 2,
       "lastSync": "2026-10-29",
       "path": "/notes/",
       "topTags": [
         {
-          "id": "numerical",
-          "label": "数值",
+          "id": "combat",
+          "label": "战斗",
+          "count": 2
+        },
+        {
+          "id": "unity",
+          "label": "Unity",
+          "count": 2
+        },
+        {
+          "id": "input",
+          "label": "输入",
           "count": 1
         },
         {
-          "id": "combat",
-          "label": "战斗",
+          "id": "aim",
+          "label": "瞄准",
+          "count": 1
+        },
+        {
+          "id": "camera",
+          "label": "摄像机",
+          "count": 1
+        },
+        {
+          "id": "numerical",
+          "label": "数值",
           "count": 1
         },
         {
@@ -89,11 +109,6 @@
         {
           "id": "roguelike",
           "label": "肉鸽",
-          "count": 1
-        },
-        {
-          "id": "unity",
-          "label": "Unity",
           "count": 1
         }
       ]

@@ -1,7 +1,7 @@
 ---
 title: "输入与交互系统设计"
 description: "本文档定义了游戏的输入映射、跨平台适配策略以及 UI 导航逻辑。建议使用 Unity 的新版 Input System 包。"
-tags: ["module-tech","ui","build","skill","combat","enemy"]
+tags: ["module-tech","ui","input","build","skill","aim"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Input_System_Design.md"

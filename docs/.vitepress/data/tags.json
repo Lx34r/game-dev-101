@@ -1,7 +1,7 @@
 {
   "enemy": {
     "label": "敌人",
-    "count": 71,
+    "count": 69,
     "kind": "keyword"
   },
   "performance": {
@@ -11,12 +11,12 @@
   },
   "numerical": {
     "label": "数值",
-    "count": 55,
+    "count": 54,
     "kind": "keyword"
   },
   "combat": {
     "label": "战斗",
-    "count": 52,
+    "count": 51,
     "kind": "keyword"
   },
   "unity": {
@@ -44,14 +44,14 @@
     "count": 37,
     "kind": "keyword"
   },
-  "analytics": {
-    "label": "数据",
-    "count": 37,
-    "kind": "keyword"
-  },
   "architecture": {
     "label": "架构",
     "count": 36,
+    "kind": "keyword"
+  },
+  "analytics": {
+    "label": "数据",
+    "count": 35,
     "kind": "keyword"
   },
   "loot": {
@@ -66,7 +66,7 @@
   },
   "build": {
     "label": "构筑",
-    "count": 26,
+    "count": 25,
     "kind": "keyword"
   },
   "testing": {
@@ -89,13 +89,13 @@
     "count": 22,
     "kind": "keyword"
   },
-  "vfx": {
-    "label": "特效",
-    "count": 21,
-    "kind": "keyword"
-  },
   "algorithm": {
     "label": "算法",
+    "count": 20,
+    "kind": "keyword"
+  },
+  "vfx": {
+    "label": "特效",
     "count": 20,
     "kind": "keyword"
   },
@@ -119,11 +119,6 @@
     "count": 17,
     "kind": "keyword"
   },
-  "psychology": {
-    "label": "心理",
-    "count": 16,
-    "kind": "keyword"
-  },
   "module-art": {
     "label": "美术",
     "count": 15,
@@ -131,6 +126,11 @@
   },
   "towerdefense": {
     "label": "塔防",
+    "count": 15,
+    "kind": "keyword"
+  },
+  "psychology": {
+    "label": "心理",
     "count": 15,
     "kind": "keyword"
   },
@@ -164,11 +164,6 @@
     "count": 12,
     "kind": "keyword"
   },
-  "audio": {
-    "label": "音频",
-    "count": 12,
-    "kind": "keyword"
-  },
   "ai": {
     "label": "AI",
     "count": 12,
@@ -179,8 +174,13 @@
     "count": 11,
     "kind": "keyword"
   },
-  "network": {
-    "label": "网络",
+  "input": {
+    "label": "输入",
+    "count": 11,
+    "kind": "keyword"
+  },
+  "audio": {
+    "label": "音频",
     "count": 11,
     "kind": "keyword"
   },
@@ -192,6 +192,16 @@
   "retention": {
     "label": "留存",
     "count": 10,
+    "kind": "keyword"
+  },
+  "network": {
+    "label": "网络",
+    "count": 10,
+    "kind": "keyword"
+  },
+  "aim": {
+    "label": "瞄准",
+    "count": 9,
     "kind": "keyword"
   },
   "config": {
@@ -211,11 +221,6 @@
   },
   "multiplayer": {
     "label": "多人",
-    "count": 8,
-    "kind": "keyword"
-  },
-  "community": {
-    "label": "社区",
     "count": 7,
     "kind": "keyword"
   },
@@ -224,18 +229,13 @@
     "count": 7,
     "kind": "keyword"
   },
-  "save": {
-    "label": "存档",
-    "count": 6,
-    "kind": "keyword"
-  },
   "monetization": {
     "label": "商业化",
     "count": 6,
     "kind": "keyword"
   },
-  "ftue": {
-    "label": "新手引导",
+  "community": {
+    "label": "社区",
     "count": 6,
     "kind": "keyword"
   },
@@ -244,10 +244,20 @@
     "count": 6,
     "kind": "module"
   },
+  "save": {
+    "label": "存档",
+    "count": 5,
+    "kind": "keyword"
+  },
   "module-standards": {
     "label": "规范标准",
     "count": 5,
     "kind": "module"
+  },
+  "ftue": {
+    "label": "新手引导",
+    "count": 5,
+    "kind": "keyword"
   },
   "liveops": {
     "label": "LiveOps",
@@ -289,6 +299,11 @@
     "count": 3,
     "kind": "module"
   },
+  "module-notes": {
+    "label": "笔记",
+    "count": 2,
+    "kind": "module"
+  },
   "module-guides": {
     "label": "发行指南",
     "count": 2,
@@ -298,11 +313,6 @@
     "label": "Mod",
     "count": 2,
     "kind": "keyword"
-  },
-  "module-notes": {
-    "label": "笔记",
-    "count": 1,
-    "kind": "module"
   },
   "module-tools": {
     "label": "工具",

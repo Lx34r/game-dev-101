@@ -1,7 +1,7 @@
 ---
 title: "Steam Unity 游戏功能：下限保底与上限突破知识库"
 description: "这篇文档不聊“营销话术”，只聊 Steam Unity 项目最容易翻车的功能项。核心原则是：先把功能下限做稳（可用、可恢复、可维护），再做体验上限（可扩展、可分享、可长线运营）。除了手柄、多语言、Mod、存档，还补齐成就/排行、联机邀请、DLC/IAP、Steam Deck、Playtest 与分支灰度、崩溃诊断。"
-tags: ["module-dev","steam","network","mod","unity","save"]
+tags: ["module-dev","steam","input","network","mod","unity"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Publishing/Steam_Unity_Functionality_Floor_Ceiling_KB.md"

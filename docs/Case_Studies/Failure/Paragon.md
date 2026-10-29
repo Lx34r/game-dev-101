@@ -1,7 +1,7 @@
 ---
 title: "Paragon 失败剖析：复杂度陷阱与 3D MOBA 的伪命题"
 description: "本文聚焦「Paragon 失败剖析：复杂度陷阱与 3D MOBA 的伪命题」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-case","level","enemy","loot","numerical","combat"]
+tags: ["module-case","level","aim","enemy","loot","numerical"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Case_Studies/Failure/Paragon.md"

@@ -1,6 +1,37 @@
 {
-  "generatedAt": "2026-10-29T11:50:43.347Z",
+  "generatedAt": "2026-10-29T12:52:29.305Z",
   "notes": [
+    {
+      "title": "双摇杆射击的辅助瞄准：从死区到自动瞄准",
+      "link": "/notes/dual-stick-aim-assist",
+      "description": "拆解双摇杆瞄准的输入死区、朝向插值、粘性瞄准、自动瞄准与角度判定，并给出 Unity 实现。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "input",
+          "label": "输入"
+        },
+        {
+          "id": "aim",
+          "label": "瞄准"
+        },
+        {
+          "id": "combat",
+          "label": "战斗"
+        },
+        {
+          "id": "camera",
+          "label": "摄像机"
+        },
+        {
+          "id": "unity",
+          "label": "Unity"
+        }
+      ]
+    },
     {
       "title": "战斗公式：从固定 K 到动态 K",
       "link": "/notes/combat-formulas",

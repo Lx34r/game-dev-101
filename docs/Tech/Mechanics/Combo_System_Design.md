@@ -1,7 +1,7 @@
 ---
 title: "连招系统深度研究"
 description: "本文聚焦「连招系统深度研究」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-tech","skill","combat","ui","roguelike","analytics"]
+tags: ["module-tech","input","skill","combat","ui","roguelike"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Mechanics/Combo_System_Design.md"

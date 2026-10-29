@@ -324,6 +324,30 @@
       ]
     },
     {
+      "id": "input",
+      "label": "输入",
+      "patterns": [
+        "输入",
+        "Input",
+        "手柄",
+        "摇杆",
+        "Gamepad",
+        "Deadzone",
+        "死区"
+      ]
+    },
+    {
+      "id": "aim",
+      "label": "瞄准",
+      "patterns": [
+        "瞄准",
+        "Aim",
+        "辅助瞄准",
+        "准星",
+        "弹道"
+      ]
+    },
+    {
       "id": "skill",
       "label": "技能",
       "patterns": [

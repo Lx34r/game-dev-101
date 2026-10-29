@@ -1,7 +1,7 @@
 ---
 title: "投射物系统深度解析"
 description: "本文档旨在构建一个**通用、高性能、高扩展性**的投射物系统理论框架。"
-tags: ["module-tech","combat","performance","enemy","numerical","network"]
+tags: ["module-tech","combat","aim","performance","enemy","numerical"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Mechanics/Projectile_System_DeepDive.md"

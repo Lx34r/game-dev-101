@@ -1136,6 +1136,10 @@
       "collapsed": false,
       "items": [
         {
+          "text": "双摇杆射击的辅助瞄准：从死区到自动瞄准",
+          "link": "/notes/dual-stick-aim-assist"
+        },
+        {
           "text": "战斗公式：从固定 K 到动态 K",
           "link": "/notes/combat-formulas"
         }

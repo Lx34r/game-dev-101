@@ -1,7 +1,7 @@
 ---
 title: "跨平台适配"
 description: "本文聚焦「跨平台适配」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-design","numerical","mobile","analytics","skill","build"]
+tags: ["module-design","numerical","mobile","analytics","skill","aim"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Design/Product_Strategy/Cross_Platform_Adaptation.md"
