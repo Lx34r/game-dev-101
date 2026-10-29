@@ -28,6 +28,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run check:content
+      - run: npm run check:tags
       - run: npm run check:links
       - run: npm run build
         env:

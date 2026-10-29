@@ -1,10 +1,16 @@
 ---
 title: "AI 平衡测试工具：利用 LLM 进行自动化数值验收"
 description: "本文聚焦「AI 平衡测试工具：利用 LLM 进行自动化数值验收」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","testing","ai","numerical","tooling","analytics"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Tools/AI_Balance_Testing.md"
 outline: [2, 3]
 ---
 
 # AI 平衡测试工具：利用 LLM 进行自动化数值验收
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「AI 平衡测试工具：利用 LLM 进行自动化数值验收」，梳理核心概念、关键方法与落地实践。
 

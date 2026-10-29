@@ -1,7 +1,9 @@
 <script setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { withBase } from 'vitepress'
 import modules from '../../data/modules.json'
+import site from '../../data/site.json'
+import tagCatalog from '../../data/tags.json'
 
 const META = {
   Design: {
@@ -31,7 +33,20 @@ const moduleCards = modules.map((module) => ({
   ...(META[module.dir] || { desc: '', accent: '#a3e635' })
 }))
 
-const totalDocs = modules.reduce((sum, module) => sum + module.count, 0) + 4
+const tagPreview = computed(() => {
+  const entries = Object.entries(tagCatalog)
+    .filter(([, tag]) => tag.kind === 'keyword')
+    .sort((a, b) => b[1].count - a[1].count)
+    .slice(0, 24)
+  const counts = entries.map(([, tag]) => tag.count)
+  const min = Math.min(...counts)
+  const max = Math.max(...counts)
+  return entries.map(([id, tag]) => ({
+    id,
+    ...tag,
+    size: Math.round(12 + Math.sqrt(max === min ? 1 : (tag.count - min) / (max - min)) * 13)
+  }))
+})
 
 const paths = [
   {
@@ -151,8 +166,8 @@ function openSearch() {
             <span class="home-title-accent">从设计到上线</span>
           </h1>
           <p class="home-lead">
-            一个为独立游戏团队整理的开发知识库。{{ totalDocs }} 篇文档，
-            覆盖设计、工程、美术、音频与发行，按真实工作流组织。
+            一个可持续同步的开发知识备忘站。{{ site.docs }} 篇文章自动生成标签，
+            按主题、模块与来源快速检索，也可以从词云进入。
           </p>
           <div class="home-actions">
             <a class="home-btn home-btn-primary" :href="withBase('/START_HERE')">
@@ -168,19 +183,19 @@ function openSearch() {
           <dl class="home-stats">
             <div>
               <dt>DOCS</dt>
-              <dd>{{ totalDocs }}</dd>
+              <dd>{{ site.docs }}</dd>
             </div>
             <div>
-              <dt>MODULES</dt>
-              <dd>{{ modules.length }}</dd>
+              <dt>TAGS</dt>
+              <dd>{{ site.tags }}</dd>
+            </div>
+            <div>
+              <dt>SOURCES</dt>
+              <dd>{{ site.sources }}</dd>
             </div>
             <div>
               <dt>DIAGRAMS</dt>
-              <dd>46</dd>
-            </div>
-            <div>
-              <dt>SEARCH</dt>
-              <dd>中文</dd>
+              <dd>{{ site.diagrams }}</dd>
             </div>
           </dl>
         </div>
@@ -209,7 +224,7 @@ function openSearch() {
             </div>
             <span class="atlas-coord">X 128.4 / Y 36.2</span>
           </div>
-          <span class="atlas-chip chip-docs">{{ totalDocs }} 篇文档</span>
+          <span class="atlas-chip chip-docs">{{ site.docs }} 篇文章</span>
           <span class="atlas-chip chip-diagrams">46 张图表</span>
         </div>
       </div>
@@ -306,11 +321,35 @@ function openSearch() {
       </div>
     </section>
 
+    <section class="home-section">
+      <div class="home-wrap">
+        <header class="home-section-head reveal">
+          <div>
+            <p class="home-kicker">04 / TAGS</p>
+            <h2>从标签进入</h2>
+          </div>
+          <p class="home-section-note">标签由标题、章节与正文自动提取，可组合来源筛选，也可以直接看词云。</p>
+        </header>
+        <div class="home-tag-cloud reveal">
+          <a
+            v-for="tag in tagPreview"
+            :key="tag.id"
+            class="home-tag"
+            :href="withBase(`/tags/#${tag.id}`)"
+            :style="{ fontSize: `${tag.size}px` }"
+          >
+            # {{ tag.label }}<sup>{{ tag.count }}</sup>
+          </a>
+          <a class="home-tag-more" :href="withBase('/tags/')">打开标签图谱 →</a>
+        </div>
+      </div>
+    </section>
+
     <section class="home-section home-section-cta">
       <div class="home-wrap">
         <div class="home-cta reveal">
           <div>
-            <p class="home-kicker">04 / BEGIN</p>
+            <p class="home-kicker">05 / BEGIN</p>
             <h2>下一步，读一篇今天就能用上的文档。</h2>
           </div>
           <div class="home-actions">

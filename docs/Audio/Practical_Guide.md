@@ -1,10 +1,16 @@
 ---
 title: "游戏音效设计与实现实战指南"
 description: "本文档旨在总结游戏开发中“音效（SFX）”的设计原则、工程最佳实践及性能优化方案，帮助非全职音频设计师也能构建出听感优秀、性能高效的音频系统。"
+tags: ["module-audio","audio","memory","ui","performance","unity"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Audio/Practical_Guide.md"
 outline: [2, 3]
 ---
 
 # 游戏音效设计与实现实战指南
+
+<ArticleTags />
 
 > **摘要**：本文档旨在总结游戏开发中“音效（SFX）”的设计原则、工程最佳实践及性能优化方案，帮助非全职音频设计师也能构建出听感优秀、性能高效的音频系统。
 

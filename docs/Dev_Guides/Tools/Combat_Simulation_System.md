@@ -1,10 +1,16 @@
 ---
 title: "战斗仿真系统 (Combat Simulation System)：Python 极速模拟"
 description: "本文聚焦「战斗仿真系统 (Combat Simulation System)：Python 极速模拟」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","combat","build","numerical","algorithm","unity"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Tools/Combat_Simulation_System.md"
 outline: [2, 3]
 ---
 
 # 战斗仿真系统 (Combat Simulation System)：Python 极速模拟
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「战斗仿真系统 (Combat Simulation System)：Python 极速模拟」，梳理核心概念、关键方法与落地实践。
 

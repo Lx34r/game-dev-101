@@ -1,10 +1,16 @@
 ---
 title: "Factorio (异星工厂) 深度研究：极致优化与自动化"
 description: "本文聚焦「Factorio (异星工厂) 深度研究：极致优化与自动化」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-case","performance","tooling","analytics","enemy","unity"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Case_Studies/Sandbox/Factorio.md"
 outline: [2, 3]
 ---
 
 # Factorio (异星工厂) 深度研究：极致优化与自动化
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Factorio (异星工厂) 深度研究：极致优化与自动化」，梳理核心概念、关键方法与落地实践。
 

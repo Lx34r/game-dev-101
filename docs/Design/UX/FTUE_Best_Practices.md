@@ -1,10 +1,16 @@
 ---
 title: "新手引导与首局体验"
 description: "本文聚焦「新手引导与首局体验」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","ftue","psychology","enemy","loot","level"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/UX/FTUE_Best_Practices.md"
 outline: [2, 3]
 ---
 
 # 新手引导与首局体验
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「新手引导与首局体验」，梳理核心概念、关键方法与落地实践。
 

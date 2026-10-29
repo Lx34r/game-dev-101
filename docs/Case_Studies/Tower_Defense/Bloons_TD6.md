@@ -1,10 +1,16 @@
 ---
 title: "Bloons TD6 伤害矩阵系统深度剖析"
 description: "本文聚焦「Bloons TD6 伤害矩阵系统深度剖析」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-case","combat","performance","towerdefense","unity","build"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Case_Studies/Tower_Defense/Bloons_TD6.md"
 outline: [2, 3]
 ---
 
 # Bloons TD6 伤害矩阵系统深度剖析
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Bloons TD6 伤害矩阵系统深度剖析」，梳理核心概念、关键方法与落地实践。
 

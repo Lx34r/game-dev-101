@@ -1,10 +1,16 @@
 ---
 title: "Unity 轻量级音频框架"
 description: "本文聚焦「Unity 轻量级音频框架」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-audio","audio","unity","analytics","architecture","config"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Audio/Lightweight_Audio_Framework.md"
 outline: [2, 3]
 ---
 
 # Unity 轻量级音频框架
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Unity 轻量级音频框架」，梳理核心概念、关键方法与落地实践。
 

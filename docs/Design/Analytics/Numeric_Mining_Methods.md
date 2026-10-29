@@ -1,10 +1,16 @@
 ---
 title: "数值挖掘 (Mining)"
 description: "本文聚焦「数值挖掘 (Mining)」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","loot","numerical","build","economy","algorithm"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Analytics/Numeric_Mining_Methods.md"
 outline: [2, 3]
 ---
 
 # 数值挖掘 (Mining)
+
+<ArticleTags />
 
 > 使用聚类、回归等机器学习算法发现潜在Meta与经济漏洞
 

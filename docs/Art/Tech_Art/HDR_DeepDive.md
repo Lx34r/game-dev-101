@@ -1,10 +1,16 @@
 ---
 title: "HDR 渲染深度研究"
 description: "本文聚焦「HDR 渲染深度研究」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-art","rendering","performance","mobile","analytics","graphics"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Art/Tech_Art/HDR_DeepDive.md"
 outline: [2, 3]
 ---
 
 # HDR 渲染深度研究
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「HDR 渲染深度研究」，梳理核心概念、关键方法与落地实践。
 

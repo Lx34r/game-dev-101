@@ -1,10 +1,16 @@
 ---
 title: "技能动画管线：从 Animator Event 到可视化时间轴"
 description: "本文聚焦「技能动画管线：从 Animator Event 到可视化时间轴」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","animation","skill","tooling","combat","unity"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Technical_Implementation/Skill_Animation_Pipeline.md"
 outline: [2, 3]
 ---
 
 # 技能动画管线：从 Animator Event 到可视化时间轴
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「技能动画管线：从 Animator Event 到可视化时间轴」，梳理核心概念、关键方法与落地实践。
 

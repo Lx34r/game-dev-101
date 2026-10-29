@@ -1,10 +1,16 @@
 ---
 title: "Excel三表法数值模板指南"
 description: "本文聚焦「Excel三表法数值模板指南」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","numerical","team","config","ai","analytics"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Tools/Excel_Numerical_Templates.md"
 outline: [2, 3]
 ---
 
 # Excel三表法数值模板指南
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Excel三表法数值模板指南」，梳理核心概念、关键方法与落地实践。
 

@@ -1,10 +1,16 @@
 ---
 title: "Battleborn 失败剖析：当复杂性吞噬了核心体验"
 description: "本文聚焦「Battleborn 失败剖析：当复杂性吞噬了核心体验」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-case","enemy","numerical","performance","roguelike","vfx"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Case_Studies/Failure/Battleborn.md"
 outline: [2, 3]
 ---
 
 # Battleborn 失败剖析：当复杂性吞噬了核心体验
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Battleborn 失败剖析：当复杂性吞噬了核心体验」，梳理核心概念、关键方法与落地实践。
 

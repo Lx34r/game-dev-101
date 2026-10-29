@@ -1,10 +1,16 @@
 ---
 title: "Unity C# 进阶开发：高性能与底层原理"
 description: "本文聚焦「Unity C# 进阶开发：高性能与底层原理」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-tech","memory","performance","analytics","unity","csharp"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Optimization/Unity_Advanced_CSharp_Performance.md"
 outline: [2, 3]
 ---
 
 # Unity C# 进阶开发：高性能与底层原理
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Unity C# 进阶开发：高性能与底层原理」，梳理核心概念、关键方法与落地实践。
 

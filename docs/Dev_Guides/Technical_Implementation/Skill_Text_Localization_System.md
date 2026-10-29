@@ -1,10 +1,16 @@
 ---
 title: "游戏文本配置方案：富文本、动态参数与多语言架构"
 description: "本文聚焦「游戏文本配置方案：富文本、动态参数与多语言架构」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","architecture","skill","config","rendering","ui"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Technical_Implementation/Skill_Text_Localization_System.md"
 outline: [2, 3]
 ---
 
 # 游戏文本配置方案：富文本、动态参数与多语言架构
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「游戏文本配置方案：富文本、动态参数与多语言架构」，梳理核心概念、关键方法与落地实践。
 

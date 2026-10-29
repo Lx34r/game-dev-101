@@ -1,10 +1,16 @@
 ---
 title: "美术资源出图规范与速查表"
 description: "本文档旨在统一美术资源的输出格式，确保导入 Unity 后无需二次调整即可直接使用。"
+tags: ["module-dev","art","ui","unity","tooling","save"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Art_Pipeline/Art_Asset_Export_Standards.md"
 outline: [2, 3]
 ---
 
 # 美术资源出图规范与速查表
+
+<ArticleTags />
 
 > **摘要**：本文档旨在统一美术资源的输出格式，确保导入 Unity 后无需二次调整即可直接使用。
 

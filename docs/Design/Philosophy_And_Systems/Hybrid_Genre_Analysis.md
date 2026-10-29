@@ -1,10 +1,16 @@
 ---
 title: "Roguelike + 塔防 + 刷宝：三位一体设计的利弊权衡"
 description: "本文聚焦「Roguelike + 塔防 + 刷宝：三位一体设计的利弊权衡」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","loot","towerdefense","roguelike","numerical","retention"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Philosophy_And_Systems/Hybrid_Genre_Analysis.md"
 outline: [2, 3]
 ---
 
 # Roguelike + 塔防 + 刷宝：三位一体设计的利弊权衡
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Roguelike + 塔防 + 刷宝：三位一体设计的利弊权衡」，梳理核心概念、关键方法与落地实践。
 

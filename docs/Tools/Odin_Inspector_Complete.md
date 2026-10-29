@@ -1,10 +1,16 @@
 ---
 title: "Odin Inspector 高级使用技巧"
 description: "本文聚焦「Odin Inspector 高级使用技巧」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-tools","tooling","config","performance","procedural","unity"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Tools/Odin_Inspector_Complete.md"
 outline: [2, 3]
 ---
 
 # Odin Inspector 高级使用技巧
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Odin Inspector 高级使用技巧」，梳理核心概念、关键方法与落地实践。
 

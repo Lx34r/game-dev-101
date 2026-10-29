@@ -1,10 +1,16 @@
 ---
 title: "瞄准辅助系统 (Aim Assist System)"
 description: "本文聚焦「瞄准辅助系统 (Aim Assist System)」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-tech","unity","mobile","performance","analytics","ftue"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Mechanics/Aim_Assist_System.md"
 outline: [2, 3]
 ---
 
 # 瞄准辅助系统 (Aim Assist System)
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「瞄准辅助系统 (Aim Assist System)」，梳理核心概念、关键方法与落地实践。
 

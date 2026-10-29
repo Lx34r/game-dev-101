@@ -1,10 +1,16 @@
 ---
 title: "NavMesh 寻路与状态控制指南 (NavMesh Pathfinding & CC Interaction)"
 description: "本文档详细阐述 Project Vampirefall 中敌人如何利用 Unity NavMesh 系统进行寻路，重点解析**异常状态 (CC)** 下的寻路控制，以及**动态阻挡 (塔防)** 的实现细节。"
+tags: ["module-tech","algorithm","enemy","architecture","animation","towerdefense"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Mechanics/NavMesh_Pathfinding_Guide.md"
 outline: [2, 3]
 ---
 
 # NavMesh 寻路与状态控制指南 (NavMesh Pathfinding & CC Interaction)
+
+<ArticleTags />
 
 > **摘要**：本文档详细阐述 Project Vampirefall 中敌人如何利用 Unity NavMesh 系统进行寻路，重点解析**异常状态 (CC)** 下的寻路控制，以及**动态阻挡 (塔防)** 的实现细节。
 

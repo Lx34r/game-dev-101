@@ -1,10 +1,16 @@
 ---
 title: "成长心理学"
 description: "游戏数值策划的终极形态是“体验设计师”。本文不讨论单纯的加减乘除，而是探讨如何利用神经科学与心理学原理（自我决定理论、韦伯定律、斯金纳箱），通过数值模型精确操控玩家的多巴胺分泌与心流状态。"
+tags: ["module-design","numerical","psychology","retention","skill","loot"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Psychology/Progression_Psychology.md"
 outline: [2, 3]
 ---
 
 # 成长心理学
+
+<ArticleTags />
 
 > 深度解析游戏成瘾背后的心理学机制，利用韦伯定律、心流理论与斯金纳箱构建沉浸式数值体验
 

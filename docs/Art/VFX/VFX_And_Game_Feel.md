@@ -1,10 +1,16 @@
 ---
 title: "特效与打击感深度研究"
 description: "本文聚焦「特效与打击感深度研究」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-art","vfx","performance","mobile","combat","enemy"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Art/VFX/VFX_And_Game_Feel.md"
 outline: [2, 3]
 ---
 
 # 特效与打击感深度研究
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「特效与打击感深度研究」，梳理核心概念、关键方法与落地实践。
 

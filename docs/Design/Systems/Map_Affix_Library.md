@@ -1,10 +1,16 @@
 ---
 title: "关卡词条库"
 description: "本文聚焦「关卡词条库」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","enemy","combat","level","skill","loot"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Systems/Map_Affix_Library.md"
 outline: [2, 3]
 ---
 
 # 关卡词条库
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「关卡词条库」，梳理核心概念、关键方法与落地实践。
 

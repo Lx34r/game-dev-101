@@ -1,10 +1,16 @@
 ---
 title: "Steam游戏 下限保底与上限突破指南"
 description: "这篇文章专门解决一个现实问题：Steam 上很多项目不是“做得不够好”，而是“先死在下限，再也没有机会碰上限”。我们把 Steam 发行拆成两层：先做“下限保底”（不踩平台硬雷，不在首周口碑崩盘），再做“上限突破”（把平台流量机制吃满，持续放大长尾）。"
+tags: ["module-dev","steam","publishing","liveops","analytics","testing"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Publishing/Steam_Floor_And_Ceiling_Guide.md"
 outline: [2, 3]
 ---
 
 # Steam游戏 下限保底与上限突破指南
+
+<ArticleTags />
 
 > **摘要**：这篇文章专门解决一个现实问题：Steam 上很多项目不是“做得不够好”，而是“先死在下限，再也没有机会碰上限”。我们把 Steam 发行拆成两层：先做“下限保底”（不踩平台硬雷，不在首周口碑崩盘），再做“上限突破”（把平台流量机制吃满，持续放大长尾）。
 

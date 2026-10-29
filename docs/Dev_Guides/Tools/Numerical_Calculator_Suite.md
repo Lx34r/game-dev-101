@@ -1,10 +1,16 @@
 ---
 title: "数值计算器套装：可视化你的设计"
 description: "本文聚焦「数值计算器套装：可视化你的设计」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","numerical","config","economy","enemy","procedural"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Tools/Numerical_Calculator_Suite.md"
 outline: [2, 3]
 ---
 
 # 数值计算器套装：可视化你的设计
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「数值计算器套装：可视化你的设计」，梳理核心概念、关键方法与落地实践。
 

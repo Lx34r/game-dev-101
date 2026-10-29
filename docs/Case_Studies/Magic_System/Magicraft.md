@@ -1,10 +1,16 @@
 ---
 title: "《Magicraft》核心设计知识图谱"
 description: "本文聚焦「《Magicraft》核心设计知识图谱」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-case","build","enemy","combat","community","numerical"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Case_Studies/Magic_System/Magicraft.md"
 outline: [2, 3]
 ---
 
 # 《Magicraft》核心设计知识图谱
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「《Magicraft》核心设计知识图谱」，梳理核心概念、关键方法与落地实践。
 

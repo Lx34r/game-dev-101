@@ -1,10 +1,16 @@
 ---
 title: "Linear 与 Gamma 渲染空间深度解析"
 description: "本文聚焦「Linear 与 Gamma 渲染空间深度解析」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-tech","graphics","rendering","shader","unity","art"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Graphics/Linear_vs_Gamma_Rendering.md"
 outline: [2, 3]
 ---
 
 # Linear 与 Gamma 渲染空间深度解析
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Linear 与 Gamma 渲染空间深度解析」，梳理核心概念、关键方法与落地实践。
 

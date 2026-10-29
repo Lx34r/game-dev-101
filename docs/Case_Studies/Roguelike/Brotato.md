@@ -1,10 +1,16 @@
 ---
 title: "土豆兄弟 (Brotato) 数值体系全解"
 description: "本文聚焦「土豆兄弟 (Brotato) 数值体系全解」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-case","numerical","combat","performance","towerdefense","build"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Case_Studies/Roguelike/Brotato.md"
 outline: [2, 3]
 ---
 
 # 土豆兄弟 (Brotato) 数值体系全解
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「土豆兄弟 (Brotato) 数值体系全解」，梳理核心概念、关键方法与落地实践。
 

@@ -1,10 +1,16 @@
 ---
 title: "《Binding of Isaac》核心设计知识图谱"
 description: "本文档拆解《以撒的结合》的**道具协同数学**、**房间生成**和**诅咒机制**。"
+tags: ["module-case","build","procedural","algorithm"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Case_Studies/Roguelike/Binding_of_Isaac.md"
 outline: [2, 3]
 ---
 
 # 《Binding of Isaac》核心设计知识图谱
+
+<ArticleTags />
 
 > **摘要**：本文档拆解《以撒的结合》的**道具协同数学**、**房间生成**和**诅咒机制**。
 

@@ -1,10 +1,16 @@
 ---
 title: "肉鸽强化系统"
 description: "本文档定义了局内成长系统（Level Up Bonuses），这是 Roguelike 体验的核心，决定了单局游戏的重玩价值。"
+tags: ["module-design","skill","build","numerical","combat","roguelike"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Mechanics/Roguelike_Perks.md"
 outline: [2, 3]
 ---
 
 # 肉鸽强化系统
+
+<ArticleTags />
 
 > **摘要**：本文档定义了局内成长系统（Level Up Bonuses），这是 Roguelike 体验的核心，决定了单局游戏的重玩价值。
 

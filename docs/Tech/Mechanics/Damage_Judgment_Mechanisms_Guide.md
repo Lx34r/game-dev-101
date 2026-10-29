@@ -1,10 +1,16 @@
 ---
 title: "伤害判定机制详解：Hitbox vs. Distance vs. Raycast"
 description: "本文档详细解析游戏中伤害判定的三种核心流派：**基于数值的距离判定 (Distance Check)**、**基于模型的物理判定 (Hitbox/Collider)** 以及 **射线检测 (Raycast/Hitscan)**。"
+tags: ["module-tech","combat","enemy","performance","network","architecture"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Mechanics/Damage_Judgment_Mechanisms_Guide.md"
 outline: [2, 3]
 ---
 
 # 伤害判定机制详解：Hitbox vs. Distance vs. Raycast
+
+<ArticleTags />
 
 > **摘要**：本文档详细解析游戏中伤害判定的三种核心流派：**基于数值的距离判定 (Distance Check)**、**基于模型的物理判定 (Hitbox/Collider)** 以及 **射线检测 (Raycast/Hitscan)**。
 

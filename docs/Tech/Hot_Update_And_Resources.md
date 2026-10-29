@@ -1,10 +1,16 @@
 ---
 title: "热更新与资源管理"
 description: "本文聚焦「热更新与资源管理」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-tech","hotupdate","analytics","build","architecture","testing"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Hot_Update_And_Resources.md"
 outline: [2, 3]
 ---
 
 # 热更新与资源管理
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「热更新与资源管理」，梳理核心概念、关键方法与落地实践。
 

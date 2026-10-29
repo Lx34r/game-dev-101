@@ -1,10 +1,16 @@
 ---
 title: "Luban 配表实战与 ID 命名规范"
 description: "本文档旨在确立 Project Vampirefall 的配表标准。我们使用 **Luban** 作为核心数据工具。"
+tags: ["module-tech","config","numerical","skill","procedural","analytics"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Luban_Config_Guide.md"
 outline: [2, 3]
 ---
 
 # Luban 配表实战与 ID 命名规范
+
+<ArticleTags />
 
 > **摘要**：本文档旨在确立 Project Vampirefall 的配表标准。我们使用 **Luban** 作为核心数据工具。
 

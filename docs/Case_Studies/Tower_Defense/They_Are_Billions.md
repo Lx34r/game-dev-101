@@ -1,10 +1,16 @@
 ---
 title: "《They Are Billions》核心设计知识图谱"
 description: "本文档拆解《亿万僵尸》的**经济螺旋设计**、**大规模单位优化**和**失败惩罚机制**。"
+tags: ["module-case","economy","performance","architecture","ecs"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Case_Studies/Tower_Defense/They_Are_Billions.md"
 outline: [2, 3]
 ---
 
 # 《They Are Billions》核心设计知识图谱
+
+<ArticleTags />
 
 > **摘要**：本文档拆解《亿万僵尸》的**经济螺旋设计**、**大规模单位优化**和**失败惩罚机制**。
 

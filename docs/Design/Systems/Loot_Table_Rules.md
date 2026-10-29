@@ -1,10 +1,16 @@
 ---
 title: "掉落规则与战利品系统"
 description: "本文档定义了怪物死亡或宝箱开启时，生成战利品的算法。核心目标是平衡“惊喜感”与“经济稳定”。"
+tags: ["module-design","loot","algorithm","enemy","procedural","performance"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Systems/Loot_Table_Rules.md"
 outline: [2, 3]
 ---
 
 # 掉落规则与战利品系统
+
+<ArticleTags />
 
 > **摘要**：本文档定义了怪物死亡或宝箱开启时，生成战利品的算法。核心目标是平衡“惊喜感”与“经济稳定”。
 

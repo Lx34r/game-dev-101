@@ -1,10 +1,16 @@
 ---
 title: "掉落蓄水池算法 (Loot Reservoir Algorithm)：恒定 DPM 的 0GC 实现"
 description: "本文聚焦「掉落蓄水池算法 (Loot Reservoir Algorithm)：恒定 DPM 的 0GC 实现」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","loot","algorithm","enemy","performance","memory"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Technical_Implementation/Loot_Reservoir_Algorithm.md"
 outline: [2, 3]
 ---
 
 # 掉落蓄水池算法 (Loot Reservoir Algorithm)：恒定 DPM 的 0GC 实现
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「掉落蓄水池算法 (Loot Reservoir Algorithm)：恒定 DPM 的 0GC 实现」，梳理核心概念、关键方法与落地实践。
 

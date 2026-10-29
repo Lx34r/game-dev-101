@@ -1,10 +1,16 @@
 ---
 title: "存档与数据持久化架构"
 description: "本文档定义了游戏数据的存储结构、序列化方式及云存档策略。"
+tags: ["module-tech","save","analytics","performance","architecture","debugging"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Save_System_Architecture.md"
 outline: [2, 3]
 ---
 
 # 存档与数据持久化架构
+
+<ArticleTags />
 
 > **摘要**：本文档定义了游戏数据的存储结构、序列化方式及云存档策略。
 

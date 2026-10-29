@@ -1,10 +1,16 @@
 ---
 title: "活动排期策略"
 description: "本文聚焦「活动排期策略」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","liveops","ftue","architecture","monetization","analytics"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/LiveOps/Event_Cadence_Strategy.md"
 outline: [2, 3]
 ---
 
 # 活动排期策略
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「活动排期策略」，梳理核心概念、关键方法与落地实践。
 

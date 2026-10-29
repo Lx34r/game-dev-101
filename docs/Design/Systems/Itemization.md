@@ -1,10 +1,16 @@
 ---
 title: "装备与物品化设计"
 description: "本文聚焦「装备与物品化设计」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","loot","numerical","algorithm","combat","procedural"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Systems/Itemization.md"
 outline: [2, 3]
 ---
 
 # 装备与物品化设计
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「装备与物品化设计」，梳理核心概念、关键方法与落地实践。
 

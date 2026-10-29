@@ -1,10 +1,16 @@
 ---
 title: "移动端深度优化指南"
 description: "本文聚焦「移动端深度优化指南」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-tech","performance","mobile","memory","rendering","animation"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Performance/Mobile_Optimization_Complete.md"
 outline: [2, 3]
 ---
 
 # 移动端深度优化指南
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「移动端深度优化指南」，梳理核心概念、关键方法与落地实践。
 

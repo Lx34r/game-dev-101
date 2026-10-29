@@ -32,11 +32,15 @@ const nav = [
     .map((module) => ({ text: module.label, link: module.link })),
   {
     text: '更多',
-    items: moreOrder
-      .map((dir) => moduleByDir.get(dir))
-      .filter(Boolean)
-      .map((module) => ({ text: module.label, link: module.link }))
+    items: [
+      ...moreOrder
+        .map((dir) => moduleByDir.get(dir))
+        .filter(Boolean)
+        .map((module) => ({ text: module.label, link: module.link })),
+      { text: '内容来源', link: '/sources/' }
+    ]
   },
+  { text: '标签', link: '/tags/' },
   { text: '全站索引', link: '/Full_Index' }
 ]
 
@@ -119,9 +123,8 @@ export default withMermaid(
       darkModeSwitchTitle: '切换到深色模式',
       socialLinks: [{ icon: 'github', link: REPO_URL }],
       footer: {
-        message:
-          '文档内容来自 <a href="https://docs.wanyouxi.online/docs" target="_blank" rel="noreferrer">游戏开发 101</a>，本站以独立设计与导航重新呈现。',
-        copyright: 'GameDev Atlas · 可部署的知识库镜像'
+        message: `本站是可持续同步的开发知识备忘站。各文章来源与同步状态见 <a href="${base}sources/">内容来源</a>。`,
+        copyright: 'GameDev Atlas · 开发知识备忘站'
       }
     }
   })

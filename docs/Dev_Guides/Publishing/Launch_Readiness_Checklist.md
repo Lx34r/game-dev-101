@@ -1,10 +1,16 @@
 ---
 title: "发射前夜：上线前的生死清单"
 description: "本文聚焦「发射前夜：上线前的生死清单」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","publishing","build","performance","testing","ftue"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Publishing/Launch_Readiness_Checklist.md"
 outline: [2, 3]
 ---
 
 # 发射前夜：上线前的生死清单
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「发射前夜：上线前的生死清单」，梳理核心概念、关键方法与落地实践。
 

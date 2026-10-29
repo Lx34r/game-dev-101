@@ -1,10 +1,16 @@
 ---
 title: "Wwise 音频中间件：工业级声音引擎"
 description: "本文聚焦「Wwise 音频中间件：工业级声音引擎」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-audio","audio","performance","unity","towerdefense","enemy"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Audio/Wwise_Middleware_Guide.md"
 outline: [2, 3]
 ---
 
 # Wwise 音频中间件：工业级声音引擎
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Wwise 音频中间件：工业级声音引擎」，梳理核心概念、关键方法与落地实践。
 

@@ -1,10 +1,16 @@
 ---
 title: "游戏剧情与包装"
 description: "本文聚焦「游戏剧情与包装」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","narrative","loot","enemy","ui","roguelike"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Narrative/Game_Narrative_And_Presentation.md"
 outline: [2, 3]
 ---
 
 # 游戏剧情与包装
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「游戏剧情与包装」，梳理核心概念、关键方法与落地实践。
 

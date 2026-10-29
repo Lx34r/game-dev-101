@@ -1,10 +1,16 @@
 ---
 title: "Palworld 生产模式分析：Triple-I 与自动化管线"
 description: "本文聚焦「Palworld 生产模式分析：Triple-I 与自动化管线」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-case","tooling","procedural","ai","performance","enemy"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Case_Studies/Sandbox/Palworld.md"
 outline: [2, 3]
 ---
 
 # Palworld 生产模式分析：Triple-I 与自动化管线
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Palworld 生产模式分析：Triple-I 与自动化管线」，梳理核心概念、关键方法与落地实践。
 

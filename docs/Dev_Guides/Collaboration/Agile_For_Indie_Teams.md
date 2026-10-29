@@ -1,10 +1,16 @@
 ---
 title: "独立游戏团队 Scrum 实施指南：从混乱到有序"
 description: "本文聚焦「独立游戏团队 Scrum 实施指南：从混乱到有序」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","team","art","multiplayer","network","ai"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Collaboration/Agile_For_Indie_Teams.md"
 outline: [2, 3]
 ---
 
 # 独立游戏团队 Scrum 实施指南：从混乱到有序
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「独立游戏团队 Scrum 实施指南：从混乱到有序」，梳理核心概念、关键方法与落地实践。
 

@@ -1,10 +1,16 @@
 ---
 title: "难度曲线与动态难度调整 (DDA)"
 description: "本文聚焦「难度曲线与动态难度调整 (DDA)」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","numerical","performance","retention","loot","algorithm"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Mechanics/Difficulty_And_DDA_System.md"
 outline: [2, 3]
 ---
 
 # 难度曲线与动态难度调整 (DDA)
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「难度曲线与动态难度调整 (DDA)」，梳理核心概念、关键方法与落地实践。
 

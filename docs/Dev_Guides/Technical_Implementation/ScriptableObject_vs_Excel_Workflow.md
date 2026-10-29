@@ -1,10 +1,16 @@
 ---
 title: "工业化游戏开发：ScriptableObject 的生存指南"
 description: "本文聚焦「工业化游戏开发：ScriptableObject 的生存指南」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","config","tooling","performance","analytics","memory"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Technical_Implementation/ScriptableObject_vs_Excel_Workflow.md"
 outline: [2, 3]
 ---
 
 # 工业化游戏开发：ScriptableObject 的生存指南
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「工业化游戏开发：ScriptableObject 的生存指南」，梳理核心概念、关键方法与落地实践。
 

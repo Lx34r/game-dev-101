@@ -1,10 +1,16 @@
 ---
 title: "多人协作平衡 (Co-op Balance Design)"
 description: "本文聚焦「多人协作平衡 (Co-op Balance Design)」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","team","loot","multiplayer","enemy","combat"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Systems/Coop_Balance_Design.md"
 outline: [2, 3]
 ---
 
 # 多人协作平衡 (Co-op Balance Design)
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「多人协作平衡 (Co-op Balance Design)」，梳理核心概念、关键方法与落地实践。
 

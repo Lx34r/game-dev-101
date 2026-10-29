@@ -1,10 +1,16 @@
 ---
 title: "Compute Shader 移动端深度指南"
 description: "本文聚焦「Compute Shader 移动端深度指南」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-tech","shader","mobile","performance","csharp","rendering"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Graphics/Compute_Shader_Mobile_Guide.md"
 outline: [2, 3]
 ---
 
 # Compute Shader 移动端深度指南
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Compute Shader 移动端深度指南」，梳理核心概念、关键方法与落地实践。
 

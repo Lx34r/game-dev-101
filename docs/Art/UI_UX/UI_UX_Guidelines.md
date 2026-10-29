@@ -1,10 +1,16 @@
 ---
 title: "UI/UX 设计与交互规范"
 description: "本文档定义了 Project Vampirefall 的用户界面风格、层级结构及交互反馈标准。"
+tags: ["module-art","ui","combat","loot","art","animation"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Art/UI_UX/UI_UX_Guidelines.md"
 outline: [2, 3]
 ---
 
 # UI/UX 设计与交互规范
+
+<ArticleTags />
 
 > **摘要**：本文档定义了 Project Vampirefall 的用户界面风格、层级结构及交互反馈标准。
 

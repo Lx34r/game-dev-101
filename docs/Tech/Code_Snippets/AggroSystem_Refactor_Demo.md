@@ -1,10 +1,16 @@
 ---
 title: "怪物仇恨系统重构示例"
 description: "本文档展示了如何将 `Design/Mechanics/Aggro_System.md` 中定义的怪物仇恨系统，通过我们设计的 `DecisionEngine` 进行重构。这使得仇恨逻辑更加模块化、可配置，并能轻松扩展新的仇恨考量因素。"
+tags: ["module-tech","enemy"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Code_Snippets/AggroSystem_Refactor_Demo.md"
 outline: [2, 3]
 ---
 
 # 怪物仇恨系统重构示例
+
+<ArticleTags />
 
 > **摘要**：本文档展示了如何将 `Design/Mechanics/Aggro_System.md` 中定义的怪物仇恨系统，通过我们设计的 `DecisionEngine` 进行重构。这使得仇恨逻辑更加模块化、可配置，并能轻松扩展新的仇恨考量因素。
 

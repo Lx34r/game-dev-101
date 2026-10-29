@@ -1,0 +1,67 @@
+{
+  "generatedAt": "2026-10-29T11:19:45.413Z",
+  "docs": 188,
+  "tags": 61,
+  "sources": [
+    {
+      "id": "wanyouxi",
+      "name": "游戏开发 101",
+      "url": "https://docs.wanyouxi.online/docs",
+      "pages": 188,
+      "lastSync": "2026-10-29",
+      "path": "/Full_Index",
+      "topTags": [
+        {
+          "id": "enemy",
+          "label": "敌人",
+          "count": 72
+        },
+        {
+          "id": "performance",
+          "label": "性能",
+          "count": 64
+        },
+        {
+          "id": "numerical",
+          "label": "数值",
+          "count": 56
+        },
+        {
+          "id": "combat",
+          "label": "战斗",
+          "count": 51
+        },
+        {
+          "id": "unity",
+          "label": "Unity",
+          "count": 49
+        },
+        {
+          "id": "skill",
+          "label": "技能",
+          "count": 41
+        },
+        {
+          "id": "analytics",
+          "label": "数据",
+          "count": 38
+        },
+        {
+          "id": "architecture",
+          "label": "架构",
+          "count": 36
+        },
+        {
+          "id": "loot",
+          "label": "掉落",
+          "count": 34
+        },
+        {
+          "id": "build",
+          "label": "构筑",
+          "count": 29
+        }
+      ]
+    }
+  ]
+}

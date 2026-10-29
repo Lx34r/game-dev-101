@@ -1,10 +1,16 @@
 ---
 title: "跨平台适配"
 description: "本文聚焦「跨平台适配」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","numerical","mobile","analytics","skill","build"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Product_Strategy/Cross_Platform_Adaptation.md"
 outline: [2, 3]
 ---
 
 # 跨平台适配
+
+<ArticleTags />
 
 > 应对移动端与PC端的技术差异，以及全球不同市场的文化数值偏好
 

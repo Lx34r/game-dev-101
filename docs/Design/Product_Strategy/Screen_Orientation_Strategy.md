@@ -1,10 +1,16 @@
 ---
 title: "竖屏 vs 横屏：产品形态选择策略"
 description: "本文聚焦「竖屏 vs 横屏：产品形态选择策略」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","ui","towerdefense","loot","retention","psychology"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Product_Strategy/Screen_Orientation_Strategy.md"
 outline: [2, 3]
 ---
 
 # 竖屏 vs 横屏：产品形态选择策略
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「竖屏 vs 横屏：产品形态选择策略」，梳理核心概念、关键方法与落地实践。
 

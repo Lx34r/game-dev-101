@@ -1,10 +1,16 @@
 ---
 title: "ECS 理论与实践：从面向对象 (OOP) 到数据导向 (DOD) 的思维跃迁"
 description: "本文聚焦「ECS 理论与实践：从面向对象 (OOP) 到数据导向 (DOD) 的思维跃迁」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-tech","ecs","analytics","performance","memory","architecture"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Architecture/ECS_Complete_Guide.md"
 outline: [2, 3]
 ---
 
 # ECS 理论与实践：从面向对象 (OOP) 到数据导向 (DOD) 的思维跃迁
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「ECS 理论与实践：从面向对象 (OOP) 到数据导向 (DOD) 的思维跃迁」，梳理核心概念、关键方法与落地实践。
 

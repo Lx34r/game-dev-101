@@ -1,10 +1,16 @@
 ---
 title: "经济系统与通胀控制模型"
 description: "本文聚焦「经济系统与通胀控制模型」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","economy","loot","skill","architecture","monetization"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Systems/Economy_And_Inflation_Model.md"
 outline: [2, 3]
 ---
 
 # 经济系统与通胀控制模型
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「经济系统与通胀控制模型」，梳理核心概念、关键方法与落地实践。
 

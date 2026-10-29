@@ -1,10 +1,16 @@
 ---
 title: "阅读导航中心"
 description: "本文聚焦「阅读导航中心」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-site","publishing","performance","numerical","liveops","vfx"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/NAVIGATION.md"
 outline: [2, 3]
 ---
 
 # 阅读导航中心
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「阅读导航中心」，梳理核心概念、关键方法与落地实践。
 

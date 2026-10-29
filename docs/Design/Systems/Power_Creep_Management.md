@@ -1,10 +1,16 @@
 ---
 title: "数值膨胀控制论"
 description: "本文聚焦「数值膨胀控制论」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","numerical","combat","economy","enemy","loot"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Systems/Power_Creep_Management.md"
 outline: [2, 3]
 ---
 
 # 数值膨胀控制论
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「数值膨胀控制论」，梳理核心概念、关键方法与落地实践。
 

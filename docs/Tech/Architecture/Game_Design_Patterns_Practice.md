@@ -1,10 +1,16 @@
 ---
 title: "游戏设计模式：理论与 Unity 实战"
 description: "本文聚焦「游戏设计模式：理论与 Unity 实战」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-tech","architecture","unity","analytics","performance","ecs"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Architecture/Game_Design_Patterns_Practice.md"
 outline: [2, 3]
 ---
 
 # 游戏设计模式：理论与 Unity 实战
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「游戏设计模式：理论与 Unity 实战」，梳理核心概念、关键方法与落地实践。
 

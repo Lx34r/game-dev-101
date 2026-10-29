@@ -1,10 +1,16 @@
 ---
 title: "埋点设计"
 description: "本文聚焦「埋点设计」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","analytics","monetization","testing","architecture","performance"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Analytics/Event_Tracking_Design.md"
 outline: [2, 3]
 ---
 
 # 埋点设计
+
+<ArticleTags />
 
 > 深入探讨游戏埋点设计原则、数据架构、发送时机与频率控制，以及如何构建可分析的事件体系
 

@@ -1,10 +1,16 @@
 ---
 title: "Unity URP 画面表现与镜头设计指南"
 description: "本文档基于 Unity URP (Universal Render Pipeline) 编写，旨在指导如何构建**手游性能预算下**的高品质画面。"
+tags: ["module-art","camera","rendering","art","unity","graphics"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Art/Visual_Quality_Guide.md"
 outline: [2, 3]
 ---
 
 # Unity URP 画面表现与镜头设计指南
+
+<ArticleTags />
 
 > **摘要**：本文档基于 Unity URP (Universal Render Pipeline) 编写，旨在指导如何构建**手游性能预算下**的高品质画面。
 

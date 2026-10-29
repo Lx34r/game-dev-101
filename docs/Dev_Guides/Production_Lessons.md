@@ -1,10 +1,16 @@
 ---
 title: "游戏开发血泪史：那些没人告诉你的坑"
 description: "本文聚焦「游戏开发血泪史：那些没人告诉你的坑」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","network","ui","save","multiplayer","audio"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Production_Lessons.md"
 outline: [2, 3]
 ---
 
 # 游戏开发血泪史：那些没人告诉你的坑
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「游戏开发血泪史：那些没人告诉你的坑」，梳理核心概念、关键方法与落地实践。
 

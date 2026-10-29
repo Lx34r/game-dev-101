@@ -1,10 +1,16 @@
 ---
 title: "Unity 游戏开发通用经验数值速查表"
 description: "本文聚焦「Unity 游戏开发通用经验数值速查表」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","numerical","animation","unity","vfx","camera"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Mechanics/Unity_General_Numeric_Quick_Reference.md"
 outline: [2, 3]
 ---
 
 # Unity 游戏开发通用经验数值速查表
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Unity 游戏开发通用经验数值速查表」，梳理核心概念、关键方法与落地实践。
 

@@ -1,10 +1,16 @@
 ---
 title: "GPU Instancing 渲染优化：15,000 个单位 1 个 DrawCall"
 description: "本文聚焦「GPU Instancing 渲染优化：15,000 个单位 1 个 DrawCall」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","performance","shader","rendering","level","architecture"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Technical_Implementation/GPU_Instancing_Guide.md"
 outline: [2, 3]
 ---
 
 # GPU Instancing 渲染优化：15,000 个单位 1 个 DrawCall
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「GPU Instancing 渲染优化：15,000 个单位 1 个 DrawCall」，梳理核心概念、关键方法与落地实践。
 

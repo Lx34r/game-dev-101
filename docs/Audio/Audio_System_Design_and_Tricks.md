@@ -1,10 +1,16 @@
 ---
 title: "游戏音效设计：从音阶算法到听觉心理学"
 description: "本文聚焦「游戏音效设计：从音阶算法到听觉心理学」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-audio","psychology","algorithm","audio","unity","vfx"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Audio/Audio_System_Design_and_Tricks.md"
 outline: [2, 3]
 ---
 
 # 游戏音效设计：从音阶算法到听觉心理学
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「游戏音效设计：从音阶算法到听觉心理学」，梳理核心概念、关键方法与落地实践。
 

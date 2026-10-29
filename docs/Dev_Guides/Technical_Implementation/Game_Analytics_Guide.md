@@ -1,10 +1,16 @@
 ---
 title: "全局埋点实战指南：用数据上帝视角“看”游戏"
 description: "本文聚焦「全局埋点实战指南：用数据上帝视角“看”游戏」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","analytics","combat","ftue","level","testing"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Technical_Implementation/Game_Analytics_Guide.md"
 outline: [2, 3]
 ---
 
 # 全局埋点实战指南：用数据上帝视角“看”游戏
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「全局埋点实战指南：用数据上帝视角“看”游戏」，梳理核心概念、关键方法与落地实践。
 

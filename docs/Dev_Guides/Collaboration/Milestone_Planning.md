@@ -1,10 +1,16 @@
 ---
 title: "里程碑规划模板：从切片到金盘"
 description: "本文聚焦「里程碑规划模板：从切片到金盘」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","testing","performance","level","enemy","skill"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Collaboration/Milestone_Planning.md"
 outline: [2, 3]
 ---
 
 # 里程碑规划模板：从切片到金盘
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「里程碑规划模板：从切片到金盘」，梳理核心概念、关键方法与落地实践。
 

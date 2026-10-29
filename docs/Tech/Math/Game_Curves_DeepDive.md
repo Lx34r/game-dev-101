@@ -1,10 +1,16 @@
 ---
 title: "游戏中的曲线艺术"
 description: "本文聚焦「游戏中的曲线艺术」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-tech","numerical","ui","animation","unity","retention"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Math/Game_Curves_DeepDive.md"
 outline: [2, 3]
 ---
 
 # 游戏中的曲线艺术
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「游戏中的曲线艺术」，梳理核心概念、关键方法与落地实践。
 

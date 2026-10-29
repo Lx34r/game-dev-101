@@ -1,10 +1,16 @@
 ---
 title: "AudioListener 挂载策略：俯视视角的陷阱"
 description: "本文聚焦「AudioListener 挂载策略：俯视视角的陷阱」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-audio","audio","camera","enemy","art","towerdefense"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Audio/AudioListener_Placement_Guide.md"
 outline: [2, 3]
 ---
 
 # AudioListener 挂载策略：俯视视角的陷阱
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「AudioListener 挂载策略：俯视视角的陷阱」，梳理核心概念、关键方法与落地实践。
 

@@ -1,10 +1,16 @@
 ---
 title: "游戏设计哲学与系统架构"
 description: "本文聚焦「游戏设计哲学与系统架构」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","architecture","enemy","build","ai","level"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Philosophy_And_Systems.md"
 outline: [2, 3]
 ---
 
 # 游戏设计哲学与系统架构
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「游戏设计哲学与系统架构」，梳理核心概念、关键方法与落地实践。
 

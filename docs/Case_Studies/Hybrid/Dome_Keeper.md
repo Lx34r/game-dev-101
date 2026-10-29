@@ -1,10 +1,16 @@
 ---
 title: "《Dome Keeper》核心设计知识图谱"
 description: "本文档拆解《圆顶守护者》的**双阶段循环**、**资源管理博弈**和**时间压力递增**。"
+tags: ["module-case","hotupdate","enemy","psychology"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Case_Studies/Hybrid/Dome_Keeper.md"
 outline: [2, 3]
 ---
 
 # 《Dome Keeper》核心设计知识图谱
+
+<ArticleTags />
 
 > **摘要**：本文档拆解《圆顶守护者》的**双阶段循环**、**资源管理博弈**和**时间压力递增**。
 

@@ -1,10 +1,16 @@
 ---
 title: "技能树设计深度研究"
 description: "本文聚焦「技能树设计深度研究」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","skill","build","analytics","numerical","ui"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Systems/Skill_Tree_Design.md"
 outline: [2, 3]
 ---
 
 # 技能树设计深度研究
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「技能树设计深度研究」，梳理核心概念、关键方法与落地实践。
 

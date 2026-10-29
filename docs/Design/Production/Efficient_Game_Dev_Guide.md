@@ -1,10 +1,16 @@
 ---
 title: "高效游戏开发指南：拒绝返工与项目规划"
 description: "本文聚焦「高效游戏开发指南：拒绝返工与项目规划」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","performance","debugging","unity","tooling","team"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Production/Efficient_Game_Dev_Guide.md"
 outline: [2, 3]
 ---
 
 # 高效游戏开发指南：拒绝返工与项目规划
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「高效游戏开发指南：拒绝返工与项目规划」，梳理核心概念、关键方法与落地实践。
 

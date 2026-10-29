@@ -1,10 +1,16 @@
 ---
 title: "战斗系统详解"
 description: "本文档定义了 Project Vampirefall 的核心战斗规则，包括伤害计算流程、属性相互作用、异常状态及控制机制。"
+tags: ["module-design","combat","numerical","algorithm","enemy","build"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Mechanics/Combat_System.md"
 outline: [2, 3]
 ---
 
 # 战斗系统详解
+
+<ArticleTags />
 
 > **摘要**：本文档定义了 Project Vampirefall 的核心战斗规则，包括伤害计算流程、属性相互作用、异常状态及控制机制。
 

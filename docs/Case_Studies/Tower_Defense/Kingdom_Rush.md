@@ -1,10 +1,16 @@
 ---
 title: "Kingdom Rush 数值模型分析：四维平衡的艺术"
 description: "本文聚焦「Kingdom Rush 数值模型分析：四维平衡的艺术」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-case","numerical","combat","enemy","level","skill"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Case_Studies/Tower_Defense/Kingdom_Rush.md"
 outline: [2, 3]
 ---
 
 # Kingdom Rush 数值模型分析：四维平衡的艺术
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Kingdom Rush 数值模型分析：四维平衡的艺术」，梳理核心概念、关键方法与落地实践。
 

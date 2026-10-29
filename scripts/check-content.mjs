@@ -16,17 +16,25 @@ function walk(dir, out = []) {
   return out
 }
 
+const FRONTMATTER = /^---\r?\n[\s\S]*?\r?\n---\r?\n/
+
 for (const file of walk(DOCS)) {
   const rel = path.relative(DOCS, file).replace(/\\/g, '/')
   if (rel === 'index.md') continue
   const text = fs.readFileSync(file, 'utf8')
-  if (!text.startsWith('---\ntitle: ')) problems.push(`${rel}: missing frontmatter title`)
+  if (!text.startsWith('---\n') || !/^title:/m.test(text.slice(0, 500))) {
+    problems.push(`${rel}: missing frontmatter title`)
+  }
   if (text.includes('Documentation Index')) problems.push(`${rel}: leftover llms header`)
   if (text.includes('built and hosted on [Mintlify]')) problems.push(`${rel}: leftover Mintlify footer`)
-  if (/https:\/\/docs\.wanyouxi\.online\/docs\//.test(text)) problems.push(`${rel}: absolute origin link remains`)
+
+  const content = text.replace(FRONTMATTER, '')
+  if (content.includes('docs.wanyouxi.online/docs/')) {
+    problems.push(`${rel}: absolute origin link remains`)
+  }
 
   let inFence = false
-  text.split(/\r?\n/).forEach((line, index) => {
+  content.split(/\r?\n/).forEach((line, index) => {
     if (/^\s*```/.test(line)) {
       inFence = !inFence
       return

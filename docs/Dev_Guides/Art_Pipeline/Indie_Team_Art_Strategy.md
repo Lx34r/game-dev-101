@@ -1,10 +1,16 @@
 ---
 title: "独立游戏美术突围：低成本、高统一性的资源策略"
 description: "本文聚焦「独立游戏美术突围：低成本、高统一性的资源策略」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","art","shader","rendering","procedural","performance"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Art_Pipeline/Indie_Team_Art_Strategy.md"
 outline: [2, 3]
 ---
 
 # 独立游戏美术突围：低成本、高统一性的资源策略
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「独立游戏美术突围：低成本、高统一性的资源策略」，梳理核心概念、关键方法与落地实践。
 
@@ -449,7 +455,7 @@ outline: [2, 3]
 
 我们用刚才定义的“程序员协议”来分析这张参考图：
 
-![Reference Image](/images/9abc975e01ec.png)
+![Reference Image](https://mintcdn.com/person-d58caa4b/pN3tnTK5uWHOdcsO/docs/Dev_Guides/Art_Pipeline/uploaded_image_1764749419457.png?fit=max\&auto=format\&n=pN3tnTK5uWHOdcsO\&q=85\&s=6e063924ca7c0a51cbe90947412490f5)
 
 ### 12.1 ✅ 做对了什么 (Compliance)
 

@@ -1,10 +1,16 @@
 ---
 title: "有限状态机 (FSM) 设计与实战指南"
 description: "本文聚焦「有限状态机 (FSM) 设计与实战指南」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-tech","architecture","enemy","animation","ai","combat"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Tech/FSM_Design_Patterns.md"
 outline: [2, 3]
 ---
 
 # 有限状态机 (FSM) 设计与实战指南
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「有限状态机 (FSM) 设计与实战指南」，梳理核心概念、关键方法与落地实践。
 

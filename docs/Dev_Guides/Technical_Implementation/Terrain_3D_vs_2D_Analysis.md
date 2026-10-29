@@ -1,10 +1,16 @@
 ---
 title: "3D 地形 vs 平面地形选型分析"
 description: "本文聚焦「3D 地形 vs 平面地形选型分析」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","level","art","algorithm","enemy","towerdefense"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Technical_Implementation/Terrain_3D_vs_2D_Analysis.md"
 outline: [2, 3]
 ---
 
 # 3D 地形 vs 平面地形选型分析
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「3D 地形 vs 平面地形选型分析」，梳理核心概念、关键方法与落地实践。
 

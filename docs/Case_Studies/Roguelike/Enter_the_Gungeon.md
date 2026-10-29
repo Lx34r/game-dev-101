@@ -1,10 +1,16 @@
 ---
 title: "《Enter the Gungeon》核心设计知识图谱"
 description: "本文档拆解《挺进地牢》的**武器多样性设计**、**弹道系统优化**和**房间生成算法**。"
+tags: ["module-case","procedural","performance","enemy","numerical","combat"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Case_Studies/Roguelike/Enter_the_Gungeon.md"
 outline: [2, 3]
 ---
 
 # 《Enter the Gungeon》核心设计知识图谱
+
+<ArticleTags />
 
 > **摘要**：本文档拆解《挺进地牢》的**武器多样性设计**、**弹道系统优化**和**房间生成算法**。
 

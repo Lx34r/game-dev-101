@@ -1,10 +1,16 @@
 ---
 title: "Unity HUD & 血条系统最佳实践 (Health Bar Deep Dive)"
 description: "本文聚焦「Unity HUD & 血条系统最佳实践 (Health Bar Deep Dive)」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-tech","shader","unity","ui","vfx","performance"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Mechanics/Unity_HUD_HealthBar_DeepDive.md"
 outline: [2, 3]
 ---
 
 # Unity HUD & 血条系统最佳实践 (Health Bar Deep Dive)
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Unity HUD & 血条系统最佳实践 (Health Bar Deep Dive)」，梳理核心概念、关键方法与落地实践。
 

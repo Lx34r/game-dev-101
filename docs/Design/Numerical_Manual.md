@@ -1,10 +1,16 @@
 ---
 title: "核心数值体系定义手册"
 description: "本文聚焦「核心数值体系定义手册」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","numerical","loot","combat","enemy","skill"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Numerical_Manual.md"
 outline: [2, 3]
 ---
 
 # 核心数值体系定义手册
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「核心数值体系定义手册」，梳理核心概念、关键方法与落地实践。
 

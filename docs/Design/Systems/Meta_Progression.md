@@ -1,10 +1,16 @@
 ---
 title: "局外成长系统"
 description: "本文档定义了 **Project Vampirefall** 的长期留存动力引擎。"
+tags: ["module-design","numerical","skill","loot","economy","enemy"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Systems/Meta_Progression.md"
 outline: [2, 3]
 ---
 
 # 局外成长系统
+
+<ArticleTags />
 
 > **摘要**：本文档定义了 **Project Vampirefall** 的长期留存动力引擎。
 

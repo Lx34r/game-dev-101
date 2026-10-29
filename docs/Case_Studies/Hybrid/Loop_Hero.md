@@ -1,10 +1,16 @@
 ---
 title: "Loop Hero 案例分析：循环叙事与风险博弈"
 description: "本文聚焦「Loop Hero 案例分析：循环叙事与风险博弈」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-case","loot","enemy","narrative","towerdefense","combat"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Case_Studies/Hybrid/Loop_Hero.md"
 outline: [2, 3]
 ---
 
 # Loop Hero 案例分析：循环叙事与风险博弈
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Loop Hero 案例分析：循环叙事与风险博弈」，梳理核心概念、关键方法与落地实践。
 

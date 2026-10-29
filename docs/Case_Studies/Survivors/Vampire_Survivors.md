@@ -1,10 +1,16 @@
 ---
 title: "Vampire Survivors 性能奇迹：如何渲染与逻辑解耦"
 description: "本文聚焦「Vampire Survivors 性能奇迹：如何渲染与逻辑解耦」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-case","performance","rendering","unity","architecture","enemy"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Case_Studies/Survivors/Vampire_Survivors.md"
 outline: [2, 3]
 ---
 
 # Vampire Survivors 性能奇迹：如何渲染与逻辑解耦
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Vampire Survivors 性能奇迹：如何渲染与逻辑解耦」，梳理核心概念、关键方法与落地实践。
 

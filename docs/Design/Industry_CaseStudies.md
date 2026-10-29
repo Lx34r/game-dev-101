@@ -1,10 +1,16 @@
 ---
 title: "优秀数值设计案例库"
 description: "本文聚焦「优秀数值设计案例库」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","numerical","combat","towerdefense","enemy","skill"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Industry_CaseStudies.md"
 outline: [2, 3]
 ---
 
 # 优秀数值设计案例库
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「优秀数值设计案例库」，梳理核心概念、关键方法与落地实践。
 

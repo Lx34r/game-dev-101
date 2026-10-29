@@ -1,10 +1,16 @@
 ---
 title: "Boss 战设计哲学"
 description: "本文聚焦「Boss 战设计哲学」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","enemy","combat","psychology","skill","loot"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Content/Boss_Design_Philosophy.md"
 outline: [2, 3]
 ---
 
 # Boss 战设计哲学
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Boss 战设计哲学」，梳理核心概念、关键方法与落地实践。
 

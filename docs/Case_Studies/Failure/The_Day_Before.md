@@ -1,10 +1,16 @@
 ---
 title: "失败案例复盘：The Day Before (浩劫前夕)"
 description: "本文聚焦「失败案例复盘：The Day Before (浩劫前夕)」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-case","art","network","publishing","team","shader"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Case_Studies/Failure/The_Day_Before.md"
 outline: [2, 3]
 ---
 
 # 失败案例复盘：The Day Before (浩劫前夕)
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「失败案例复盘：The Day Before (浩劫前夕)」，梳理核心概念、关键方法与落地实践。
 

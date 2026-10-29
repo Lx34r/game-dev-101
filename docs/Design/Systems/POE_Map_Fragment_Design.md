@@ -1,10 +1,16 @@
 ---
 title: "POE 门票关卡机制深度解析"
 description: "本文聚焦「POE 门票关卡机制深度解析」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","loot","enemy","level","numerical","economy"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Systems/POE_Map_Fragment_Design.md"
 outline: [2, 3]
 ---
 
 # POE 门票关卡机制深度解析
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「POE 门票关卡机制深度解析」，梳理核心概念、关键方法与落地实践。
 

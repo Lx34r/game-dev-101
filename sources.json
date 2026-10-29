@@ -1,0 +1,14 @@
+{
+  "sources": [
+    {
+      "id": "wanyouxi",
+      "name": "游戏开发 101",
+      "origin": "https://docs.wanyouxi.online",
+      "docsPath": "/docs/",
+      "llms": "https://docs.wanyouxi.online/llms.txt",
+      "url": "https://docs.wanyouxi.online/docs",
+      "prefix": "",
+      "enabled": true
+    }
+  ]
+}

@@ -1,10 +1,16 @@
 ---
 title: "Thronefall 机制分析：极简主义与日夜循环的完美融合"
 description: "本文聚焦「Thronefall 机制分析：极简主义与日夜循环的完美融合」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-case","skill","economy","enemy","build","algorithm"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Case_Studies/Hybrid/Thronefall_Analysis.md"
 outline: [2, 3]
 ---
 
 # Thronefall 机制分析：极简主义与日夜循环的完美融合
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Thronefall 机制分析：极简主义与日夜循环的完美融合」，梳理核心概念、关键方法与落地实践。
 

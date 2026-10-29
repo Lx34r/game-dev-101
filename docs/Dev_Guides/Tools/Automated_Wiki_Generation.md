@@ -1,10 +1,16 @@
 ---
 title: "自动化 WIKI 生成指南：从零散项目资源到结构化文档"
 description: "本文聚焦「自动化 WIKI 生成指南：从零散项目资源到结构化文档」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","procedural","tooling","analytics","numerical","unity"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Tools/Automated_Wiki_Generation.md"
 outline: [2, 3]
 ---
 
 # 自动化 WIKI 生成指南：从零散项目资源到结构化文档
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「自动化 WIKI 生成指南：从零散项目资源到结构化文档」，梳理核心概念、关键方法与落地实践。
 

@@ -1,10 +1,16 @@
 ---
 title: "Unity 灰盒工作流"
 description: "本文聚焦「Unity 灰盒工作流」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","unity","art","level","testing","build"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Art_Pipeline/Unity_Greybox_Workflow.md"
 outline: [2, 3]
 ---
 
 # Unity 灰盒工作流
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Unity 灰盒工作流」，梳理核心概念、关键方法与落地实践。
 

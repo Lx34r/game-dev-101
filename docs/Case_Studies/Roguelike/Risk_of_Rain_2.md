@@ -1,10 +1,16 @@
 ---
 title: "《Risk of Rain 2》核心设计知识图谱"
 description: "本文档拆解《雨中冒险2》的核心设计哲学，重点研究其**时间压力系统**、**物品协同机制**和**多人动态平衡**。"
+tags: ["module-case","build","multiplayer","loot","combat","enemy"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Case_Studies/Roguelike/Risk_of_Rain_2.md"
 outline: [2, 3]
 ---
 
 # 《Risk of Rain 2》核心设计知识图谱
+
+<ArticleTags />
 
 > **摘要**：本文档拆解《雨中冒险2》的核心设计哲学，重点研究其**时间压力系统**、**物品协同机制**和**多人动态平衡**。
 

@@ -1,10 +1,16 @@
 ---
 title: "动态音乐系统 (Adaptive Music System)"
 description: "本文聚焦「动态音乐系统 (Adaptive Music System)」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-audio","audio","network","combat","enemy","unity"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Audio/Adaptive_Music_System.md"
 outline: [2, 3]
 ---
 
 # 动态音乐系统 (Adaptive Music System)
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「动态音乐系统 (Adaptive Music System)」，梳理核心概念、关键方法与落地实践。
 

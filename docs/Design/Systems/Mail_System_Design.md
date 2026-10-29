@@ -1,10 +1,16 @@
 ---
 title: "邮件系统设计"
 description: "本文聚焦「邮件系统设计」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","ui","analytics","architecture","debugging","performance"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Systems/Mail_System_Design.md"
 outline: [2, 3]
 ---
 
 # 邮件系统设计
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「邮件系统设计」，梳理核心概念、关键方法与落地实践。
 

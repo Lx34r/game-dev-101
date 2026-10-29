@@ -1,10 +1,16 @@
 ---
 title: "Beta 测试与用户反馈指南：把差评扼杀在摇篮里"
 description: "本文聚焦「Beta 测试与用户反馈指南：把差评扼杀在摇篮里」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","testing","steam","community","enemy","save"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Collaboration/Beta_Testing_Guide.md"
 outline: [2, 3]
 ---
 
 # Beta 测试与用户反馈指南：把差评扼杀在摇篮里
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Beta 测试与用户反馈指南：把差评扼杀在摇篮里」，梳理核心概念、关键方法与落地实践。
 

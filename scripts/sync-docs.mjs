@@ -2,6 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import crypto from 'node:crypto'
 import { fileURLToPath } from 'node:url'
+import { scoreArticleTags, buildTagStats } from './lib/tags.mjs'
 
 const ROOT = path.resolve(fileURLToPath(new URL('..', import.meta.url)))
 const ASSETS = path.join(ROOT, 'assets')
@@ -9,15 +10,15 @@ const DOCS = path.join(ROOT, 'docs')
 const CACHE = path.join(ROOT, '.cache', 'raw')
 const REPORTS = path.join(ROOT, 'reports')
 const PUBLIC_IMAGES = path.join(DOCS, 'public', 'images')
-const MODULES_DATA = path.join(DOCS, '.vitepress', 'data', 'modules.json')
-const SIDEBAR_DATA = path.join(DOCS, '.vitepress', 'data', 'sidebar.json')
+const PUBLIC_DATA = path.join(DOCS, 'public', 'data')
+const DATA_DIR = path.join(DOCS, '.vitepress', 'data')
+const MODULES_DATA = path.join(DATA_DIR, 'modules.json')
+const SIDEBAR_DATA = path.join(DATA_DIR, 'sidebar.json')
+const TAGS_DATA = path.join(DATA_DIR, 'tags.json')
+const SITE_DATA = path.join(DATA_DIR, 'site.json')
 
-const ORIGIN = 'https://docs.wanyouxi.online'
-const LOCAL_IMAGES = {
-  'https://media.geeksforgeeks.org/wp-content/uploads/20230623123101/Stack-vs-Heap-Memory-Allocation.png':
-    '/images/stack-vs-heap-memory.svg'
-}
-const DOCS_BASE = `${ORIGIN}/docs/`
+const SOURCE_CONFIG = JSON.parse(fs.readFileSync(path.join(ROOT, 'sources.json'), 'utf8'))
+const TAG_RULES = JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts', 'tag-rules.json'), 'utf8'))
 const REFRESH = process.argv.includes('--refresh')
 const CONCURRENCY = 8
 
@@ -93,13 +94,36 @@ const FOLDER_LABELS = {
   'Tech/Performance': '性能'
 }
 
+const LOCAL_IMAGES = {
+  'https://media.geeksforgeeks.org/wp-content/uploads/20230623123101/Stack-vs-Heap-Memory-Allocation.png':
+    '/images/stack-vs-heap-memory.svg'
+}
+
 const collator = new Intl.Collator('zh-Hans-CN')
 const CJK = /[\u3400-\u9fff]/
+const SOURCES = SOURCE_CONFIG.sources.filter((source) => source.enabled !== false).map((source) => ({
+  ...source,
+  origin: source.origin.replace(/\/+$/, ''),
+  docsPath: source.docsPath.endsWith('/') ? source.docsPath : `${source.docsPath}/`,
+  prefix: source.prefix == null ? `sources/${source.id}` : source.prefix.replace(/^\/+|\/+$/g, '')
+}))
+
+for (const source of SOURCES) {
+  if (source.prefix) {
+    TAG_RULES.moduleTags[`source:${source.id}`] = {
+      id: `source-${source.id}`,
+      label: source.name
+    }
+  }
+}
+
+let activeSource = SOURCES[0]
 
 const report = {
   generatedAt: new Date().toISOString(),
-  origin: ORIGIN,
+  sources: [],
   pages: 0,
+  tags: 0,
   brokenLinks: [],
   remappedLinks: [],
   degradedLinks: [],
@@ -108,6 +132,22 @@ const report = {
 }
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
+
+function setActive(source) {
+  activeSource = source
+}
+
+function siteRelFor(source, rel) {
+  return source.prefix ? `${source.prefix}/${rel}` : rel
+}
+
+function siteRel(rel) {
+  return siteRelFor(activeSource, rel)
+}
+
+function sourceHost(source = activeSource) {
+  return new URL(source.origin).hostname
+}
 
 function safeDecode(value) {
   try {
@@ -120,8 +160,10 @@ function safeDecode(value) {
 function normalizeRel(rel, applyAlias = true) {
   let next = safeDecode(rel).replace(/\\/g, '/').replace(/^\/+/, '')
   if (next === 'index.md') next = 'overview.md'
-  if (next.startsWith('Research/Roguelike')) next = 'Research/Roguelike强化系统深度分析报告.md'
-  if (applyAlias) next = ALIASES[next] || next
+  if (activeSource.id === 'wanyouxi') {
+    if (next.startsWith('Research/Roguelike')) next = 'Research/Roguelike强化系统深度分析报告.md'
+    if (applyAlias) next = ALIASES[next] || next
+  }
   return next
 }
 
@@ -131,6 +173,8 @@ function resolveRel(target, fromRel, applyAlias = true) {
   if (/^(mailto:|tel:|javascript:|data:)/i.test(raw)) return null
   raw = raw.replace(/^<|>$/g, '')
 
+  const docsRoot = activeSource.docsPath.replace(/\/$/, '')
+
   if (/^https?:/i.test(raw)) {
     let url
     try {
@@ -138,10 +182,12 @@ function resolveRel(target, fromRel, applyAlias = true) {
     } catch {
       return null
     }
-    if (url.hostname !== 'docs.wanyouxi.online') return null
-    if (url.pathname === '/docs' || url.pathname === '/docs/' || url.pathname === '/docs.md') return 'overview.md'
-    if (!url.pathname.startsWith('/docs/')) return null
-    let rel = safeDecode(url.pathname.slice('/docs/'.length))
+    if (url.hostname !== sourceHost()) return null
+    if (url.pathname === docsRoot || url.pathname === `${docsRoot}/` || url.pathname === `${docsRoot}.md`) {
+      return 'overview.md'
+    }
+    if (!url.pathname.startsWith(activeSource.docsPath)) return null
+    let rel = safeDecode(url.pathname.slice(activeSource.docsPath.length))
     if (!rel) return null
     if (!/\.[a-zA-Z0-9]+$/.test(rel)) rel += '.md'
     if (!rel.endsWith('.md')) return null
@@ -149,8 +195,8 @@ function resolveRel(target, fromRel, applyAlias = true) {
   }
 
   if (raw.startsWith('/')) {
-    if (!raw.startsWith('/docs/')) return null
-    let rel = safeDecode(raw.slice('/docs/'.length).split(/[?#]/)[0])
+    if (!raw.startsWith(activeSource.docsPath)) return null
+    let rel = safeDecode(raw.slice(activeSource.docsPath.length).split(/[?#]/)[0])
     if (!/\.[a-zA-Z0-9]+$/.test(rel)) rel += '.md'
     if (!rel.endsWith('.md')) return null
     return normalizeRel(rel, applyAlias)
@@ -165,9 +211,9 @@ function resolveRel(target, fromRel, applyAlias = true) {
   return normalizeRel(rel, applyAlias)
 }
 
-function relLink(fromRel, toRel) {
-  const target = path.posix.relative(path.posix.dirname(fromRel), toRel)
-  return target || path.posix.basename(toRel)
+function relLink(fromSiteRel, toSiteRel) {
+  const target = path.posix.relative(path.posix.dirname(fromSiteRel), toSiteRel)
+  return target || path.posix.basename(toSiteRel)
 }
 
 function extractLinks(markdown) {
@@ -191,7 +237,7 @@ async function fetchText(url) {
   for (let attempt = 0; attempt < 3; attempt += 1) {
     try {
       const response = await fetch(url, {
-        headers: { 'user-agent': 'Mozilla/5.0 game-dev-101-mirror' },
+        headers: { 'user-agent': 'Mozilla/5.0 gamedev-atlas-sync' },
         signal: AbortSignal.timeout(30000)
       })
       const text = await response.text()
@@ -209,24 +255,28 @@ async function fetchText(url) {
   return { ok: false, error: lastError }
 }
 
-function cachePath(rel) {
-  return path.join(CACHE, rel)
+function cachePath(source, rel) {
+  return path.join(CACHE, source.id, rel)
 }
 
-function readCache(rel) {
-  const file = cachePath(rel)
+function readCache(source, rel) {
+  const file = cachePath(source, rel)
   if (!REFRESH && fs.existsSync(file)) return fs.readFileSync(file, 'utf8')
+  if (!REFRESH && !source.prefix) {
+    const legacy = path.join(CACHE, rel)
+    if (fs.existsSync(legacy)) return fs.readFileSync(legacy, 'utf8')
+  }
   return null
 }
 
-async function loadPage(rel) {
-  const cached = readCache(rel)
+async function loadPage(source, rel) {
+  const cached = readCache(source, rel)
   if (cached) return { ok: true, text: cached, cached: true }
   const fetchRel = rel === 'overview.md' ? 'index.md' : rel
-  const url = new URL(`docs/${fetchRel}`, ORIGIN).href
+  const url = new URL(`${source.docsPath}${fetchRel}`, source.origin).href
   const result = await fetchText(url)
   if (result.ok) {
-    const file = cachePath(rel)
+    const file = cachePath(source, rel)
     fs.mkdirSync(path.dirname(file), { recursive: true })
     fs.writeFileSync(file, result.text)
   }
@@ -247,12 +297,16 @@ async function mapLimit(items, limit, worker) {
   return results
 }
 
-async function discover() {
+async function discover(source) {
+  setActive(source)
   const seeds = new Set()
-  const llms = await fetchText(`${ORIGIN}/llms.txt`)
-  if (llms.ok) {
-    for (const match of llms.text.matchAll(/https:\/\/docs\.wanyouxi\.online\/docs\/[^)\s]+?\.md/g)) {
-      seeds.add(normalizeRel(match[0].replace(DOCS_BASE, ''), false))
+  if (source.llms) {
+    const llms = await fetchText(source.llms)
+    if (llms.ok) {
+      const prefix = `${source.origin}${source.docsPath}`
+      for (const match of llms.text.matchAll(new RegExp(`${prefix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[^)\\s]+?\\.md`, 'g'))) {
+        seeds.add(normalizeRel(match[0].replace(prefix, ''), false))
+      }
     }
   }
   seeds.add('NAVIGATION.md')
@@ -266,7 +320,10 @@ async function discover() {
   while (frontier.length > 0) {
     const batch = frontier.filter((rel) => !seen.has(rel))
     for (const rel of batch) seen.add(rel)
-    const results = await mapLimit(batch, CONCURRENCY, async (rel) => ({ rel, result: await loadPage(rel) }))
+    const results = await mapLimit(batch, CONCURRENCY, async (rel) => {
+      setActive(source)
+      return { rel, result: await loadPage(source, rel) }
+    })
     const next = []
     for (const { rel, result } of results) {
       if (!result.ok) {
@@ -274,6 +331,7 @@ async function discover() {
         continue
       }
       pages.set(rel, result.text)
+      setActive(source)
       for (const target of extractLinks(result.text)) {
         const targetRel = resolveRel(target, rel)
         if (!targetRel) continue
@@ -366,7 +424,7 @@ async function downloadImage(url) {
   const file = path.join(PUBLIC_IMAGES, filename)
   if (fs.existsSync(file)) return { ok: true, filename }
   const response = await fetch(normalized, {
-    headers: { 'user-agent': 'Mozilla/5.0 game-dev-101-mirror' },
+    headers: { 'user-agent': 'Mozilla/5.0 gamedev-atlas-sync' },
     signal: AbortSignal.timeout(30000)
   })
   if (!response.ok) return { ok: false, status: response.status }
@@ -374,10 +432,24 @@ async function downloadImage(url) {
   return { ok: true, filename }
 }
 
-async function normalizePage(rel, raw, pageSet) {
+function moduleTagFor(source, rel) {
+  if (source.prefix) {
+    return TAG_RULES.moduleTags[`source:${source.id}`] || { id: `source-${source.id}`, label: source.name }
+  }
+  const first = rel.split('/')[0]
+  return TAG_RULES.moduleTags[first] || TAG_RULES.moduleTags.site
+}
+
+function canonicalUrl(source, rel) {
+  const fetchRel = rel === 'overview.md' ? 'index.md' : rel
+  return new URL(`${source.docsPath}${fetchRel}`, source.origin).href
+}
+
+async function normalizePage(rel, raw, pageSet, outputRel) {
   let markdown = stripOriginChrome(raw)
   const title = extractTitle(markdown) || path.posix.basename(rel, '.md')
   const summary = extractSummary(markdown)
+  const source = activeSource
 
   const lines = markdown.split(/\r?\n/)
   const output = []
@@ -412,7 +484,7 @@ async function normalizePage(rel, raw, pageSet) {
       continue
     }
 
-    line = line.replace(/(!?)\[([^\]]*)\]\(([^)\s]+)(\s+"[^"]*")?\)/g, (match, bang, alt, rawTarget, tail) => {
+    line = line.replace(/(!?)\[([^\]]*)\]\(([^)\s]+)(\s+"[^"]*")?\)/g, (match, bang, alt, rawTarget) => {
       const target = rawTarget.replace(/\\&/g, '&')
 
       if (bang === '!') {
@@ -420,41 +492,42 @@ async function normalizePage(rel, raw, pageSet) {
           return '（原站图片缺失）'
         }
         if (LOCAL_IMAGES[target]) {
-          report.images.push({ from: rel, url: target, file: path.posix.basename(LOCAL_IMAGES[target]) })
+          report.images.push({ from: outputRel, url: target, file: path.posix.basename(LOCAL_IMAGES[target]) })
           return `![${alt}](${LOCAL_IMAGES[target]})`
         }
-        if (!target.startsWith(ORIGIN) && !/^https?:/i.test(target)) return match
+        if (!target.startsWith(source.origin)) return match
         imageTasks.push(downloadImage(target).then((result) => {
           if (result.ok) {
-            report.images.push({ from: rel, url: target, file: result.filename })
+            report.images.push({ from: outputRel, url: target, file: result.filename })
             return { match, replacement: `![${alt}](/images/${result.filename})` }
           }
-          report.images.push({ from: rel, url: target, error: result.status || 'download failed' })
+          report.images.push({ from: outputRel, url: target, error: result.status || 'download failed' })
           return { match, replacement: match }
         }))
         return match
       }
 
-      if (!target.startsWith(ORIGIN) && /^https?:/i.test(target)) return match
+      if (!target.startsWith(source.origin) && /^https?:/i.test(target)) return match
 
       const fragment = target.includes('#') ? target.slice(target.indexOf('#')) : ''
       const resolved = resolveRel(target, rel)
       if (!resolved) {
-        if (target.startsWith(ORIGIN) || target.startsWith('/docs/') || /\.html?$/i.test(target.split('#')[0])) {
-          degraded.push({ from: rel, target })
+        if (target.startsWith(source.origin) || target.startsWith(source.docsPath) || /\.html?$/i.test(target.split('#')[0])) {
+          degraded.push({ from: outputRel, target })
           return alt || match
         }
         return match
       }
-      if (!pageSet.has(resolved)) {
-        degraded.push({ from: rel, target, resolved })
+      const resolvedSite = siteRelFor(source, resolved)
+      if (!pageSet.has(resolvedSite)) {
+        degraded.push({ from: outputRel, target, resolved: resolvedSite })
         return alt || match
       }
       const unmapped = resolveRel(target, rel, false)
       if (unmapped && resolved !== unmapped) {
-        report.remappedLinks.push({ from: rel, target, resolved })
+        report.remappedLinks.push({ from: outputRel, target, resolved: resolvedSite })
       }
-      return `[${alt}](${relLink(rel, resolved)}${fragment})`
+      return `[${alt}](${relLink(outputRel, resolvedSite)}${fragment})`
     })
 
     line = sanitizeDollars(line)
@@ -471,11 +544,40 @@ async function normalizePage(rel, raw, pageSet) {
 
   for (const item of degraded) report.degradedLinks.push(item)
 
+  const moduleTag = moduleTagFor(source, rel)
+  const tags = scoreArticleTags({
+    title,
+    body,
+    moduleTag,
+    rules: TAG_RULES.rules,
+    maxPerArticle: TAG_RULES.maxPerArticle || 6
+  })
+
   const frontmatter = ['---', `title: ${JSON.stringify(title)}`]
   if (summary) frontmatter.push(`description: ${JSON.stringify(summary)}`)
+  frontmatter.push(`tags: ${JSON.stringify(tags)}`)
+  frontmatter.push(`source: ${JSON.stringify(source.id)}`)
+  frontmatter.push(`sourceName: ${JSON.stringify(source.name)}`)
+  frontmatter.push(`sourceUrl: ${JSON.stringify(canonicalUrl(source, rel))}`)
   frontmatter.push('outline: [2, 3]', '---', '', '')
 
-  return { rel, title, summary, body: frontmatter.join('\n') + body.trimStart() }
+  let content = body.trimStart()
+  if (/^#\s+/m.test(content)) {
+    content = content.replace(/^(#\s+.+)$/m, (heading) => `${heading}\n\n<ArticleTags />`)
+  } else {
+    content = `<ArticleTags />\n\n${content}`
+  }
+
+  return {
+    rel: outputRel,
+    title,
+    summary,
+    module: moduleTag.label,
+    source: source.id,
+    sourceName: source.name,
+    tags,
+    body: frontmatter.join('\n') + content
+  }
 }
 
 function writePage(rel, content) {
@@ -487,7 +589,7 @@ function writePage(rel, content) {
 function readPageTitle(rel) {
   const file = path.join(DOCS, rel)
   if (!fs.existsSync(file)) return path.posix.basename(rel, '.md')
-  const text = fs.readFileSync(file, 'utf8').slice(0, 600)
+  const text = fs.readFileSync(file, 'utf8').slice(0, 1200)
   const match = text.match(/^title:\s*"(.*)"$/m) || text.match(/^#\s+(.+)$/m)
   return match ? match[1].replace(/\\"/g, '"') : path.posix.basename(rel, '.md')
 }
@@ -536,15 +638,122 @@ function generateModulePage(module) {
     return sorted.map((rel) => `- [${readPageTitle(rel)}](./${path.posix.relative(module.dir, rel)})`)
   }
 
-  if (rootFiles.length > 0) {
-    lines.push('## 综合', '', ...renderList(rootFiles), '')
-  }
+  if (rootFiles.length > 0) lines.push('## 综合', '', ...renderList(rootFiles), '')
   for (const [label, rels] of [...groups.entries()].sort((a, b) => collator.compare(a[0], b[0]))) {
     lines.push(`## ${label}`, '', ...renderList(rels), '')
   }
 
   writePage(`${module.dir}/index.md`, lines.join('\n'))
   return { dir: module.dir, label: module.label, emoji: module.emoji, count: files.length, link: `/${module.dir}/` }
+}
+
+function generateSourcePage(source, records) {
+  const files = records.filter((record) => record.rel.startsWith(`${source.prefix}/`))
+  const lines = [
+    '---',
+    `title: ${JSON.stringify(source.name)}`,
+    `description: ${JSON.stringify(`${source.name}来源，共 ${files.length} 篇文档。`)}`,
+    'sidebar: false',
+    '---',
+    '',
+    `# ${source.name}`,
+    '',
+    `共 **${files.length}** 篇文档，来自 [${source.name}](${source.url})。`,
+    '',
+    '## 文章',
+    ''
+  ]
+  for (const file of files.sort((a, b) => collator.compare(a.title, b.title))) {
+    lines.push(`- [${file.title}](./${path.posix.relative(`${source.prefix}`, file.rel)})`)
+  }
+  writePage(`${source.prefix}/index.md`, lines.join('\n'))
+}
+
+function generateSourcesPage(records, tagStats) {
+  const tagById = new Map(tagStats.tags.map((tag) => [tag.id, tag]))
+  const cards = SOURCES.map((source) => {
+    const sourceRecords = records.filter((record) => record.source === source.id)
+    const counts = new Map()
+    for (const record of sourceRecords) {
+      for (const id of record.tags) counts.set(id, (counts.get(id) || 0) + 1)
+    }
+    const topTags = [...counts.entries()]
+      .map(([id, count]) => ({ id, count, label: tagById.get(id)?.label || id, kind: tagById.get(id)?.kind }))
+      .filter((tag) => tag.kind === 'keyword')
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 10)
+      .map(({ id, label, count }) => ({ id, label, count }))
+    return {
+      id: source.id,
+      name: source.name,
+      url: source.url,
+      pages: sourceRecords.length,
+      lastSync: report.generatedAt.slice(0, 10),
+      path: source.prefix ? `/${source.prefix}/` : '/Full_Index',
+      topTags
+    }
+  })
+
+  fs.writeFileSync(
+    path.join(PUBLIC_DATA, 'sources-index.json'),
+    `${JSON.stringify(
+      {
+        generatedAt: report.generatedAt,
+        docs: records.length,
+        tags: tagStats.tagCount,
+        sources: cards
+      },
+      null,
+      2
+    )}\n`
+  )
+
+  writePage(
+    'sources/index.md',
+    [
+      '---',
+      'layout: page',
+      'title: 内容来源',
+      'description: 本站同步的文章来源与同步状态。',
+      'sidebar: false',
+      '---',
+      '',
+      '<SourcesPage />',
+      ''
+    ].join('\n')
+  )
+}
+
+function generateTagsPage() {
+  writePage(
+    'tags/index.md',
+    ['---', 'layout: page', 'title: 标签图谱', 'sidebar: false', '---', '', '<TagsPage />', ''].join('\n')
+  )
+}
+
+function buildSidebar(sources) {
+  const rootOrder = ['START_HERE.md', 'NAVIGATION.md', 'Full_Index.md']
+  const rootItems = rootOrder
+    .filter((rel) => fs.existsSync(path.join(DOCS, rel)))
+    .map((rel) => ({ text: readPageTitle(rel), link: sidebarLink(rel) }))
+  rootItems.push({ text: '标签图谱', link: '/tags/' })
+  rootItems.push({ text: '内容来源', link: '/sources/' })
+
+  const sidebar = {
+    '/': [{ text: '开始', items: rootItems }]
+  }
+  for (const module of MODULES) {
+    sidebar[`/${module.dir}/`] = buildModuleSidebar(module)
+  }
+  for (const source of sources) {
+    if (!source.prefix) continue
+    const files = listModuleFiles(source.prefix)
+    sidebar[`/${source.prefix}/`] = [
+      { text: '来源概览', link: `/${source.prefix}/` },
+      { text: '文章', collapsed: false, items: sortedItems(files) }
+    ]
+  }
+  return sidebar
 }
 
 function sidebarLink(rel) {
@@ -570,70 +779,115 @@ function buildModuleSidebar(module) {
   }
 
   const items = [{ text: '模块概览', link: `/${module.dir}/` }]
-  if (rootFiles.length > 0) {
-    items.push({ text: '综合', collapsed: false, items: sortedItems(rootFiles) })
-  }
+  if (rootFiles.length > 0) items.push({ text: '综合', collapsed: false, items: sortedItems(rootFiles) })
   for (const [label, rels] of [...groups.entries()].sort((a, b) => collator.compare(a[0], b[0]))) {
     items.push({ text: label, collapsed: true, items: sortedItems(rels) })
   }
   return items
 }
 
-function buildSidebar() {
-  const rootOrder = ['START_HERE.md', 'NAVIGATION.md', 'Full_Index.md']
-  const rootItems = rootOrder
-    .filter((rel) => fs.existsSync(path.join(DOCS, rel)))
-    .map((rel) => ({ text: readPageTitle(rel), link: sidebarLink(rel) }))
-  const sidebar = {
-    '/': [{ text: '开始', items: rootItems }]
-  }
-  for (const module of MODULES) {
-    sidebar[`/${module.dir}/`] = buildModuleSidebar(module)
-  }
-  return sidebar
-}
-
 async function main() {
   fs.mkdirSync(DOCS, { recursive: true })
   fs.mkdirSync(REPORTS, { recursive: true })
   fs.mkdirSync(CACHE, { recursive: true })
+  fs.mkdirSync(PUBLIC_DATA, { recursive: true })
+  fs.mkdirSync(DATA_DIR, { recursive: true })
   fs.rmSync(PUBLIC_IMAGES, { recursive: true, force: true })
   fs.mkdirSync(PUBLIC_IMAGES, { recursive: true })
   if (fs.existsSync(ASSETS)) fs.cpSync(ASSETS, PUBLIC_IMAGES, { recursive: true })
 
   for (const entry of fs.readdirSync(DOCS)) {
-    if (['.vitepress', 'public', 'index.md'].includes(entry)) continue
+    if (['.vitepress', 'public', 'index.md', 'notes'].includes(entry)) continue
     fs.rmSync(path.join(DOCS, entry), { recursive: true, force: true })
   }
 
-  console.log('discovering pages...')
-  const { pages, failed } = await discover()
-  const pageSet = new Set(pages.keys())
-  console.log(`discovered ${pages.size} pages, ${failed.size} failed targets`)
-
-  for (const [rel, result] of failed) {
-    report.skippedTargets.push({ rel, status: result.status || 404, error: result.error })
+  const discovered = []
+  for (const source of SOURCES) {
+    console.log(`discovering ${source.name}...`)
+    const result = await discover(source)
+    discovered.push({ source, ...result })
+    console.log(`  ${source.name}: ${result.pages.size} pages, ${result.failed.size} failed targets`)
   }
 
+  const pageSet = new Set()
+  for (const item of discovered) {
+    for (const rel of item.pages.keys()) pageSet.add(siteRelFor(item.source, rel))
+  }
+
+  const records = []
+  let diagramCount = 0
   let count = 0
-  for (const [rel, raw] of [...pages.entries()].sort(([a], [b]) => a.localeCompare(b))) {
-    const normalized = await normalizePage(rel, raw, pageSet)
-    writePage(rel, normalized.body)
-    count += 1
-    if (count % 20 === 0) console.log(`normalized ${count}/${pages.size}`)
+  for (const item of discovered) {
+    setActive(item.source)
+    for (const [rel, result] of item.failed) {
+      report.skippedTargets.push({ source: item.source.id, rel, status: result.status || 404, error: result.error })
+    }
+    const entries = [...item.pages.entries()].sort(([a], [b]) => a.localeCompare(b))
+    for (const [rel, raw] of entries) {
+      const outputRel = siteRelFor(item.source, rel)
+      const normalized = await normalizePage(rel, raw, pageSet, outputRel)
+      writePage(outputRel, normalized.body)
+      records.push({
+        rel: outputRel,
+        title: normalized.title,
+        link: `/${outputRel.replace(/\.md$/, '')}`,
+        module: normalized.module,
+        source: normalized.source,
+        sourceName: normalized.sourceName,
+        tags: normalized.tags
+      })
+      diagramCount += (normalized.body.match(/^```mermaid$/gm) || []).length
+      count += 1
+      if (count % 20 === 0) console.log(`normalized ${count}`)
+    }
+    report.sources.push({
+      id: item.source.id,
+      name: item.source.name,
+      pages: item.pages.size,
+      failed: item.failed.size,
+      url: item.source.url
+    })
   }
 
   const modules = MODULES.map(generateModulePage)
-  fs.mkdirSync(path.dirname(MODULES_DATA), { recursive: true })
-  fs.writeFileSync(MODULES_DATA, `${JSON.stringify(modules, null, 2)}\n`)
-  fs.writeFileSync(SIDEBAR_DATA, `${JSON.stringify(buildSidebar(), null, 2)}\n`)
+  for (const source of SOURCES) {
+    if (source.prefix) generateSourcePage(source, records)
+  }
+  generateTagsPage()
 
-  report.pages = count
+  const tagStats = buildTagStats({ articles: records, rules: TAG_RULES })
+  generateSourcesPage(records, tagStats)
+  fs.writeFileSync(path.join(PUBLIC_DATA, 'tag-index.json'), `${JSON.stringify(tagStats)}\n`)
+  const catalog = Object.fromEntries(
+    tagStats.tags.map((tag) => [tag.id, { label: tag.label, count: tag.count, kind: tag.kind }])
+  )
+  fs.writeFileSync(TAGS_DATA, `${JSON.stringify(catalog, null, 2)}\n`)
+  fs.writeFileSync(MODULES_DATA, `${JSON.stringify(modules, null, 2)}\n`)
+  fs.writeFileSync(
+    SITE_DATA,
+    `${JSON.stringify(
+      {
+        docs: records.length,
+        modules: MODULES.length,
+        tags: tagStats.keywordCount,
+        sources: SOURCES.length,
+        diagrams: diagramCount,
+        generatedAt: report.generatedAt
+      },
+      null,
+      2
+    )}\n`
+  )
+  fs.writeFileSync(SIDEBAR_DATA, `${JSON.stringify(buildSidebar(SOURCES), null, 2)}\n`)
+
+  report.pages = records.length
+  report.tags = tagStats.tagCount
   report.brokenLinks = [...new Map(report.degradedLinks.map((item) => [`${item.from}|${item.target}`, item])).values()]
   report.remappedLinks = [...new Map(report.remappedLinks.map((item) => [`${item.from}|${item.target}`, item])).values()]
   fs.writeFileSync(path.join(REPORTS, 'mirror-report.json'), `${JSON.stringify(report, null, 2)}\n`)
 
-  console.log(`wrote ${count} pages`)
+  console.log(`wrote ${records.length} pages from ${SOURCES.length} source(s)`)
+  console.log(`tags: ${tagStats.tagCount} total, ${tagStats.keywordCount} keyword, ${tagStats.cloud.length} in cloud`)
   console.log(`broken/orphan links: ${report.brokenLinks.length}`)
   console.log(`remapped links: ${report.remappedLinks.length}`)
   console.log(`images: ${report.images.filter((item) => item.file).length} downloaded, ${report.images.filter((item) => item.error).length} left remote`)

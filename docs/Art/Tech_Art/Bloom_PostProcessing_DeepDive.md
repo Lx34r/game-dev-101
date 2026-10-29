@@ -1,10 +1,16 @@
 ---
 title: "Bloom 后处理"
 description: "本文聚焦「Bloom 后处理」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-art","rendering","shader","performance","mobile","camera"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Art/Tech_Art/Bloom_PostProcessing_DeepDive.md"
 outline: [2, 3]
 ---
 
 # Bloom 后处理
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Bloom 后处理」，梳理核心概念、关键方法与落地实践。
 

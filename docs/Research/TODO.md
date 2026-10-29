@@ -1,10 +1,16 @@
 ---
 title: "Roguelike强化系统深度分析报告 - 任务清单"
 description: "本文聚焦「Roguelike强化系统深度分析报告 - 任务清单」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-research","skill","roguelike","algorithm","numerical","architecture"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Research/TODO.md"
 outline: [2, 3]
 ---
 
 # Roguelike强化系统深度分析报告 - 任务清单
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Roguelike强化系统深度分析报告 - 任务清单」，梳理核心概念、关键方法与落地实践。
 

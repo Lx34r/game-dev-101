@@ -1,10 +1,16 @@
 ---
 title: "网络架构与协议"
 description: "本文聚焦「网络架构与协议」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-tech","network","architecture","performance","save","analytics"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Network_Architecture.md"
 outline: [2, 3]
 ---
 
 # 网络架构与协议
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「网络架构与协议」，梳理核心概念、关键方法与落地实践。
 

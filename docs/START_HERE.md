@@ -1,10 +1,16 @@
 ---
 title: "新人上路指南"
 description: "本文聚焦「新人上路指南」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-site","numerical","roguelike","publishing","combat","skill"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/START_HERE.md"
 outline: [2, 3]
 ---
 
 # 新人上路指南
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「新人上路指南」，梳理核心概念、关键方法与落地实践。
 

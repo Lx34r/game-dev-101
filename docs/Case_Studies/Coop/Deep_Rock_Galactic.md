@@ -1,10 +1,16 @@
 ---
 title: "《Deep Rock Galactic》核心设计知识图谱"
 description: "本文档拆解《深岩银河》的**职业互补设计**、**程序生成洞穴**和**强制合作机制**。"
+tags: ["module-case","procedural","loot","analytics","algorithm","enemy"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Case_Studies/Coop/Deep_Rock_Galactic.md"
 outline: [2, 3]
 ---
 
 # 《Deep Rock Galactic》核心设计知识图谱
+
+<ArticleTags />
 
 > **摘要**：本文档拆解《深岩银河》的**职业互补设计**、**程序生成洞穴**和**强制合作机制**。
 

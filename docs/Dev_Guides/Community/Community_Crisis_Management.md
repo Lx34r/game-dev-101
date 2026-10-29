@@ -1,10 +1,16 @@
 ---
 title: "社区危机公关指南"
 description: "本文聚焦「社区危机公关指南」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","community","psychology","testing","publishing","monetization"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Community/Community_Crisis_Management.md"
 outline: [2, 3]
 ---
 
 # 社区危机公关指南
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「社区危机公关指南」，梳理核心概念、关键方法与落地实践。
 

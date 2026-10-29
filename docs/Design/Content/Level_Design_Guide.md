@@ -1,10 +1,16 @@
 ---
 title: "关卡与波次设计指南"
 description: "本文档指导如何构建游戏地图以及控制刷怪节奏 (Pacing)。"
+tags: ["module-design","level","enemy","testing","algorithm","numerical"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Content/Level_Design_Guide.md"
 outline: [2, 3]
 ---
 
 # 关卡与波次设计指南
+
+<ArticleTags />
 
 > **摘要**：本文档指导如何构建游戏地图以及控制刷怪节奏 (Pacing)。
 

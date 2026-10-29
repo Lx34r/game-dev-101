@@ -8,6 +8,7 @@
     "sync": "node scripts/sync-docs.mjs",
     "check:links": "node scripts/check-links.mjs",
     "check:content": "node scripts/check-content.mjs",
+    "check:tags": "node scripts/check-tags.mjs",
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
     "preview": "vitepress preview docs"

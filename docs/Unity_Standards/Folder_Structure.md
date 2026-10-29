@@ -1,10 +1,16 @@
 ---
 title: "Unity 项目文件夹结构规范"
 description: "本文聚焦「Unity 项目文件夹结构规范」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-standards","unity","art","tooling","architecture","towerdefense"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Unity_Standards/Folder_Structure.md"
 outline: [2, 3]
 ---
 
 # Unity 项目文件夹结构规范
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Unity 项目文件夹结构规范」，梳理核心概念、关键方法与落地实践。
 

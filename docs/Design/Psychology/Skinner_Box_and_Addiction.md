@@ -1,10 +1,16 @@
 ---
 title: "斯金纳箱与成瘾设计"
 description: "本文聚焦「斯金纳箱与成瘾设计」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","psychology","loot","skill","retention","numerical"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Psychology/Skinner_Box_and_Addiction.md"
 outline: [2, 3]
 ---
 
 # 斯金纳箱与成瘾设计
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「斯金纳箱与成瘾设计」，梳理核心概念、关键方法与落地实践。
 

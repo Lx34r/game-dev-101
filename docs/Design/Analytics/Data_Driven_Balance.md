@@ -1,10 +1,16 @@
 ---
 title: "数据驱动平衡 (DDNO)"
 description: "数据不会撒谎，但解读数据的人会。本文将揭示“平均胜率 50%”背后的陷阱，引入辛普森悖论与幸存者偏差的修正模型，并提供一套完整的数值健康度（Numeric Health）评分体系。"
+tags: ["module-design","analytics","numerical","testing","architecture","skill"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Analytics/Data_Driven_Balance.md"
 outline: [2, 3]
 ---
 
 # 数据驱动平衡 (DDNO)
+
+<ArticleTags />
 
 > 警惕辛普森悖论与幸存者偏差，构建基于多维分层的数值健康监控体系
 

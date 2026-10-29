@@ -1,10 +1,16 @@
 ---
 title: "PRD算法完整实现指南"
 description: "本文聚焦「PRD算法完整实现指南」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","performance","testing","algorithm","debugging","numerical"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Technical_Implementation/PRD_Algorithm_Complete.md"
 outline: [2, 3]
 ---
 
 # PRD算法完整实现指南
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「PRD算法完整实现指南」，梳理核心概念、关键方法与落地实践。
 

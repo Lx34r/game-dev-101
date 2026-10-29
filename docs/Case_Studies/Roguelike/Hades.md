@@ -1,10 +1,16 @@
 ---
 title: "Hades 构建多样性深度解析：从设计哲学到底层架构"
 description: "本文聚焦「Hades 构建多样性深度解析：从设计哲学到底层架构」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-case","architecture","combat","numerical","enemy","config"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Case_Studies/Roguelike/Hades.md"
 outline: [2, 3]
 ---
 
 # Hades 构建多样性深度解析：从设计哲学到底层架构
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Hades 构建多样性深度解析：从设计哲学到底层架构」，梳理核心概念、关键方法与落地实践。
 

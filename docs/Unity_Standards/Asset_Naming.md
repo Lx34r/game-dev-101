@@ -1,10 +1,16 @@
 ---
 title: "Unity 资产命名规范与强制检查工具"
 description: "本文聚焦「Unity 资产命名规范与强制检查工具」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-standards","ui","combat","unity","enemy","animation"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Unity_Standards/Asset_Naming.md"
 outline: [2, 3]
 ---
 
 # Unity 资产命名规范与强制检查工具
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Unity 资产命名规范与强制检查工具」，梳理核心概念、关键方法与落地实践。
 

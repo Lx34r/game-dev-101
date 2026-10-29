@@ -1,10 +1,16 @@
 ---
 title: "游戏开发工具链指南：加速迭代的秘密武器"
 description: "本文聚焦「游戏开发工具链指南：加速迭代的秘密武器」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","tooling","testing","unity","team","analytics"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Tools/Game_Dev_Toolchain_Guide.md"
 outline: [2, 3]
 ---
 
 # 游戏开发工具链指南：加速迭代的秘密武器
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「游戏开发工具链指南：加速迭代的秘密武器」，梳理核心概念、关键方法与落地实践。
 

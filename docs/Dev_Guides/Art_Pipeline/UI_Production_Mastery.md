@@ -1,10 +1,16 @@
 ---
 title: "UI 制作从入门到精通：从手工匠人到工业化生产"
 description: "本文聚焦「UI 制作从入门到精通：从手工匠人到工业化生产」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","ui","performance","unity","skill","build"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Art_Pipeline/UI_Production_Mastery.md"
 outline: [2, 3]
 ---
 
 # UI 制作从入门到精通：从手工匠人到工业化生产
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「UI 制作从入门到精通：从手工匠人到工业化生产」，梳理核心概念、关键方法与落地实践。
 

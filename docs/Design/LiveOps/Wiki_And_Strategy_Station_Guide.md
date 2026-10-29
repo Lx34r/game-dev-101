@@ -1,10 +1,16 @@
 ---
 title: "社区WIKI与攻略站构建策略"
 description: "本文聚焦「社区WIKI与攻略站构建策略」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","community","analytics","architecture","publishing","loot"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/LiveOps/Wiki_And_Strategy_Station_Guide.md"
 outline: [2, 3]
 ---
 
 # 社区WIKI与攻略站构建策略
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「社区WIKI与攻略站构建策略」，梳理核心概念、关键方法与落地实践。
 

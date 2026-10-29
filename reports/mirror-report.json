@@ -1,7 +1,16 @@
 {
-  "generatedAt": "2026-10-29T10:50:32.935Z",
-  "origin": "https://docs.wanyouxi.online",
+  "generatedAt": "2026-10-29T11:19:45.413Z",
+  "sources": [
+    {
+      "id": "wanyouxi",
+      "name": "游戏开发 101",
+      "pages": 188,
+      "failed": 2,
+      "url": "https://docs.wanyouxi.online/docs"
+    }
+  ],
   "pages": 188,
+  "tags": 61,
   "brokenLinks": [
     {
       "from": "Full_Index.md",
@@ -88,11 +97,6 @@
   ],
   "images": [
     {
-      "from": "Dev_Guides/Art_Pipeline/Indie_Team_Art_Strategy.md",
-      "url": "https://mintcdn.com/person-d58caa4b/pN3tnTK5uWHOdcsO/docs/Dev_Guides/Art_Pipeline/uploaded_image_1764749419457.png?fit=max&auto=format&n=pN3tnTK5uWHOdcsO&q=85&s=6e063924ca7c0a51cbe90947412490f5",
-      "file": "9abc975e01ec.png"
-    },
-    {
       "from": "Tech/Optimization/Unity_Advanced_CSharp_Performance.md",
       "url": "https://media.geeksforgeeks.org/wp-content/uploads/20230623123101/Stack-vs-Heap-Memory-Allocation.png",
       "file": "stack-vs-heap-memory.svg"
@@ -100,10 +104,12 @@
   ],
   "skippedTargets": [
     {
+      "source": "wanyouxi",
       "rel": "Tools/Odin_Luban_Integration_Guide.md",
       "status": 404
     },
     {
+      "source": "wanyouxi",
       "rel": "Tech/Algorithms/Procedural_Generation_Guide.md",
       "status": 404
     }

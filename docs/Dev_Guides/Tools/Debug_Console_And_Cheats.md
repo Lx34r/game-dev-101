@@ -1,10 +1,16 @@
 ---
 title: "🛠️ 调试控制台与作弊指令"
 description: "本文聚焦「🛠️ 调试控制台与作弊指令」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","debugging","testing","performance","tooling","loot"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Tools/Debug_Console_And_Cheats.md"
 outline: [2, 3]
 ---
 
 # 🛠️ 调试控制台与作弊指令
+
+<ArticleTags />
 
 > 游戏开发中的调试工具、控制台指令、快速调试技巧与自动化测试方案
 

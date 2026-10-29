@@ -1,10 +1,16 @@
 ---
 title: "《Darkest Dungeon》核心设计知识图谱"
 description: "本文档拆解《暗黑地牢》的**压力系统设计**、**永久损失机制**和**叙事驱动机制**。"
+tags: ["module-case","narrative","enemy","psychology"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Case_Studies/Roguelike/Darkest_Dungeon.md"
 outline: [2, 3]
 ---
 
 # 《Darkest Dungeon》核心设计知识图谱
+
+<ArticleTags />
 
 > **摘要**：本文档拆解《暗黑地牢》的**压力系统设计**、**永久损失机制**和**叙事驱动机制**。
 

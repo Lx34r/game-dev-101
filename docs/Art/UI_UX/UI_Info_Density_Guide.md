@@ -1,10 +1,16 @@
 ---
 title: "UI 信息密度与技能描述设计：极简与硬核的取舍"
 description: "本文聚焦「UI 信息密度与技能描述设计：极简与硬核的取舍」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-art","ui","combat","skill","numerical","psychology"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Art/UI_UX/UI_Info_Density_Guide.md"
 outline: [2, 3]
 ---
 
 # UI 信息密度与技能描述设计：极简与硬核的取舍
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「UI 信息密度与技能描述设计：极简与硬核的取舍」，梳理核心概念、关键方法与落地实践。
 

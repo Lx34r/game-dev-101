@@ -1,10 +1,16 @@
 ---
 title: "美术警察：资源验证标准"
 description: "本文聚焦「美术警察：资源验证标准」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-art","vfx","animation","performance","art","audio"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Art/Tech_Art/Asset_Validation_Standards.md"
 outline: [2, 3]
 ---
 
 # 美术警察：资源验证标准
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「美术警察：资源验证标准」，梳理核心概念、关键方法与落地实践。
 

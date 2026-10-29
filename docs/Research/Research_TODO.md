@@ -1,10 +1,16 @@
 ---
 title: "Vampirefall 深度研究 TODO 清单"
 description: "本文聚焦「Vampirefall 深度研究 TODO 清单」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-research","narrative","art","vfx","team","multiplayer"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Research/Research_TODO.md"
 outline: [2, 3]
 ---
 
 # Vampirefall 深度研究 TODO 清单
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Vampirefall 深度研究 TODO 清单」，梳理核心概念、关键方法与落地实践。
 

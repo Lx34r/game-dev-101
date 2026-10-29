@@ -1,10 +1,16 @@
 ---
 title: "Shader 核心数学模式与实战指南 (The Math of Shaders)"
 description: "本文聚焦「Shader 核心数学模式与实战指南 (The Math of Shaders)」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-tech","shader","numerical","rendering","vfx","procedural"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Graphics/Shader_Math_Patterns.md"
 outline: [2, 3]
 ---
 
 # Shader 核心数学模式与实战指南 (The Math of Shaders)
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「Shader 核心数学模式与实战指南 (The Math of Shaders)」，梳理核心概念、关键方法与落地实践。
 

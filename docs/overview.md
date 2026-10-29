@@ -1,10 +1,16 @@
 ---
 title: "游戏开发 101"
 description: "本文聚焦「游戏开发 101」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-site","roguelike","performance","skill","art","numerical"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/index.md"
 outline: [2, 3]
 ---
 
 # 游戏开发 101
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「游戏开发 101」，梳理核心概念、关键方法与落地实践。
 

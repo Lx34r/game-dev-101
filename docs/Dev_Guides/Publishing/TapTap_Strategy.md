@@ -1,10 +1,16 @@
 ---
 title: "TapTap 发行策略研究"
 description: "本文聚焦「TapTap 发行策略研究」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-dev","taptap","testing","publishing","steam","art"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Publishing/TapTap_Strategy.md"
 outline: [2, 3]
 ---
 
 # TapTap 发行策略研究
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「TapTap 发行策略研究」，梳理核心概念、关键方法与落地实践。
 

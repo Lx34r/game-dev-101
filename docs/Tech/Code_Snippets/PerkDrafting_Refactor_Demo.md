@@ -1,10 +1,16 @@
 ---
 title: "肉鸽强化抽取系统重构示例"
 description: "本文档展示了如何将 `Design/Mechanics/Roguelike_Perks.md` 中定义的肉鸽强化（Perk）抽取逻辑，通过我们设计的 `DecisionEngine` 进行重构。这使得 Perk 池的加权随机选择、流派偏好和稀有度控制变得高度可配置。"
+tags: ["module-tech","skill","roguelike","build","analytics"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Code_Snippets/PerkDrafting_Refactor_Demo.md"
 outline: [2, 3]
 ---
 
 # 肉鸽强化抽取系统重构示例
+
+<ArticleTags />
 
 > **摘要**：本文档展示了如何将 `Design/Mechanics/Roguelike_Perks.md` 中定义的肉鸽强化（Perk）抽取逻辑，通过我们设计的 `DecisionEngine` 进行重构。这使得 Perk 池的加权随机选择、流派偏好和稀有度控制变得高度可配置。
 

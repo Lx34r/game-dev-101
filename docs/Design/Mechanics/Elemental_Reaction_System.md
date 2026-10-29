@@ -1,10 +1,16 @@
 ---
 title: "元素反应与连携机制"
 description: "本文聚焦「元素反应与连携机制」，梳理核心概念、关键方法与落地实践。"
+tags: ["module-design","enemy","combat","skill","roguelike","architecture"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Design/Mechanics/Elemental_Reaction_System.md"
 outline: [2, 3]
 ---
 
 # 元素反应与连携机制
+
+<ArticleTags />
 
 > **摘要**：本文聚焦「元素反应与连携机制」，梳理核心概念、关键方法与落地实践。
 

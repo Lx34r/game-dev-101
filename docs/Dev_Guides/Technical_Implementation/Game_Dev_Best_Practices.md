@@ -1,10 +1,16 @@
 ---
 title: "游戏开发最佳实践：Tag系统、热重载与快速测试"
 description: "本文档深入探讨了游戏开发中三个关键方面：如何构建健壮的 Tag 系统、在 Unity 中实现高效的热重载，以及通过快速测试技巧显著提升开发效率和迭代质量。"
+tags: ["module-dev","testing","unity","analytics","debugging","numerical"]
+source: "wanyouxi"
+sourceName: "游戏开发 101"
+sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Technical_Implementation/Game_Dev_Best_Practices.md"
 outline: [2, 3]
 ---
 
 # 游戏开发最佳实践：Tag系统、热重载与快速测试
+
+<ArticleTags />
 
 > **摘要**：本文档深入探讨了游戏开发中三个关键方面：如何构建健壮的 Tag 系统、在 Unity 中实现高效的热重载，以及通过快速测试技巧显著提升开发效率和迭代质量。
 
