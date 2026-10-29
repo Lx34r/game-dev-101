@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-29T17:17:49.145Z",
-  "docs": 198,
-  "tags": 58,
+  "generatedAt": "2026-10-29T17:32:00.170Z",
+  "docs": 199,
+  "tags": 59,
   "sources": [
     {
       "id": "wanyouxi",
@@ -42,14 +42,14 @@
           "count": 36
         },
         {
-          "id": "loot",
-          "label": "掉落",
-          "count": 34
-        },
-        {
           "id": "analytics",
           "label": "数据",
           "count": 34
+        },
+        {
+          "id": "loot",
+          "label": "掉落",
+          "count": 33
         },
         {
           "id": "architecture",
@@ -67,7 +67,7 @@
       "id": "notes",
       "name": "GameDev Atlas 笔记",
       "url": "",
-      "pages": 10,
+      "pages": 11,
       "lastSync": "2026-10-29",
       "path": "/notes/",
       "topTags": [
@@ -117,9 +117,9 @@
           "count": 2
         },
         {
-          "id": "steam",
-          "label": "Steam",
-          "count": 1
+          "id": "narrative",
+          "label": "叙事",
+          "count": 2
         }
       ]
     }

@@ -56,7 +56,7 @@
   },
   "loot": {
     "label": "掉落",
-    "count": 34,
+    "count": 33,
     "kind": "keyword"
   },
   "module-case": {
@@ -64,13 +64,13 @@
     "count": 26,
     "kind": "module"
   },
-  "testing": {
-    "label": "测试",
-    "count": 24,
-    "kind": "keyword"
-  },
   "ui": {
     "label": "UI",
+    "count": 25,
+    "kind": "keyword"
+  },
+  "testing": {
+    "label": "测试",
     "count": 24,
     "kind": "keyword"
   },
@@ -104,11 +104,6 @@
     "count": 20,
     "kind": "keyword"
   },
-  "level": {
-    "label": "关卡",
-    "count": 19,
-    "kind": "keyword"
-  },
   "roguelike": {
     "label": "肉鸽",
     "count": 19,
@@ -116,6 +111,11 @@
   },
   "tooling": {
     "label": "工具",
+    "count": 18,
+    "kind": "keyword"
+  },
+  "level": {
+    "label": "关卡",
     "count": 18,
     "kind": "keyword"
   },
@@ -129,15 +129,15 @@
     "count": 17,
     "kind": "keyword"
   },
+  "psychology": {
+    "label": "心理",
+    "count": 16,
+    "kind": "keyword"
+  },
   "module-art": {
     "label": "美术",
     "count": 15,
     "kind": "module"
-  },
-  "psychology": {
-    "label": "心理",
-    "count": 15,
-    "kind": "keyword"
   },
   "rendering": {
     "label": "渲染",
@@ -179,6 +179,11 @@
     "count": 12,
     "kind": "keyword"
   },
+  "module-notes": {
+    "label": "笔记",
+    "count": 11,
+    "kind": "module"
+  },
   "economy": {
     "label": "经济",
     "count": 11,
@@ -193,11 +198,6 @@
     "label": "AI",
     "count": 11,
     "kind": "keyword"
-  },
-  "module-notes": {
-    "label": "笔记",
-    "count": 10,
-    "kind": "module"
   },
   "debugging": {
     "label": "调试",
@@ -229,14 +229,14 @@
     "count": 8,
     "kind": "keyword"
   },
-  "monetization": {
-    "label": "商业化",
+  "retention": {
+    "label": "留存",
     "count": 8,
     "kind": "keyword"
   },
-  "retention": {
-    "label": "留存",
-    "count": 7,
+  "monetization": {
+    "label": "商业化",
+    "count": 8,
     "kind": "keyword"
   },
   "community": {
@@ -246,6 +246,11 @@
   },
   "camera": {
     "label": "摄像机",
+    "count": 6,
+    "kind": "keyword"
+  },
+  "narrative": {
+    "label": "叙事",
     "count": 6,
     "kind": "keyword"
   },
@@ -271,11 +276,6 @@
   },
   "ftue": {
     "label": "新手引导",
-    "count": 5,
-    "kind": "keyword"
-  },
-  "narrative": {
-    "label": "叙事",
     "count": 5,
     "kind": "keyword"
   },
@@ -307,6 +307,11 @@
   "ecs": {
     "label": "ECS",
     "count": 4,
+    "kind": "keyword"
+  },
+  "flow": {
+    "label": "心流",
+    "count": 3,
     "kind": "keyword"
   },
   "module-research": {

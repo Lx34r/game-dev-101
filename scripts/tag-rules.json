@@ -498,6 +498,18 @@
       ]
     },
     {
+      "id": "flow",
+      "label": "心流",
+      "patterns": [
+        "心流",
+        "\bFlow\b",
+        "最优体验",
+        "挑战与技能",
+        "自成目标",
+        "沉浸体验"
+      ]
+    },
+    {
       "id": "monetization",
       "label": "商业化",
       "patterns": [

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T17:17:49.145Z",
+  "generatedAt": "2026-10-29T17:32:00.170Z",
   "notes": [
     {
       "title": "独立游戏上架 Steam：从 100 美元到商店页的实务清单",
@@ -153,6 +153,37 @@
         {
           "id": "animation",
           "label": "动画"
+        }
+      ]
+    },
+    {
+      "title": "心流与游戏：把挑战、反馈与注意力设计成体验",
+      "link": "/notes/flow-game-design",
+      "description": "用契克森米哈赖的心流理论拆解目标、反馈、挑战与技能平衡，并给出游戏设计与验收清单。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "psychology",
+          "label": "心理"
+        },
+        {
+          "id": "flow",
+          "label": "心流"
+        },
+        {
+          "id": "retention",
+          "label": "留存"
+        },
+        {
+          "id": "ui",
+          "label": "UI"
+        },
+        {
+          "id": "narrative",
+          "label": "叙事"
         }
       ]
     },

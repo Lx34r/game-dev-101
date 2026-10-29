@@ -1,7 +1,7 @@
 ---
 title: "游戏心理学框架：心流、爽点与留存机制"
 description: "本文聚焦「游戏心理学框架：心流、爽点与留存机制」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-design","retention","psychology","skill","enemy","level"]
+tags: ["module-design","retention","psychology","flow","skill","enemy"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Design/Game_Psychology_DeepDive.md"

@@ -1156,6 +1156,10 @@
           "link": "/notes/quaternion-3d-rotation"
         },
         {
+          "text": "心流与游戏：把挑战、反馈与注意力设计成体验",
+          "link": "/notes/flow-game-design"
+        },
+        {
           "text": "以撒的房间生成：BFS 布局、特殊房与形状扩展",
           "link": "/notes/isaac-room-generation"
         },
