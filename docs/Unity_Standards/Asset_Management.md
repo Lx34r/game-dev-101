@@ -1,7 +1,7 @@
 ---
 title: "Unity 资产管理实战指南"
 description: "本文聚焦「Unity 资产管理实战指南」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-standards","unity","memory","audio","performance","hotupdate"]
+tags: ["module-standards","unity","memory","audio","performance","ui"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Unity_Standards/Asset_Management.md"

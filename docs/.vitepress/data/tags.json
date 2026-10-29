@@ -69,13 +69,13 @@
     "count": 24,
     "kind": "keyword"
   },
-  "math": {
-    "label": "数学",
-    "count": 23,
-    "kind": "keyword"
-  },
   "ui": {
     "label": "UI",
+    "count": 24,
+    "kind": "keyword"
+  },
+  "math": {
+    "label": "数学",
     "count": 23,
     "kind": "keyword"
   },
@@ -289,11 +289,6 @@
     "count": 4,
     "kind": "keyword"
   },
-  "hotupdate": {
-    "label": "热更新",
-    "count": 4,
-    "kind": "keyword"
-  },
   "graphics": {
     "label": "图形",
     "count": 4,
@@ -323,6 +318,11 @@
     "label": "发行指南",
     "count": 2,
     "kind": "module"
+  },
+  "hotupdate": {
+    "label": "热更新",
+    "count": 2,
+    "kind": "keyword"
   },
   "quaternion": {
     "label": "四元数",
