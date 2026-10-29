@@ -1,7 +1,7 @@
 ---
 title: "Unity 粒子系统"
 description: "本文聚焦「Unity 粒子系统」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-art","vfx","shader","unity","debugging","numerical"]
+tags: ["module-art","vfx","shader","color","unity","debugging"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Art/VFX/Unity_Particle_System_DeepDive.md"

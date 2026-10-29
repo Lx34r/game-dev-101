@@ -1,7 +1,7 @@
 ---
 title: "粒子特效材质透明度混合模式"
 description: "本文聚焦「粒子特效材质透明度混合模式」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-tech","vfx","shader","unity","math","rendering"]
+tags: ["module-tech","vfx","color","shader","unity","math"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Graphics/Particle_Blending_Modes.md"

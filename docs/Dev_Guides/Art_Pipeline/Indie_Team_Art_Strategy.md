@@ -1,7 +1,7 @@
 ---
 title: "独立游戏美术突围：低成本、高统一性的资源策略"
 description: "本文聚焦「独立游戏美术突围：低成本、高统一性的资源策略」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-dev","art","shader","rendering","procedural","performance"]
+tags: ["module-dev","art","color","shader","rendering","procedural"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Dev_Guides/Art_Pipeline/Indie_Team_Art_Strategy.md"

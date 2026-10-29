@@ -1,7 +1,7 @@
 ---
 title: "视觉层级：混乱中的秩序"
 description: "本文聚焦「视觉层级：混乱中的秩序」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-art","vfx","combat","enemy","art","skill"]
+tags: ["module-art","vfx","combat","color","enemy","art"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Art/Visual_Hierarchy_In_Chaos.md"

@@ -1,7 +1,7 @@
 ---
 title: "Unity Transform 数学变换与最佳实践 (The Math of Transform)"
 description: "本文聚焦「Unity Transform 数学变换与最佳实践 (The Math of Transform)」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-tech","math","rotation","ui","unity","quaternion"]
+tags: ["module-tech","math","rotation","ui","unity","color"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Tech/Mechanics/Unity_Transform_Math_Guide.md"

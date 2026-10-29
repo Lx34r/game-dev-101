@@ -1,7 +1,7 @@
 ---
 title: "《Dead Cells》核心设计知识图谱"
 description: "本文档拆解《死亡细胞》的**颜色分级词缀系统**、**关卡分支设计**和**打击感优化**。"
-tags: ["module-case","level","vfx","combat","procedural","enemy"]
+tags: ["module-case","level","vfx","color","combat","procedural"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Case_Studies/Roguelike/Dead_Cells.md"

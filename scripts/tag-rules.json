@@ -561,6 +561,31 @@
       ]
     },
     {
+      "id": "color",
+      "label": "配色",
+      "patterns": [
+        "配色",
+        "色彩",
+        "Color",
+        "Palette",
+        "色相",
+        "明度",
+        "纯度"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "label": "可访问性",
+      "patterns": [
+        "可访问性",
+        "无障碍",
+        "Accessibility",
+        "对比度",
+        "色盲",
+        "色弱"
+      ]
+    },
+    {
       "id": "publishing",
       "label": "发行",
       "patterns": [

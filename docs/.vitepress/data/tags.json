@@ -1,12 +1,12 @@
 {
   "enemy": {
     "label": "敌人",
-    "count": 66,
+    "count": 65,
     "kind": "keyword"
   },
   "performance": {
     "label": "性能",
-    "count": 63,
+    "count": 62,
     "kind": "keyword"
   },
   "unity": {
@@ -21,7 +21,7 @@
   },
   "numerical": {
     "label": "数值",
-    "count": 50,
+    "count": 49,
     "kind": "keyword"
   },
   "module-design": {
@@ -39,14 +39,14 @@
     "count": 38,
     "kind": "module"
   },
-  "skill": {
-    "label": "技能",
-    "count": 36,
-    "kind": "keyword"
-  },
   "architecture": {
     "label": "架构",
     "count": 36,
+    "kind": "keyword"
+  },
+  "skill": {
+    "label": "技能",
+    "count": 35,
     "kind": "keyword"
   },
   "analytics": {
@@ -66,7 +66,7 @@
   },
   "ui": {
     "label": "UI",
-    "count": 25,
+    "count": 26,
     "kind": "keyword"
   },
   "testing": {
@@ -79,6 +79,11 @@
     "count": 24,
     "kind": "keyword"
   },
+  "art": {
+    "label": "美术",
+    "count": 23,
+    "kind": "keyword"
+  },
   "defense": {
     "label": "防御",
     "count": 22,
@@ -86,11 +91,6 @@
   },
   "build": {
     "label": "构筑",
-    "count": 22,
-    "kind": "keyword"
-  },
-  "art": {
-    "label": "美术",
     "count": 22,
     "kind": "keyword"
   },
@@ -129,18 +129,13 @@
     "count": 17,
     "kind": "keyword"
   },
-  "psychology": {
-    "label": "心理",
-    "count": 16,
-    "kind": "keyword"
-  },
   "module-art": {
     "label": "美术",
     "count": 15,
     "kind": "module"
   },
-  "rendering": {
-    "label": "渲染",
+  "psychology": {
+    "label": "心理",
     "count": 15,
     "kind": "keyword"
   },
@@ -149,8 +144,23 @@
     "count": 14,
     "kind": "keyword"
   },
+  "rendering": {
+    "label": "渲染",
+    "count": 14,
+    "kind": "keyword"
+  },
+  "module-notes": {
+    "label": "笔记",
+    "count": 13,
+    "kind": "module"
+  },
   "memory": {
     "label": "内存",
+    "count": 13,
+    "kind": "keyword"
+  },
+  "color": {
+    "label": "配色",
     "count": 13,
     "kind": "keyword"
   },
@@ -159,29 +169,19 @@
     "count": 13,
     "kind": "keyword"
   },
-  "module-notes": {
-    "label": "笔记",
-    "count": 12,
-    "kind": "module"
-  },
-  "animation": {
-    "label": "动画",
-    "count": 12,
-    "kind": "keyword"
-  },
   "input": {
     "label": "输入",
-    "count": 12,
-    "kind": "keyword"
-  },
-  "audio": {
-    "label": "音频",
     "count": 12,
     "kind": "keyword"
   },
   "shader": {
     "label": "Shader",
     "count": 12,
+    "kind": "keyword"
+  },
+  "animation": {
+    "label": "动画",
+    "count": 11,
     "kind": "keyword"
   },
   "economy": {
@@ -194,6 +194,11 @@
     "count": 11,
     "kind": "keyword"
   },
+  "audio": {
+    "label": "音频",
+    "count": 11,
+    "kind": "keyword"
+  },
   "ai": {
     "label": "AI",
     "count": 11,
@@ -201,11 +206,6 @@
   },
   "debugging": {
     "label": "调试",
-    "count": 10,
-    "kind": "keyword"
-  },
-  "steam": {
-    "label": "Steam",
     "count": 10,
     "kind": "keyword"
   },
@@ -221,6 +221,11 @@
   },
   "mobile": {
     "label": "移动端",
+    "count": 9,
+    "kind": "keyword"
+  },
+  "steam": {
+    "label": "Steam",
     "count": 9,
     "kind": "keyword"
   },
@@ -249,13 +254,13 @@
     "count": 7,
     "kind": "keyword"
   },
-  "rotation": {
-    "label": "旋转",
-    "count": 7,
-    "kind": "keyword"
-  },
   "narrative": {
     "label": "叙事",
+    "count": 6,
+    "kind": "keyword"
+  },
+  "rotation": {
+    "label": "旋转",
     "count": 6,
     "kind": "keyword"
   },
@@ -274,11 +279,6 @@
     "count": 5,
     "kind": "module"
   },
-  "graphics": {
-    "label": "图形",
-    "count": 5,
-    "kind": "keyword"
-  },
   "ftue": {
     "label": "新手引导",
     "count": 5,
@@ -286,6 +286,11 @@
   },
   "save": {
     "label": "存档",
+    "count": 4,
+    "kind": "keyword"
+  },
+  "graphics": {
+    "label": "图形",
     "count": 4,
     "kind": "keyword"
   },
@@ -324,6 +329,11 @@
     "count": 2,
     "kind": "module"
   },
+  "accessibility": {
+    "label": "可访问性",
+    "count": 2,
+    "kind": "keyword"
+  },
   "hotupdate": {
     "label": "热更新",
     "count": 2,
@@ -331,11 +341,6 @@
   },
   "patterns": {
     "label": "设计模式",
-    "count": 2,
-    "kind": "keyword"
-  },
-  "quaternion": {
-    "label": "四元数",
     "count": 2,
     "kind": "keyword"
   },
@@ -348,6 +353,11 @@
     "label": "工具",
     "count": 1,
     "kind": "module"
+  },
+  "quaternion": {
+    "label": "四元数",
+    "count": 1,
+    "kind": "keyword"
   },
   "taptap": {
     "label": "TapTap",

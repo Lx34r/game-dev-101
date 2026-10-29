@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-29T17:41:17.276Z",
-  "docs": 200,
-  "tags": 59,
+  "generatedAt": "2026-10-29T17:57:48.667Z",
+  "docs": 201,
+  "tags": 61,
   "sources": [
     {
       "id": "wanyouxi",
@@ -14,12 +14,12 @@
         {
           "id": "enemy",
           "label": "敌人",
-          "count": 66
+          "count": 65
         },
         {
           "id": "performance",
           "label": "性能",
-          "count": 62
+          "count": 61
         },
         {
           "id": "combat",
@@ -29,7 +29,7 @@
         {
           "id": "numerical",
           "label": "数值",
-          "count": 49
+          "count": 48
         },
         {
           "id": "unity",
@@ -39,7 +39,7 @@
         {
           "id": "skill",
           "label": "技能",
-          "count": 36
+          "count": 35
         },
         {
           "id": "analytics",
@@ -67,7 +67,7 @@
       "id": "notes",
       "name": "GameDev Atlas 笔记",
       "url": "",
-      "pages": 12,
+      "pages": 13,
       "lastSync": "2026-10-29",
       "path": "/notes/",
       "topTags": [
@@ -102,6 +102,11 @@
           "count": 2
         },
         {
+          "id": "graphics",
+          "label": "图形",
+          "count": 2
+        },
+        {
           "id": "camera",
           "label": "摄像机",
           "count": 2
@@ -114,11 +119,6 @@
         {
           "id": "monetization",
           "label": "商业化",
-          "count": 2
-        },
-        {
-          "id": "algorithm",
-          "label": "算法",
           "count": 2
         }
       ]

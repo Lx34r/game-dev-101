@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T17:41:17.276Z",
+  "generatedAt": "2026-10-29T17:57:48.667Z",
   "notes": [
     {
       "title": "3D 数学基础：坐标空间、变换与游戏渲染管线",
@@ -60,6 +60,37 @@
         {
           "id": "analytics",
           "label": "数据"
+        }
+      ]
+    },
+    {
+      "title": "七日配色基础：从色相环到游戏 UI 的可读配色",
+      "link": "/notes/seven-day-color-basics",
+      "description": "按七天课程整理色彩三属性、配色类型、对比与色彩心理，并落到游戏 UI、HUD 与场景配色。",
+      "tags": [
+        {
+          "id": "module-notes",
+          "label": "笔记"
+        },
+        {
+          "id": "art",
+          "label": "美术"
+        },
+        {
+          "id": "ui",
+          "label": "UI"
+        },
+        {
+          "id": "color",
+          "label": "配色"
+        },
+        {
+          "id": "graphics",
+          "label": "图形"
+        },
+        {
+          "id": "accessibility",
+          "label": "可访问性"
         }
       ]
     },

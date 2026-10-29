@@ -1,7 +1,7 @@
 ---
 title: "无障碍设计标准"
 description: "本文聚焦「无障碍设计标准」，梳理核心概念、关键方法与落地实践。"
-tags: ["module-design","multiplayer","tooling","art","audio","steam"]
+tags: ["module-design","accessibility","color","multiplayer","tooling","art"]
 source: "wanyouxi"
 sourceName: "游戏开发 101"
 sourceUrl: "https://docs.wanyouxi.online/docs/Design/UX/Accessibility_Standards.md"
