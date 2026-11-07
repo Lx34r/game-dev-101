@@ -121,7 +121,7 @@ for (const source of SOURCES) {
 let activeSource = SOURCES[0]
 
 const report = {
-  generatedAt: new Date().toISOString(),
+  generatedAt: new Date().toISOString().slice(0, 10),
   sources: [],
   pages: 0,
   tags: 0,
