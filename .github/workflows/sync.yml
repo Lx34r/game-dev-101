@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: sync-content
@@ -48,14 +49,29 @@ jobs:
           BASE_PATH: ${{ github.event.repository.name }}
 
       - name: Commit and push synced content
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs reports
           if git diff --cached --quiet; then
             echo "No content changes."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git commit -m "chore(sync): 定时同步内容参考"
           git pull --rebase origin main
           git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Trigger Pages deploy
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          curl -sS -X POST \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            -H "Content-Type: application/json" \
+            -d '{"ref":"main"}' \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/deploy.yml/dispatches"
