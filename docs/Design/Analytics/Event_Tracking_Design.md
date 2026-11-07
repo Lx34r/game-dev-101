@@ -224,24 +224,24 @@ public void TrackDeferred(EventData eventData) {
 
 ### 关键时机点
 
-> **应用生命周期**
+> [card] 应用生命周期
 >
 > * `app_install`（首次启动） - `app_launch`（每次启动） -
 >   `app_background`（切换后台） - `app_foreground`（恢复前台） -
 >   `app_crash`（崩溃）
 
-> **玩家生命周期**
+> [card] 玩家生命周期
 >
 > * `tutorial_start`（新手引导开始） - `tutorial_complete`（完成引导） -
 >   `level_up`（等级提升） - `first_purchase`（首次付费） -
 >   `session_end`（会话结束）
 
-> **功能漏斗**
+> [card] 功能漏斗
 >
 > * `feature_exposed`（功能曝光） - `feature_click`（点击进入） -
 >   `feature_complete`（完成操作） - `feature_exit`（退出）
 
-> **经济系统**
+> [card] 经济系统
 >
 > * `currency_gain`（货币获得） - `currency_spend`（货币消耗） -
 >   `item_craft`（物品合成） - `gacha_pull`（抽卡）
@@ -525,7 +525,7 @@ graph TB
 
 #### 关键字段说明
 
-> **通用字段（Common Fields）**
+> [accordion] 通用字段（Common Fields）
 >
 > **必须字段**：
 >
@@ -540,12 +540,12 @@ graph TB
 > * `app_version`：应用版本号
 > * `ab_test_group`：A/B 测试分组
 
-> **事件属性（Event Properties）**
+> [accordion] 事件属性（Event Properties）
 >
 > 描述"这次事件"的具体信息： - `level_id`：关卡 ID - `difficulty`：难度等级 -
 > `result`：结果（victory/defeat/quit） - `duration`：持续时间
 
-> **用户属性（User Properties）**
+> [accordion] 用户属性（User Properties）
 >
 > 描述"这个用户"的状态（快照）： - `player_level`：玩家等级 - `vip_level`：VIP
 > 等级 - `days_since_install`：安装后天数 - `total_spent`：累计付费金额
@@ -970,7 +970,7 @@ def parse_battle_event(event):
 
 ## 🎯 总结与检查清单
 
-> **✅ 埋点设计检查清单**
+> [accordion] ✅ 埋点设计检查清单
 >
 > **规划阶段**：
 >

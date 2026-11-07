@@ -18,15 +18,15 @@ outline: [2, 3]
 
 ## 🚀 快速导航
 
-> **[新手上路](START_HERE.md)**
+> [card] [新手上路](START_HERE.md)
 >
 > 首次访问？从这里开始
 
-> **[阅读导航中心](NAVIGATION.md)**
+> [card] [阅读导航中心](NAVIGATION.md)
 >
 > 按职责 / 阶段 / 目标快速选路
 
-> **[全站索引](Full_Index.md)**
+> [card] [全站索引](Full_Index.md)
 >
 > 按目录浏览所有文档
 
