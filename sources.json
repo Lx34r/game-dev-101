@@ -8,7 +8,13 @@
       "llms": "https://docs.wanyouxi.online/llms.txt",
       "url": "https://docs.wanyouxi.online/docs",
       "prefix": "",
-      "enabled": true
+      "enabled": true,
+      "rules": {
+        "directives": {
+          "card": "info",
+          "accordion": "details"
+        }
+      }
     }
   ]
 }

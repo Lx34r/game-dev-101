@@ -446,6 +446,72 @@ function canonicalUrl(source, rel) {
   return new URL(`${source.docsPath}${fetchRel}`, source.origin).href
 }
 
+function convertDirectiveBlockquotes(markdown, directives = {}) {
+  const typeMap = Object.fromEntries(
+    Object.entries(directives).map(([key, value]) => [key.toLowerCase(), value])
+  )
+  if (Object.keys(typeMap).length === 0) return markdown
+  const lines = markdown.split('\n')
+  const out = []
+  let inFence = false
+  let i = 0
+  while (i < lines.length) {
+    const line = lines[i]
+    if (/^\s*```/.test(line)) {
+      inFence = !inFence
+      out.push(line)
+      i++
+      continue
+    }
+    const m = inFence ? null : line.match(/^>\s*\[([a-zA-Z]+)\]\s*(.*)$/)
+    const type = m ? typeMap[m[1].toLowerCase()] : null
+    if (!m || !type) {
+      out.push(line)
+      i++
+      continue
+    }
+    const block = []
+    let j = i
+    while (j < lines.length && /^>/.test(lines[j])) {
+      block.push(lines[j])
+      j++
+    }
+    const title = m[2].trim()
+    out.push('', `::: ${type}${title ? ` ${title}` : ''}`)
+    for (const bl of block.slice(1)) out.push(bl.replace(/^>\s?/, ''))
+    out.push(':::', '')
+    i = j
+  }
+  return out.join('\n')
+}
+
+const sourceTagRulesCache = new Map()
+
+function tagRulesFor(source) {
+  if (!source.tagRulesFile) {
+    return { rules: TAG_RULES.rules, maxPerArticle: TAG_RULES.maxPerArticle || 6 }
+  }
+  if (!sourceTagRulesCache.has(source.id)) {
+    const file = JSON.parse(fs.readFileSync(path.join(ROOT, source.tagRulesFile), 'utf8'))
+    sourceTagRulesCache.set(source.id, {
+      rules: file.rules || [],
+      maxPerArticle: file.maxPerArticle || TAG_RULES.maxPerArticle || 6
+    })
+  }
+  return sourceTagRulesCache.get(source.id)
+}
+
+function mergedTagRules() {
+  const byId = new Map(TAG_RULES.rules.map((rule) => [rule.id, rule]))
+  for (const source of SOURCES) {
+    if (!source.tagRulesFile) continue
+    for (const rule of tagRulesFor(source).rules) {
+      if (!byId.has(rule.id)) byId.set(rule.id, rule)
+    }
+  }
+  return { moduleTags: TAG_RULES.moduleTags, rules: [...byId.values()] }
+}
+
 async function normalizePage(rel, raw, pageSet, outputRel) {
   let markdown = stripOriginChrome(raw)
   const title = extractTitle(markdown) || path.posix.basename(rel, '.md')
@@ -545,13 +611,16 @@ async function normalizePage(rel, raw, pageSet, outputRel) {
 
   for (const item of degraded) report.degradedLinks.push(item)
 
+  body = convertDirectiveBlockquotes(body, source.rules?.directives)
+
   const moduleTag = moduleTagFor(source, rel)
+  const sourceTags = tagRulesFor(source)
   const tags = scoreArticleTags({
     title,
     body,
     moduleTag,
-    rules: TAG_RULES.rules,
-    maxPerArticle: TAG_RULES.maxPerArticle || 6
+    rules: sourceTags.rules,
+    maxPerArticle: sourceTags.maxPerArticle
   })
 
   const frontmatter = ['---', `title: ${JSON.stringify(title)}`]
@@ -987,7 +1056,7 @@ async function main() {
   }
   generateTagsPage()
 
-  const tagStats = buildTagStats({ articles: records, rules: TAG_RULES })
+  const tagStats = buildTagStats({ articles: records, rules: mergedTagRules() })
   generateSourcesPage(records, tagStats, localNotes)
   generateNotesPage(localNotes, tagStats)
   fs.writeFileSync(path.join(PUBLIC_DATA, 'tag-index.json'), `${JSON.stringify(tagStats)}\n`)

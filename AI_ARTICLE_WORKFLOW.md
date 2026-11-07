@@ -112,7 +112,10 @@
       "llms": "https://docs.example.com/llms.txt",
       "url": "https://docs.example.com/docs",
       "prefix": "",
-      "enabled": true
+      "enabled": true,
+      "rules": {
+        "directives": { "card": "info", "accordion": "details" }
+      }
     },
     {
       "id": "team-notes",
@@ -122,7 +125,8 @@
       "llms": "https://notes.example.com/llms.txt",
       "url": "https://notes.example.com",
       "prefix": "sources/team-notes",
-      "enabled": true
+      "enabled": true,
+      "tagRulesFile": "scripts/tag-rules.team-notes.json"
     }
   ]
 }
@@ -134,6 +138,8 @@
 - 附加来源必须使用 `sources/<id>`，避免路径冲突；
 - `origin` 不带尾部斜杠；`docsPath` 以 `/` 结尾；
 - 没有 `llms` 时，脚本从首页与导航做 BFS；页面发现可能不完整，需检查报告。
+- **抓取与转换规则按来源区分**：`rules.directives` 声明该来源特有的块引用标记到 VitePress 容器的映射（如 `card→info`、`accordion→details`）；未声明的来源不做该转换，避免把 A 站的标记规则套到 B 站。
+- **标签规则按来源区分**：默认用全局 `scripts/tag-rules.json`；来源可用 `tagRulesFile` 指定自己的关键词规则文件（含 `rules` 与 `maxPerArticle`）。合并目录会包含各来源规则，保证标签索引与门禁一致。
 
 ### 4.3 同步步骤
 
