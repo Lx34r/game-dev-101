@@ -224,27 +224,39 @@ public void TrackDeferred(EventData eventData) {
 
 ### 关键时机点
 
-> **应用生命周期**
->
-> * `app_install`（首次启动） - `app_launch`（每次启动） -
->   `app_background`（切换后台） - `app_foreground`（恢复前台） -
->   `app_crash`（崩溃）
 
-> **玩家生命周期**
->
-> * `tutorial_start`（新手引导开始） - `tutorial_complete`（完成引导） -
->   `level_up`（等级提升） - `first_purchase`（首次付费） -
->   `session_end`（会话结束）
+::: info 应用生命周期
 
-> **功能漏斗**
->
-> * `feature_exposed`（功能曝光） - `feature_click`（点击进入） -
->   `feature_complete`（完成操作） - `feature_exit`（退出）
+* `app_install`（首次启动） - `app_launch`（每次启动） -
+  `app_background`（切换后台） - `app_foreground`（恢复前台） -
+  `app_crash`（崩溃）
+:::
 
-> **经济系统**
->
-> * `currency_gain`（货币获得） - `currency_spend`（货币消耗） -
->   `item_craft`（物品合成） - `gacha_pull`（抽卡）
+
+
+::: info 玩家生命周期
+
+* `tutorial_start`（新手引导开始） - `tutorial_complete`（完成引导） -
+  `level_up`（等级提升） - `first_purchase`（首次付费） -
+  `session_end`（会话结束）
+:::
+
+
+
+::: info 功能漏斗
+
+* `feature_exposed`（功能曝光） - `feature_click`（点击进入） -
+  `feature_complete`（完成操作） - `feature_exit`（退出）
+:::
+
+
+
+::: info 经济系统
+
+* `currency_gain`（货币获得） - `currency_spend`（货币消耗） -
+  `item_craft`（物品合成） - `gacha_pull`（抽卡）
+:::
+
 
 ***
 
@@ -525,30 +537,39 @@ graph TB
 
 #### 关键字段说明
 
-> **通用字段（Common Fields）**
->
-> **必须字段**：
->
-> * `event`：事件名称（使用 snake\_case）
-> * `timestamp`：Unix 时间戳（毫秒级）
-> * `user_id`：用户唯一标识（匿名 ID 或账号 ID）
->
-> **推荐字段**：
->
-> * `session_id`：会话 ID（用于漏斗分析）
-> * `platform`：平台（iOS/Android/PC）
-> * `app_version`：应用版本号
-> * `ab_test_group`：A/B 测试分组
 
-> **事件属性（Event Properties）**
->
-> 描述"这次事件"的具体信息： - `level_id`：关卡 ID - `difficulty`：难度等级 -
-> `result`：结果（victory/defeat/quit） - `duration`：持续时间
+::: details 通用字段（Common Fields）
 
-> **用户属性（User Properties）**
->
-> 描述"这个用户"的状态（快照）： - `player_level`：玩家等级 - `vip_level`：VIP
-> 等级 - `days_since_install`：安装后天数 - `total_spent`：累计付费金额
+**必须字段**：
+
+* `event`：事件名称（使用 snake\_case）
+* `timestamp`：Unix 时间戳（毫秒级）
+* `user_id`：用户唯一标识（匿名 ID 或账号 ID）
+
+**推荐字段**：
+
+* `session_id`：会话 ID（用于漏斗分析）
+* `platform`：平台（iOS/Android/PC）
+* `app_version`：应用版本号
+* `ab_test_group`：A/B 测试分组
+:::
+
+
+
+::: details 事件属性（Event Properties）
+
+描述"这次事件"的具体信息： - `level_id`：关卡 ID - `difficulty`：难度等级 -
+`result`：结果（victory/defeat/quit） - `duration`：持续时间
+:::
+
+
+
+::: details 用户属性（User Properties）
+
+描述"这个用户"的状态（快照）： - `player_level`：玩家等级 - `vip_level`：VIP
+等级 - `days_since_install`：安装后天数 - `total_spent`：累计付费金额
+:::
+
 
 ### 命名规范
 
@@ -970,33 +991,36 @@ def parse_battle_event(event):
 
 ## 🎯 总结与检查清单
 
-> **✅ 埋点设计检查清单**
->
-> **规划阶段**：
->
-> * [ ] 明确分析目标（留存？付费？卡关？）
-> * [ ] 绘制关键用户路径（漏斗图）
-> * [ ] 确定事件优先级（P0/P1/P2）
->
-> **实现阶段**：
->
-> * [ ] 事件命名符合规范（snake\_case）
-> * [ ] 包含必要字段（user\_id, timestamp, session\_id）
-> * [ ] 添加版本号（event\_version）
-> * [ ] 敏感信息已脱敏
->
-> **验证阶段**：
->
-> * [ ] 测试环境数据正常上报
-> * [ ] 数据类型一致（不要混用 string/int）
-> * [ ] 服务器端数据验证通过
-> * [ ] 文档已更新（事件字典）
->
-> **优化阶段**：
->
-> * [ ] 监控数据量和成本
-> * [ ] 定期清理无用事件
-> * [ ] 根据分析需求调整粒度
+
+::: details ✅ 埋点设计检查清单
+
+**规划阶段**：
+
+* [ ] 明确分析目标（留存？付费？卡关？）
+* [ ] 绘制关键用户路径（漏斗图）
+* [ ] 确定事件优先级（P0/P1/P2）
+
+**实现阶段**：
+
+* [ ] 事件命名符合规范（snake\_case）
+* [ ] 包含必要字段（user\_id, timestamp, session\_id）
+* [ ] 添加版本号（event\_version）
+* [ ] 敏感信息已脱敏
+
+**验证阶段**：
+
+* [ ] 测试环境数据正常上报
+* [ ] 数据类型一致（不要混用 string/int）
+* [ ] 服务器端数据验证通过
+* [ ] 文档已更新（事件字典）
+
+**优化阶段**：
+
+* [ ] 监控数据量和成本
+* [ ] 定期清理无用事件
+* [ ] 根据分析需求调整粒度
+:::
+
 
 ***
 
