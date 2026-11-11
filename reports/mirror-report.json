@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09",
+  "generatedAt": "2026-11-11",
   "sources": [
     {
       "id": "wanyouxi",
@@ -113,12 +113,14 @@
     {
       "source": "wanyouxi",
       "rel": "Tools/Odin_Luban_Integration_Guide.md",
-      "status": 404
+      "status": 404,
+      "error": "TypeError: fetch failed"
     },
     {
       "source": "wanyouxi",
       "rel": "Tech/Algorithms/Procedural_Generation_Guide.md",
-      "status": 404
+      "status": 404,
+      "error": "TypeError: fetch failed"
     }
   ]
 }

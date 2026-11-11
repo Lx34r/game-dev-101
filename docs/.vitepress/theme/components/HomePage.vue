@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { withBase } from 'vitepress'
 import modules from '../../data/modules.json'
 import site from '../../data/site.json'
@@ -8,13 +8,13 @@ import tagCatalog from '../../data/tags.json'
 const META = {
   Design: {
     desc: '数值、机制、系统与玩家心理，把体验翻译成可调参数。',
-    accent: '#a3e635',
+    accent: '#42b983',
     tags: ['数值', '机制', '系统', '心理'],
     featured: true
   },
   Tech: {
     desc: '架构、渲染、网络与性能预算，写给要长期维护的项目。',
-    accent: '#22d3ee',
+    accent: '#42b4b9',
     tags: ['架构', '图形', '网络', '性能'],
     featured: true
   },
@@ -30,7 +30,7 @@ const META = {
 
 const moduleCards = modules.map((module) => ({
   ...module,
-  ...(META[module.dir] || { desc: '', accent: '#a3e635' })
+  ...(META[module.dir] || { desc: '', accent: '#42b983' })
 }))
 
 const tagPreview = computed(() => {
@@ -82,153 +82,235 @@ const paths = [
 ]
 
 const featured = [
-  {
-    tag: 'DESIGN',
-    title: '核心数值体系定义手册',
-    note: '数值框架的起点：把难度、节奏与成长写成公式。',
-    link: '/Design/Numerical_Manual'
-  },
-  {
-    tag: 'DESIGN',
-    title: '战斗系统详解',
-    note: '从输入缓冲到命中反馈，拆开动作手感。',
-    link: '/Design/Mechanics/Combat_System'
-  },
-  {
-    tag: 'TECH',
-    title: '索敌系统综合指南',
-    note: '高频查询、评分维度与空间划分的工程实现。',
-    link: '/Tech/Mechanics/Targeting_System_Complete'
-  },
-  {
-    tag: 'CASE',
-    title: 'Hades 构建多样性',
-    note: '肉鸽构筑如何做到每局都有新组合。',
-    link: '/Case_Studies/Roguelike/Hades'
-  },
-  {
-    tag: 'TECH',
-    title: '性能预算与优化标准',
-    note: '先定帧与内存的底线，再谈效果。',
-    link: '/Tech/Performance_Budget'
-  },
-  {
-    tag: 'GUIDE',
-    title: 'Steam 发行策略研究',
-    note: '从商店页到长线运营的完整路径。',
-    link: '/Guides/Publishing/Steam_Complete_Guide'
-  }
+  { tag: 'DESIGN', title: '核心数值体系定义手册', note: '数值框架的起点：把难度、节奏与成长写成公式。', link: '/Design/Numerical_Manual' },
+  { tag: 'DESIGN', title: '战斗系统详解', note: '从输入缓冲到命中反馈，拆开动作手感。', link: '/Design/Mechanics/Combat_System' },
+  { tag: 'TECH', title: '索敌系统综合指南', note: '高频查询、评分维度与空间划分的工程实现。', link: '/Tech/Mechanics/Targeting_System_Complete' },
+  { tag: 'CASE', title: 'Hades 构建多样性', note: '肉鸽构筑如何做到每局都有新组合。', link: '/Case_Studies/Roguelike/Hades' },
+  { tag: 'TECH', title: '性能预算与优化标准', note: '先定帧与内存的底线，再谈效果。', link: '/Tech/Performance_Budget' },
+  { tag: 'GUIDE', title: 'Steam 发行策略研究', note: '从商店页到长线运营的完整路径。', link: '/Guides/Publishing/Steam_Complete_Guide' }
 ]
 
 const heroEl = ref(null)
+const canvasEl = ref(null)
+let ctx = null
+let raf = 0
+let particles = []
+let W = 0
+let H = 0
+let visible = true
+let reduced = false
+let io = null
+const pointer = { x: -9999, y: -9999, on: false }
 
-function handlePointer(event) {
-  const element = heroEl.value
-  if (!element) return
-  const rect = element.getBoundingClientRect()
-  const x = event.clientX - rect.left
-  const y = event.clientY - rect.top
-  element.style.setProperty('--mx', `${x}px`)
-  element.style.setProperty('--my', `${y}px`)
+function seed() {
+  const count = Math.max(36, Math.min(90, Math.round((W * H) / 18000)))
+  particles = Array.from({ length: count }, () => ({
+    x: Math.random() * W,
+    y: Math.random() * H,
+    vx: (Math.random() - 0.5) * 0.6,
+    vy: (Math.random() - 0.5) * 0.6,
+    r: 1 + Math.random() * 2.4
+  }))
 }
+
+function draw() {
+  if (!ctx) return
+  ctx.clearRect(0, 0, W, H)
+  const LINK = 240
+  for (let i = 0; i < particles.length; i += 1) {
+    const a = particles[i]
+    for (let j = i + 1; j < particles.length; j += 1) {
+      const b = particles[j]
+      const dx = a.x - b.x
+      const dy = a.y - b.y
+      const d2 = dx * dx + dy * dy
+      if (d2 < LINK * LINK) {
+        const alpha = 0.5 * (1 - Math.sqrt(d2) / LINK)
+        ctx.strokeStyle = `rgba(255,255,255,${alpha.toFixed(3)})`
+        ctx.lineWidth = 1
+        ctx.beginPath()
+        ctx.moveTo(a.x, a.y)
+        ctx.lineTo(b.x, b.y)
+        ctx.stroke()
+      }
+    }
+    if (pointer.on) {
+      const dx = a.x - pointer.x
+      const dy = a.y - pointer.y
+      const d2 = dx * dx + dy * dy
+      const GRAB = 200
+      if (d2 < GRAB * GRAB) {
+        const alpha = 0.8 * (1 - Math.sqrt(d2) / GRAB)
+        ctx.strokeStyle = `rgba(66,185,131,${alpha.toFixed(3)})`
+        ctx.lineWidth = 1
+        ctx.beginPath()
+        ctx.moveTo(a.x, a.y)
+        ctx.lineTo(pointer.x, pointer.y)
+        ctx.stroke()
+      }
+    }
+  }
+  ctx.fillStyle = 'rgba(255,255,255,0.9)'
+  for (const p of particles) {
+    ctx.beginPath()
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
+    ctx.fill()
+  }
+}
+
+function resize() {
+  const canvas = canvasEl.value
+  const hero = heroEl.value
+  if (!canvas || !hero) return
+  const dpr = Math.min(window.devicePixelRatio || 1, 2)
+  W = hero.clientWidth
+  H = hero.clientHeight
+  canvas.width = W * dpr
+  canvas.height = H * dpr
+  canvas.style.width = `${W}px`
+  canvas.style.height = `${H}px`
+  ctx = canvas.getContext('2d')
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
+  seed()
+  if (reduced) draw()
+}
+
+function step() {
+  for (const p of particles) {
+    p.x += p.vx
+    p.y += p.vy
+    if (p.x < -10) p.x = W + 10
+    else if (p.x > W + 10) p.x = -10
+    if (p.y < -10) p.y = H + 10
+    else if (p.y > H + 10) p.y = -10
+  }
+  draw()
+}
+
+function loop() {
+  step()
+  raf = requestAnimationFrame(loop)
+}
+
+function start() {
+  if (reduced || raf) return
+  raf = requestAnimationFrame(loop)
+}
+
+function stop() {
+  if (raf) {
+    cancelAnimationFrame(raf)
+    raf = 0
+  }
+}
+
+function onVis() {
+  if (document.hidden) stop()
+  else if (visible) start()
+}
+
+function onPointerMove(event) {
+  const rect = heroEl.value.getBoundingClientRect()
+  pointer.x = event.clientX - rect.left
+  pointer.y = event.clientY - rect.top
+  pointer.on = true
+}
+
+function onPointerLeave() {
+  pointer.on = false
+}
+
+function onClick(event) {
+  const rect = heroEl.value.getBoundingClientRect()
+  particles.push({
+    x: event.clientX - rect.left,
+    y: event.clientY - rect.top,
+    vx: (Math.random() - 0.5) * 0.6,
+    vy: (Math.random() - 0.5) * 0.6,
+    r: 1 + Math.random() * 2.4
+  })
+  if (particles.length > 120) particles.shift()
+  if (reduced) draw()
+}
+
+onMounted(() => {
+  reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  resize()
+  window.addEventListener('resize', resize)
+  document.addEventListener('visibilitychange', onVis)
+  io = new IntersectionObserver(
+    ([entry]) => {
+      visible = entry.isIntersecting
+      if (visible && !document.hidden) start()
+      else stop()
+    },
+    { threshold: 0.05 }
+  )
+  io.observe(heroEl.value)
+  if (!reduced) start()
+})
+
+onBeforeUnmount(() => {
+  stop()
+  window.removeEventListener('resize', resize)
+  document.removeEventListener('visibilitychange', onVis)
+  io?.disconnect()
+})
 
 function openSearch() {
   document.querySelector('.DocSearch-Button')?.click()
 }
-
-
 </script>
 
 <template>
   <div class="home">
-    <section ref="heroEl" class="home-hero" @pointermove="handlePointer">
-      <div class="home-hero-bg" aria-hidden="true">
-        <span class="orb orb-a"></span>
-        <span class="orb orb-b"></span>
-        <span class="orb orb-c"></span>
-        <span class="grid-overlay"></span>
-        <span class="noise"></span>
-        <span class="cursor-glow"></span>
+    <section
+      ref="heroEl"
+      class="home-hero"
+      @pointermove="onPointerMove"
+      @pointerleave="onPointerLeave"
+      @click="onClick"
+    >
+      <canvas ref="canvasEl" class="hero-canvas" aria-hidden="true"></canvas>
+      <span class="hero-moon" aria-hidden="true"></span>
+
+      <div class="hero-center">
+        <h1 class="hero-title">GameDev Atlas</h1>
+        <p class="hero-tagline">把游戏做出来 · 从设计到上线</p>
+        <nav class="hero-links" aria-label="快速入口">
+          <a :href="withBase('/START_HERE')">开始探索</a>
+          <a :href="withBase('/tags/')">标签图谱</a>
+          <a :href="withBase('/sources/')">内容来源</a>
+          <a :href="withBase('/notes/')">笔记</a>
+        </nav>
+        <dl class="hero-stats">
+          <div>
+            <dt>DOCS</dt>
+            <dd>{{ site.docs }}</dd>
+          </div>
+          <div>
+            <dt>TAGS</dt>
+            <dd>{{ site.tags }}</dd>
+          </div>
+          <div>
+            <dt>SOURCES</dt>
+            <dd>{{ site.sources }}</dd>
+          </div>
+          <div>
+            <dt>DIAGRAMS</dt>
+            <dd>{{ site.diagrams }}</dd>
+          </div>
+        </dl>
       </div>
 
-      <div class="home-wrap home-hero-inner">
-        <div class="home-hero-copy">
-          <p class="home-eyebrow">
-            <span class="live-dot"></span>
-            GAMEDEV ATLAS
-            <span class="slash">/</span>
-            VOL. 01
-          </p>
-          <h1 class="home-title">
-            把游戏做出来
-            <span class="home-title-accent">从设计到上线</span>
-          </h1>
-          <p class="home-lead">
-            一个可持续同步的开发知识备忘站。{{ site.docs }} 篇文章自动生成标签，
-            按主题、模块与来源快速检索，也可以从词云进入。
-          </p>
-          <div class="home-actions">
-            <a class="home-btn home-btn-primary" :href="withBase('/START_HERE')">
-              开始探索
-              <span class="btn-arrow">→</span>
-            </a>
-            <button class="home-btn home-btn-ghost" type="button" @click="openSearch">
-              搜索文档
-              <kbd>⌘K</kbd>
-            </button>
-            <a class="home-link" :href="withBase('/Full_Index')">全站索引 <span>↗</span></a>
-          </div>
-          <dl class="home-stats">
-            <div>
-              <dt>DOCS</dt>
-              <dd>{{ site.docs }}</dd>
-            </div>
-            <div>
-              <dt>TAGS</dt>
-              <dd>{{ site.tags }}</dd>
-            </div>
-            <div>
-              <dt>SOURCES</dt>
-              <dd>{{ site.sources }}</dd>
-            </div>
-            <div>
-              <dt>DIAGRAMS</dt>
-              <dd>{{ site.diagrams }}</dd>
-            </div>
-          </dl>
-        </div>
-
-        <div class="home-atlas" aria-hidden="true">
-          <div class="atlas-panel">
-            <div class="atlas-head">
-              <span>ATLAS / 01</span>
-              <span class="atlas-live">LIVE INDEX</span>
-            </div>
-            <div class="atlas-map">
-              <svg class="atlas-lines" viewBox="0 0 460 300" preserveAspectRatio="none">
-                <path d="M70 230 C140 210 160 160 230 150 S330 100 390 60" />
-                <path d="M90 80 C160 110 210 120 260 150 S340 210 372 250" />
-                <path d="M70 230 C120 260 240 260 300 220 S350 170 390 60" />
-              </svg>
-              <span class="atlas-node node-design"><b>01</b> 设计</span>
-              <span class="atlas-node node-tech"><b>02</b> 技术</span>
-              <span class="atlas-node node-case"><b>03</b> 案例</span>
-              <span class="atlas-node node-art"><b>04</b> 美术</span>
-              <span class="atlas-node node-release"><b>05</b> 发行</span>
-              <span class="atlas-coord">X 128.4 / Y 36.2</span>
-            </div>
-            <div class="atlas-card">
-              <span class="atlas-card-kicker">FEATURED</span>
-              <strong>核心数值体系定义手册</strong>
-              <span class="atlas-card-meta">DESIGN · 数值 / 经济 / 成长</span>
-              <span class="atlas-card-line"></span>
-            </div>
-          </div>
-        </div>
-      </div>
+      <a class="hero-down" href="#modules" aria-label="向下滚动">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </a>
     </section>
 
-    <section class="home-section">
+    <section id="modules" class="home-section">
       <div class="home-wrap">
         <header class="home-section-head reveal">
           <div>
@@ -303,23 +385,20 @@ function openSearch() {
           <p class="home-section-note">如果只读六篇，从这六篇开始。</p>
         </header>
 
-        <div class="featured-grid">
-          <a
-            v-for="item in featured"
-            :key="item.link"
-            class="feature-card reveal"
-            :href="withBase(item.link)"
-          >
-            <span class="feature-tag">{{ item.tag }}</span>
-            <h3>{{ item.title }}</h3>
-            <p>{{ item.note }}</p>
-            <span class="feature-arrow">→</span>
-          </a>
-        </div>
+        <dl class="post-list reveal">
+          <template v-for="item in featured" :key="item.link">
+            <dt>
+              <code class="post-badge">{{ item.tag }}</code>
+              <span class="post-chevron">»</span>
+              <a :href="withBase(item.link)">{{ item.title }}</a>
+            </dt>
+            <dd>{{ item.note }}</dd>
+          </template>
+        </dl>
       </div>
     </section>
 
-    <section class="home-section">
+    <section class="home-section home-section-alt">
       <div class="home-wrap">
         <header class="home-section-head reveal">
           <div>

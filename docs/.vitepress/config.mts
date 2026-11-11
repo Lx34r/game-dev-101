@@ -55,10 +55,19 @@ export default withMermaid(
     appearance: 'dark',
     cleanUrls: false,
     head: [
-      ['meta', { name: 'theme-color', content: '#0b0c0e' }],
+      ['meta', { name: 'theme-color', content: '#202124' }],
       ['meta', { property: 'og:type', content: 'website' }],
       ['meta', { property: 'og:site_name', content: 'GameDev Atlas' }],
-      ['link', { rel: 'icon', href: `${base}logo.svg` }]
+      ['link', { rel: 'icon', href: `${base}logo.svg` }],
+      ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+      ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
+      [
+        'link',
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap'
+        }
+      ]
     ],
     sitemap: {
       hostname: 'https://lx34r.github.io/game-dev-101/'

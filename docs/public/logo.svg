@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="GameDev Atlas">
   <defs>
     <linearGradient id="g" x1="14" y1="48" x2="50" y2="14" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#a3e635"/>
-      <stop offset="1" stop-color="#22d3ee"/>
+      <stop stop-color="#42b983"/>
+      <stop offset="1" stop-color="#42b4b9"/>
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="16" fill="#0b0f0d"/>
+  <rect width="64" height="64" rx="16" fill="#202124"/>
   <path d="M17 47 32 16l15 31" fill="none" stroke="url(#g)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M23 38h18" fill="none" stroke="url(#g)" stroke-width="4" stroke-linecap="round"/>
-  <circle cx="49" cy="15" r="4" fill="#22d3ee"/>
+  <circle cx="49" cy="15" r="4" fill="#e8eef2"/>
 </svg>
