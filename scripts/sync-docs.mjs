@@ -981,14 +981,6 @@ async function main() {
   fs.mkdirSync(CACHE, { recursive: true })
   fs.mkdirSync(PUBLIC_DATA, { recursive: true })
   fs.mkdirSync(DATA_DIR, { recursive: true })
-  fs.rmSync(PUBLIC_IMAGES, { recursive: true, force: true })
-  fs.mkdirSync(PUBLIC_IMAGES, { recursive: true })
-  if (fs.existsSync(ASSETS)) fs.cpSync(ASSETS, PUBLIC_IMAGES, { recursive: true })
-
-  for (const entry of fs.readdirSync(DOCS)) {
-    if (['.vitepress', 'public', 'index.md', 'notes'].includes(entry)) continue
-    fs.rmSync(path.join(DOCS, entry), { recursive: true, force: true })
-  }
 
   const discovered = []
   for (const source of SOURCES) {
@@ -996,6 +988,21 @@ async function main() {
     const result = await discover(source)
     discovered.push({ source, ...result })
     console.log(`  ${source.name}: ${result.pages.size} pages, ${result.failed.size} failed targets`)
+  }
+  // 发现为空说明远端不可达；先中止再清空，否则镜像会被整站删掉
+  const empty = discovered.filter((item) => item.pages.size === 0)
+  if (empty.length > 0) {
+    console.error(`aborting: ${empty.map((item) => item.source.name).join(', ')} discovered 0 pages; keeping existing mirror`)
+    process.exit(1)
+  }
+
+  fs.rmSync(PUBLIC_IMAGES, { recursive: true, force: true })
+  fs.mkdirSync(PUBLIC_IMAGES, { recursive: true })
+  if (fs.existsSync(ASSETS)) fs.cpSync(ASSETS, PUBLIC_IMAGES, { recursive: true })
+
+  for (const entry of fs.readdirSync(DOCS)) {
+    if (['.vitepress', 'public', 'index.md', 'notes'].includes(entry)) continue
+    fs.rmSync(path.join(DOCS, entry), { recursive: true, force: true })
   }
 
   const pageSet = new Set()
