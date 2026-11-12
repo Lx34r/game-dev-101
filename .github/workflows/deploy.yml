@@ -3,6 +3,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  schedule:
+    # 每天 02:00 UTC（北京时间 10:00）同步内容源并发布
+    - cron: '0 2 * * *'
   workflow_dispatch:
 
 permissions:
@@ -17,6 +20,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
@@ -27,6 +31,10 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Sync sources
+        run: npm run sync -- --refresh
+        # push/手动触发时远端抓取失败不阻塞发布；cron 严格失败以便暴露同步问题
+        continue-on-error: ${{ github.event_name != 'schedule' }}
       - run: npm run check:content
       - run: npm run check:tags
       - run: npm run check:links
