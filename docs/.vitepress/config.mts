@@ -78,7 +78,45 @@ export default withMermaid(
       hostname: 'https://lx34r.github.io/game-dev-101/'
     },
     markdown: {
-      math: true
+      math: true,
+      config(md) {
+        // 镜像来源的目录链接用去 emoji 的旧 slug，与 VitePress 保留 emoji 的标题 id 不一致
+        const norm = (s: string) =>
+          s.replace(/\p{Extended_Pictographic}/gu, '').replace(/️/g, '').toLowerCase()
+        md.core.ruler.push('gd-anchor-hrefs', (state) => {
+          const ids: string[] = []
+          for (const t of state.tokens) {
+            if (t.type === 'heading_open') {
+              const id = t.attrGet('id')
+              if (id) ids.push(id)
+            }
+          }
+          const byNorm = new Map<string, string>()
+          for (const id of ids) {
+            const key = norm(id)
+            if (!byNorm.has(key)) byNorm.set(key, id)
+          }
+          const walk = (tokens: typeof state.tokens) => {
+            for (const t of tokens) {
+              if (t.type === 'link_open') {
+                const href = t.attrGet('href')
+                if (href && href.startsWith('#')) {
+                  let frag = href.slice(1)
+                  try {
+                    frag = decodeURIComponent(frag)
+                  } catch {}
+                  if (!ids.includes(frag)) {
+                    const hit = byNorm.get(norm(frag))
+                    if (hit) t.attrSet('href', '#' + hit)
+                  }
+                }
+              }
+              if (t.children) walk(t.children)
+            }
+          }
+          walk(state.tokens)
+        })
+      }
     },
     mermaid: {
       theme: 'default'
