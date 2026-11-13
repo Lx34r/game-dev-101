@@ -76,7 +76,7 @@ export default withMermaid(
       math: true
     },
     mermaid: {
-      theme: 'dark'
+      theme: 'default'
     },
     themeConfig: {
       logo: '/logo.svg',

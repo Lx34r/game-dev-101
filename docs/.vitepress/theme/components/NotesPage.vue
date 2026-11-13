@@ -1,10 +1,37 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { nextTick, onMounted, onUnmounted, ref } from 'vue'
 import { withBase } from 'vitepress'
 
 const data = ref(null)
 const loading = ref(true)
 const error = ref('')
+const pageEl = ref(null)
+let revealIO = null
+
+async function armReveals() {
+  await nextTick()
+  const nodes = pageEl.value?.querySelectorAll('.reveal') || []
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  if (reduced || !('IntersectionObserver' in window)) {
+    nodes.forEach((node) => node.classList.add('is-visible'))
+    return
+  }
+  revealIO = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible')
+          revealIO.unobserve(entry.target)
+        }
+      }
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
+  )
+  nodes.forEach((node, index) => {
+    node.style.setProperty('--rd', `${Math.min((index % 6) * 70, 350)}ms`)
+    revealIO.observe(node)
+  })
+}
 
 onMounted(async () => {
   try {
@@ -16,11 +43,14 @@ onMounted(async () => {
   } finally {
     loading.value = false
   }
+  await armReveals()
 })
+
+onUnmounted(() => revealIO?.disconnect())
 </script>
 
 <template>
-  <div class="home notes-page">
+  <div ref="pageEl" class="home notes-page">
     <div class="home-wrap">
       <header class="notes-header">
         <p class="notes-eyebrow"><span class="live-dot"></span> NOTES <span class="slash">/</span> 笔记</p>
@@ -39,25 +69,24 @@ onMounted(async () => {
       <p v-else-if="data.notes.length === 0" class="notes-loading">暂无笔记。在 `docs/notes/` 新建 Markdown 即可。</p>
 
       <div v-else class="notes-grid">
-        <a v-for="note in data.notes" :key="note.link" class="note-card" :href="withBase(note.link)">
+        <article v-for="note in data.notes" :key="note.link" class="note-card reveal">
           <span class="note-kicker">ORIGINAL NOTE</span>
-          <h2>{{ note.title }}</h2>
+          <h2><a class="note-title-link" :href="withBase(note.link)">{{ note.title }}</a></h2>
           <p>{{ note.description }}</p>
           <div class="note-tags">
             <a
               v-for="tag in note.tags"
               :key="tag.id"
               :href="withBase(`/tags/#${tag.id}`)"
-              @click.stop
             >
               # {{ tag.label }}
             </a>
           </div>
-          <span class="note-arrow">→</span>
-        </a>
+          <svg class="note-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+        </article>
       </div>
 
-      <section class="notes-how">
+      <section class="notes-how reveal">
         <p class="notes-kicker">WRITE A NOTE</p>
         <h2>写一篇新笔记</h2>
         <p>
@@ -72,8 +101,24 @@ onMounted(async () => {
 
 <style scoped>
 .notes-page {
+  position: relative;
   padding: 84px 0 96px;
   min-height: 100vh;
+}
+
+.notes-page::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 440px;
+  background:
+    radial-gradient(46% 62% at 12% 0%, var(--home-aurora-1), transparent 70%),
+    radial-gradient(40% 56% at 88% 4%, var(--home-aurora-2), transparent 72%);
+  pointer-events: none;
+}
+
+.notes-page .home-wrap {
+  position: relative;
 }
 
 .notes-header {
@@ -98,6 +143,10 @@ onMounted(async () => {
   font-weight: 800;
   line-height: 1.04;
   letter-spacing: -0.05em;
+  background: linear-gradient(100deg, var(--home-title-a) 5%, var(--home-title-b) 55%, var(--home-title-c) 115%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .notes-lead {
@@ -158,13 +207,25 @@ onMounted(async () => {
     var(--home-card);
   padding: 24px;
   color: var(--home-fg);
-  text-decoration: none;
   transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
 }
+
+.notes-grid .note-card:nth-child(8n + 1) { --home-accent: var(--home-cloud-1); }
+.notes-grid .note-card:nth-child(8n + 2) { --home-accent: var(--home-cloud-2); }
+.notes-grid .note-card:nth-child(8n + 3) { --home-accent: var(--home-cloud-3); }
+.notes-grid .note-card:nth-child(8n + 4) { --home-accent: var(--home-cloud-4); }
+.notes-grid .note-card:nth-child(8n + 5) { --home-accent: var(--home-cloud-5); }
+.notes-grid .note-card:nth-child(8n + 6) { --home-accent: var(--home-cloud-6); }
+.notes-grid .note-card:nth-child(8n + 7) { --home-accent: var(--home-cloud-7); }
+.notes-grid .note-card:nth-child(8n + 8) { --home-accent: var(--home-cloud-8); }
 
 .note-card:hover {
   border-color: color-mix(in srgb, var(--home-accent) 50%, var(--home-line));
   transform: translateY(-3px);
+}
+
+.note-card:active {
+  transform: translateY(-1px) scale(0.99);
 }
 
 .note-kicker {
@@ -180,6 +241,17 @@ onMounted(async () => {
   letter-spacing: -0.03em;
 }
 
+.note-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.note-title-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
 .note-card p {
   margin: 8px 0 0;
   color: var(--home-muted);
@@ -188,6 +260,8 @@ onMounted(async () => {
 }
 
 .note-tags {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
@@ -201,6 +275,7 @@ onMounted(async () => {
   color: var(--home-muted);
   font-size: 10.5px;
   text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
 }
 
 .note-tags a:hover {
@@ -208,13 +283,15 @@ onMounted(async () => {
   color: var(--home-fg);
 }
 
+.note-tags a:active {
+  transform: scale(0.95);
+}
+
 .note-arrow {
   position: absolute;
   right: 20px;
   bottom: 18px;
   color: var(--home-muted);
-  font-family: var(--vp-font-family-mono);
-  font-size: 16px;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 

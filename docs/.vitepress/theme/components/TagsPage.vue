@@ -1,6 +1,8 @@
 <script setup>
 import { computed, nextTick, onMounted, onUnmounted, ref } from 'vue'
-import { withBase } from 'vitepress'
+import { useData, withBase } from 'vitepress'
+
+const { isDark } = useData()
 
 const data = ref(null)
 const loading = ref(true)
@@ -9,6 +11,13 @@ const selected = ref('')
 const query = ref('')
 const sourceFilter = ref('')
 const articleSection = ref(null)
+
+const CLOUD_LIGHT = ['#15803d', '#0e7490', '#b45309', '#6d28d9', '#be185d', '#1d4ed8', '#0f766e', '#c2410c']
+const CLOUD_DARK = ['#4ade80', '#22d3ee', '#fbbf24', '#a78bfa', '#f472b6', '#60a5fa', '#2dd4bf', '#fb923c']
+
+function cloudColor(index) {
+  return (isDark.value ? CLOUD_DARK : CLOUD_LIGHT)[index % 8]
+}
 
 const keywordTags = computed(() => data.value?.tags.filter((tag) => tag.kind === 'keyword') || [])
 const moduleTags = computed(() => data.value?.tags.filter((tag) => tag.kind === 'module') || [])
@@ -125,7 +134,7 @@ onUnmounted(() => window.removeEventListener('hashchange', readHash))
               aria-label="文章标签词云"
             >
               <a
-                v-for="word in data.cloud"
+                v-for="(word, wi) in data.cloud"
                 :key="word.id"
                 :href="`#${word.id}`"
                 tabindex="0"
@@ -139,7 +148,7 @@ onUnmounted(() => window.removeEventListener('hashchange', readHash))
                   :x="word.x"
                   :y="word.y"
                   :font-size="word.size"
-                  :fill="word.color"
+                  :fill="cloudColor(wi)"
                   :font-weight="word.size > 42 ? 700 : 500"
                   text-anchor="middle"
                   dominant-baseline="middle"
@@ -226,7 +235,9 @@ onUnmounted(() => window.removeEventListener('hashchange', readHash))
             >
               <span class="tag-article-meta">{{ article.module }} · {{ article.sourceName }}</span>
               <h3>{{ article.title }}</h3>
-              <span class="tag-article-arrow">→</span>
+              <span class="tag-article-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </span>
             </a>
           </div>
           <p v-else class="tag-empty">这个标签下暂无文章。</p>
@@ -260,6 +271,11 @@ onUnmounted(() => window.removeEventListener('hashchange', readHash))
 
 .tags-header h1 {
   margin: 0;
+  background: linear-gradient(100deg, var(--home-title-a) 5%, var(--home-title-b) 55%, var(--home-title-c) 115%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
   font-size: clamp(2.6rem, 5.4vw, 4.4rem);
   font-weight: 800;
   line-height: 1.04;
@@ -335,7 +351,7 @@ onUnmounted(() => window.removeEventListener('hashchange', readHash))
 
 .cloud-word {
   cursor: pointer;
-  opacity: 0.82;
+  opacity: 0.88;
   transition: opacity 0.2s ease, filter 0.2s ease;
 }
 
@@ -419,6 +435,10 @@ onUnmounted(() => window.removeEventListener('hashchange', readHash))
   padding-left: 6px;
 }
 
+.tag-list-item:active {
+  transform: scale(0.98);
+}
+
 .tag-list-item b {
   color: var(--home-muted);
   font-family: var(--vp-font-family-mono);
@@ -447,7 +467,7 @@ onUnmounted(() => window.removeEventListener('hashchange', readHash))
   color: var(--home-muted);
   font-size: 11px;
   cursor: pointer;
-  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease, transform 0.2s ease;
 }
 
 .module-tag b,
@@ -465,6 +485,11 @@ onUnmounted(() => window.removeEventListener('hashchange', readHash))
   border-color: color-mix(in srgb, var(--home-accent) 55%, var(--home-line));
   background: color-mix(in srgb, var(--home-accent) 9%, transparent);
   color: var(--home-fg);
+}
+
+.module-tag:active,
+.tag-source-filter button:active {
+  transform: scale(0.96);
 }
 
 .tag-results {
@@ -537,6 +562,10 @@ onUnmounted(() => window.removeEventListener('hashchange', readHash))
   transform: translateY(-2px);
 }
 
+.tag-article:active {
+  transform: translateY(-1px) scale(0.995);
+}
+
 .tag-article-meta {
   color: var(--home-muted);
   font-family: var(--vp-font-family-mono);
@@ -556,9 +585,14 @@ onUnmounted(() => window.removeEventListener('hashchange', readHash))
   position: absolute;
   right: 16px;
   bottom: 14px;
+  display: inline-flex;
   color: var(--home-muted);
-  font-family: var(--vp-font-family-mono);
   transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.tag-article-arrow svg {
+  width: 14px;
+  height: 14px;
 }
 
 .tag-article:hover .tag-article-arrow {
@@ -615,6 +649,20 @@ onUnmounted(() => window.removeEventListener('hashchange', readHash))
     font-weight: 600;
     line-height: 1.2;
     cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .mobile-cloud-tag:nth-child(8n + 1) { color: var(--home-cloud-1); }
+  .mobile-cloud-tag:nth-child(8n + 2) { color: var(--home-cloud-2); }
+  .mobile-cloud-tag:nth-child(8n + 3) { color: var(--home-cloud-3); }
+  .mobile-cloud-tag:nth-child(8n + 4) { color: var(--home-cloud-4); }
+  .mobile-cloud-tag:nth-child(8n + 5) { color: var(--home-cloud-5); }
+  .mobile-cloud-tag:nth-child(8n + 6) { color: var(--home-cloud-6); }
+  .mobile-cloud-tag:nth-child(8n + 7) { color: var(--home-cloud-7); }
+  .mobile-cloud-tag:nth-child(8n + 8) { color: var(--home-cloud-8); }
+
+  .mobile-cloud-tag:active {
+    transform: scale(0.96);
   }
 
   .mobile-cloud-tag sup {
@@ -626,7 +674,8 @@ onUnmounted(() => window.removeEventListener('hashchange', readHash))
   }
 
   .mobile-cloud-tag.active {
-    color: var(--home-accent);
+    text-decoration: underline;
+    text-underline-offset: 4px;
   }
 
   .tag-side {

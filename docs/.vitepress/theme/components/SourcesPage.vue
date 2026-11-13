@@ -1,12 +1,28 @@
 <script setup>
-import { onMounted, ref } from 'vue'
-import { withBase } from 'vitepress'
+import { nextTick, onMounted, onUnmounted, ref } from 'vue'
+import { useData, withBase } from 'vitepress'
+
+const { isDark } = useData()
 
 const data = ref(null)
 const loading = ref(true)
 const error = ref('')
+const pageEl = ref(null)
+let revealIO = null
 
-const accents = ['#a3e635', '#22d3ee', '#fbbf24', '#f472b6', '#a78bfa', '#fb923c']
+const ACCENTS = [
+  ['#65a30d', '#a3e635'],
+  ['#0e7490', '#22d3ee'],
+  ['#b45309', '#fbbf24'],
+  ['#be185d', '#f472b6'],
+  ['#6d28d9', '#a78bfa'],
+  ['#c2410c', '#fb923c']
+]
+
+function accentFor(index) {
+  return ACCENTS[index % ACCENTS.length][isDark.value ? 1 : 0]
+}
+
 const configSample = `{
   "id": "team-notes",
   "name": "团队笔记",
@@ -18,6 +34,31 @@ const configSample = `{
   "enabled": true
 }`
 
+async function armReveals() {
+  await nextTick()
+  const nodes = pageEl.value?.querySelectorAll('.reveal') || []
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  if (reduced || !('IntersectionObserver' in window)) {
+    nodes.forEach((node) => node.classList.add('is-visible'))
+    return
+  }
+  revealIO = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible')
+          revealIO.unobserve(entry.target)
+        }
+      }
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
+  )
+  nodes.forEach((node, index) => {
+    node.style.setProperty('--rd', `${Math.min((index % 6) * 70, 350)}ms`)
+    revealIO.observe(node)
+  })
+}
+
 onMounted(async () => {
   try {
     const response = await fetch(withBase('/data/sources-index.json'))
@@ -28,11 +69,14 @@ onMounted(async () => {
   } finally {
     loading.value = false
   }
+  await armReveals()
 })
+
+onUnmounted(() => revealIO?.disconnect())
 </script>
 
 <template>
-  <div class="home sources-page">
+  <div ref="pageEl" class="home sources-page">
     <div class="home-wrap">
       <header class="sources-header">
         <p class="sources-eyebrow"><span class="live-dot"></span> SOURCES <span class="slash">/</span> 内容来源</p>
@@ -56,8 +100,8 @@ onMounted(async () => {
           <article
             v-for="(source, index) in data.sources"
             :key="source.id"
-            class="source-card"
-            :style="{ '--accent': accents[index % accents.length] }"
+            class="source-card reveal"
+            :style="{ '--accent': accentFor(index) }"
           >
             <div class="source-card-top">
               <span class="source-index">{{ String(index + 1).padStart(2, '0') }} / SYNCED</span>
@@ -75,14 +119,20 @@ onMounted(async () => {
               </a>
             </div>
             <footer class="source-actions">
-              <a v-if="source.url" :href="source.url" target="_blank" rel="noreferrer">源站 ↗</a>
+              <a v-if="source.url" :href="source.url" target="_blank" rel="noreferrer">
+                源站
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9" /></svg>
+              </a>
               <span v-else>本地笔记</span>
-              <a :href="withBase(source.path)">浏览文章 →</a>
+              <a :href="withBase(source.path)">
+                浏览文章
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </a>
             </footer>
           </article>
         </section>
 
-        <section class="source-how">
+        <section class="source-how reveal">
           <div class="source-how-copy">
             <p class="sources-kicker">ADD A SOURCE</p>
             <h2>接入下一个来源</h2>
@@ -105,8 +155,24 @@ onMounted(async () => {
 
 <style scoped>
 .sources-page {
+  position: relative;
   padding: 84px 0 96px;
   min-height: 100vh;
+}
+
+.sources-page::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 440px;
+  background:
+    radial-gradient(46% 62% at 12% 0%, var(--home-aurora-1), transparent 70%),
+    radial-gradient(40% 56% at 88% 4%, var(--home-aurora-2), transparent 72%);
+  pointer-events: none;
+}
+
+.sources-page .home-wrap {
+  position: relative;
 }
 
 .sources-header {
@@ -131,6 +197,10 @@ onMounted(async () => {
   font-weight: 800;
   line-height: 1.04;
   letter-spacing: -0.05em;
+  background: linear-gradient(100deg, var(--home-title-a) 5%, var(--home-title-b) 55%, var(--home-title-c) 115%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .sources-lead {
@@ -182,6 +252,12 @@ onMounted(async () => {
     var(--home-card);
   padding: 24px;
   box-shadow: var(--home-shadow);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.source-card:hover {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--home-line));
+  transform: translateY(-3px);
 }
 
 .source-card::after {
@@ -239,12 +315,16 @@ onMounted(async () => {
   color: var(--home-muted);
   font-size: 11px;
   text-decoration: none;
-  transition: border-color 0.2s ease, color 0.2s ease;
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
 }
 
 .source-tags a:hover {
   border-color: color-mix(in srgb, var(--accent) 55%, var(--home-line));
   color: var(--home-fg);
+}
+
+.source-tags a:active {
+  transform: scale(0.96);
 }
 
 .source-tags sup {
@@ -263,9 +343,13 @@ onMounted(async () => {
 }
 
 .source-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   color: var(--home-muted);
   font-size: 12px;
   text-decoration: none;
+  transition: color 0.2s ease, transform 0.15s ease;
 }
 
 .source-actions a:last-child {
@@ -275,6 +359,10 @@ onMounted(async () => {
 .source-actions a:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
+}
+
+.source-actions a:active {
+  transform: scale(0.96);
 }
 
 .source-how {

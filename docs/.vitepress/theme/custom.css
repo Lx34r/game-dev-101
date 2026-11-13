@@ -1,12 +1,44 @@
+/* ===== GameDev Atlas 外观 token：浅/深两套语义色，chrome 与正文共用 ===== */
 :root {
-  --vp-c-brand-1: #16a34a;
-  --vp-c-brand-2: #15803d;
-  --vp-c-brand-3: #166534;
+  color-scheme: light;
+  --vp-c-bg: #f6f8f7;
+  --vp-c-bg-alt: #f6f8f7;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: #edf2ee;
+  --vp-c-divider: #d9e2db;
+  --vp-c-gutter: #f6f8f7;
+  --vp-code-block-bg: #f0f4f1;
+  --vp-c-text-1: #182420;
+  --vp-c-text-2: #43524a;
+  --vp-c-text-3: #5f6f66;
+  --vp-c-brand-1: #15803d;
+  --vp-c-brand-2: #166534;
+  --vp-c-brand-3: #14532d;
   --vp-c-brand-soft: rgba(22, 163, 74, 0.12);
-  --vp-c-green-1: #16a34a;
-  --vp-c-green-2: #15803d;
-  --vp-c-green-3: #166534;
+  --vp-c-green-1: #15803d;
+  --vp-c-green-2: #166534;
+  --vp-c-green-3: #14532d;
   --vp-c-green-soft: rgba(22, 163, 74, 0.12);
+  --vp-c-default-soft: rgba(24, 36, 32, 0.06);
+  --gd-success: #15803d;
+  --gd-warning: #b45309;
+  --gd-danger: #b91c1c;
+  --gd-info: #1d4ed8;
+  --gd-scrollbar-track: #eef2ef;
+  --gd-scrollbar-thumb: #c0cfc5;
+  --gd-scrollbar-hover: #15803d;
+  --vp-custom-block-tip-bg: #eef7ef;
+  --vp-custom-block-tip-border: #15803d;
+  --vp-custom-block-tip-text: #14532d;
+  --vp-custom-block-warning-bg: #fdf4e7;
+  --vp-custom-block-warning-border: #b45309;
+  --vp-custom-block-warning-text: #7c3a06;
+  --vp-custom-block-danger-bg: #fdeeee;
+  --vp-custom-block-danger-border: #b91c1c;
+  --vp-custom-block-danger-text: #7f1d1d;
+  --vp-custom-block-info-bg: #edf3fd;
+  --vp-custom-block-info-border: #1d4ed8;
+  --vp-custom-block-info-text: #1e40af;
   --vp-font-family-base: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
     'Noto Sans SC', system-ui, -apple-system, sans-serif;
   --vp-font-family-mono: 'JetBrains Mono', 'Cascadia Code', 'SFMono-Regular', Consolas,
@@ -16,6 +48,7 @@
 }
 
 .dark {
+  color-scheme: dark;
   --vp-c-bg: #202124;
   --vp-c-bg-alt: #202124;
   --vp-c-bg-elv: #2a2c30;
@@ -27,14 +60,39 @@
   --vp-c-brand-2: #22c55e;
   --vp-c-brand-3: #16a34a;
   --vp-c-brand-soft: rgba(34, 197, 94, 0.14);
+  --vp-c-green-1: #4ade80;
+  --vp-c-green-2: #22c55e;
+  --vp-c-green-3: #16a34a;
+  --vp-c-green-soft: rgba(34, 197, 94, 0.14);
   --vp-c-text-1: #e8eaec;
-  --vp-c-text-2: #a7adb4;
-  --vp-c-text-3: #757c84;
+  --vp-c-text-2: #aeb4bb;
+  --vp-c-text-3: #9aa1a9;
   --vp-c-default-soft: rgba(255, 255, 255, 0.06);
+  --gd-success: #4ade80;
+  --gd-warning: #fbbf24;
+  --gd-danger: #f87171;
+  --gd-info: #60a5fa;
+  --gd-scrollbar-track: #26282c;
+  --gd-scrollbar-thumb: #3a3d42;
+  --gd-scrollbar-hover: #4ade80;
+  --vp-custom-block-tip-bg: rgba(74, 222, 128, 0.08);
+  --vp-custom-block-tip-border: #4ade80;
+  --vp-custom-block-tip-text: #bbf7d0;
+  --vp-custom-block-warning-bg: rgba(251, 191, 36, 0.08);
+  --vp-custom-block-warning-border: #fbbf24;
+  --vp-custom-block-warning-text: #fde68a;
+  --vp-custom-block-danger-bg: rgba(248, 113, 113, 0.08);
+  --vp-custom-block-danger-border: #f87171;
+  --vp-custom-block-danger-text: #fecaca;
+  --vp-custom-block-info-bg: rgba(96, 165, 250, 0.08);
+  --vp-custom-block-info-border: #60a5fa;
+  --vp-custom-block-info-text: #bfdbfe;
 }
 
 html {
   scroll-behavior: smooth;
+  scrollbar-color: var(--gd-scrollbar-thumb) var(--gd-scrollbar-track);
+  scrollbar-width: thin;
 }
 
 body {
@@ -42,45 +100,81 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gd-scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid var(--gd-scrollbar-track);
+  border-radius: 999px;
+  background: var(--gd-scrollbar-thumb);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gd-scrollbar-hover);
+}
+
+::selection {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-text-1);
+}
+
+:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ===== 导航与正文共用同一基底：浅/深均随 --vp-c-bg，不再单独写死 chrome 配色 ===== */
 .VPNavBar {
-  backdrop-filter: saturate(150%) blur(12px);
+  background-color: var(--vp-nav-bg-color) !important;
+  backdrop-filter: none;
 }
 
-.VPNavBar:not(.home) {
-  background-color: color-mix(in srgb, var(--vp-c-bg) 86%, transparent);
+.VPNavBar .divider {
+  background: var(--vp-c-divider);
 }
 
-.VPHero {
-  padding-bottom: 36px;
-}
-
-.VPHero .name .clip {
-  background: linear-gradient(115deg, #4ade80 10%, #22d3ee 90%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.VPHero .tagline {
-  max-width: 660px;
-  color: var(--vp-c-text-2);
-}
-
-.VPHome .VPFeatures {
-  padding-top: 12px;
-}
-
-.VPFeature {
+.VPNavBarSearch .DocSearch-Button {
   border: 1px solid var(--vp-c-divider);
   background: var(--vp-c-bg-soft);
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition: border-color 0.2s ease, background 0.2s ease;
 }
 
-.VPFeature:hover {
+.VPNavBarSearch .DocSearch-Button:hover {
   border-color: var(--vp-c-brand-1);
-  transform: translateY(-2px);
 }
 
+.VPNavScreen {
+  background: var(--vp-nav-screen-bg-color);
+}
+
+.VPFooter {
+  border-top: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-alt);
+}
+
+.VPFooter .message a {
+  color: var(--vp-c-brand-1);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.VPSidebarItem.level-1 .text,
+.VPSidebarItem.level-1 .item {
+  font-weight: 600;
+}
+
+.VPSidebarItem.level-2 .text {
+  font-size: 14px;
+}
+
+/* ===== 正文排版 ===== */
 .VPDoc .content-container {
   max-width: 780px;
 }
@@ -110,6 +204,10 @@ body {
   color: var(--vp-c-text-1);
 }
 
+.vp-doc a {
+  text-underline-offset: 3px;
+}
+
 .vp-doc blockquote {
   margin: 20px 0;
   border-left: 3px solid var(--vp-c-brand-1);
@@ -129,6 +227,10 @@ body {
 }
 
 .vp-doc table th {
+  background: var(--vp-c-bg-soft);
+}
+
+.vp-doc table tr:nth-child(2n) {
   background: var(--vp-c-bg-soft);
 }
 
@@ -153,29 +255,20 @@ body {
   font-weight: 600;
 }
 
+.vp-doc .custom-block {
+  border-radius: 10px;
+}
+
+.vp-doc .custom-block code {
+  background: var(--vp-c-default-soft);
+  color: inherit;
+}
+
 .mermaid {
   overflow-x: auto;
-  padding: 8px 0;
-}
-
-.VPSidebarItem.level-1 .text,
-.VPSidebarItem.level-1 .item {
-  font-weight: 600;
-}
-
-.VPSidebarItem.level-2 .text {
-  font-size: 14px;
-}
-
-.VPFooter .message a {
-  color: var(--vp-c-brand-1);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.DocSearch-Button,
-.VPNavBarSearch .DocSearch-Button {
-  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+  background: var(--vp-code-block-bg);
+  padding: 16px;
 }
 
 @media (min-width: 960px) {
@@ -188,12 +281,9 @@ body {
   .vp-doc {
     font-size: 15px;
   }
-
-  .VPHero {
-    padding-bottom: 20px;
-  }
 }
 
+/* ===== 文章标签与来源 ===== */
 .article-meta {
   margin: 18px 0 26px;
 }
@@ -233,6 +323,10 @@ body {
   color: var(--vp-c-brand-1) !important;
 }
 
+.article-tag:active {
+  transform: scale(0.97);
+}
+
 .article-tag.is-module {
   background: var(--vp-c-brand-soft);
   color: var(--vp-c-brand-1) !important;
@@ -253,7 +347,6 @@ body {
 .article-source a:hover {
   color: var(--vp-c-brand-1);
 }
-
 
 /* 深入设计模式：模式卡片的标题分节 */
 :is(.dive-patterns, .refactor-patterns, .game-algorithms, .game-world, .game-feel, .game-gems, .game-ai, .game-mechanics, .mythical-man-month, .level-design, .game-programming-patterns) .vp-doc h3 {
@@ -282,20 +375,16 @@ body {
   min-width: 4.5em;
 }
 
-/* ===== 首页重构保留：深蓝导航 chrome（仅作用于导航，不影响正文渲染） ===== */
-.VPNavBar, .VPNavScreen {
-  --vp-c-bg: #202124;
-  --vp-c-bg-elv: #2a2c30;
-  --vp-c-bg-soft: #26282c;
-  --vp-c-divider: #35383d;
-  --vp-c-text-1: #ffffff;
-  --vp-c-text-2: rgba(255, 255, 255, 0.82);
-  --vp-c-text-3: rgba(255, 255, 255, 0.6);
-  --vp-c-brand-1: #42b983;
-  --vp-c-brand-2: #52c99a;
-  --vp-c-brand-soft: rgba(66, 185, 131, 0.18);
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
-.VPNavBar { background-color: #202124 !important; backdrop-filter: none; }
-.VPNavBar .title { color: #ffffff; }
-.VPNavBarMenuLink:hover, .VPNavBarMenuLink.active, .VPNavBarMenuGroup.active .text { color: #42b983; }
-.mermaid { background: #202124; border-radius: 10px; padding: 16px; }
