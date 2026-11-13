@@ -56,6 +56,11 @@ export default withMermaid(
     cleanUrls: false,
     head: [
       ['meta', { name: 'theme-color', content: '#202124' }],
+      [
+        'script',
+        {},
+        `(function(){try{var m=document.querySelector('meta[name="theme-color"]');if(!m)return;var s=localStorage.getItem('vitepress-theme-appearance');var d=s==='light'?false:s==='auto'?matchMedia('(prefers-color-scheme: dark)').matches:true;m.setAttribute('content',d?'#202124':'#f6f8f7')}catch(e){}})()`
+      ],
       ['meta', { property: 'og:type', content: 'website' }],
       ['meta', { property: 'og:site_name', content: 'GameDev Atlas' }],
       ['link', { rel: 'icon', href: `${base}logo.svg` }],

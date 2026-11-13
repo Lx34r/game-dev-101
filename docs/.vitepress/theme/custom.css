@@ -388,3 +388,29 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* 查询已输入但索引未就绪：结果列表与无结果态都尚未渲染 */
+.VPLocalSearchBox .shell:has(.search-bar input:not(:placeholder-shown)):not(:has(#localsearch-list)):not(:has(.no-results))::after {
+  content: '索引加载中…';
+  order: 1;
+  padding: 4px 4px 12px;
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  animation: gd-search-loading 1.2s ease-in-out infinite;
+}
+
+.VPLocalSearchBox .shell:has(.search-bar input:not(:placeholder-shown)):not(:has(#localsearch-list)):not(:has(.no-results)) .search-keyboard-shortcuts {
+  order: 2;
+}
+
+@keyframes gd-search-loading {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
